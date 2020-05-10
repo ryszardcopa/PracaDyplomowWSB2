@@ -32,7 +32,7 @@
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg fixed-top nav-menu">
         <a href="#" class="navbar-brand text-light text-uppercase"
-          >Fly with WSB</a
+          ><img src="images/stork-airline-logo.svg" class="nav-logo"></a
         >
         <button
           class="navbar-toggler nav-button"
@@ -68,7 +68,7 @@
               <a href="#" class="nav-link m-2 menu-item">Pricing</a>
             </li>
             <li class="nav-item" data-toggle="modal" data-target="#sign-in">
-              <a href="#" class="nav-link m-2 menu-item">Login</a>
+              <a href="#" class="nav-link m-2 menu-item"><i class="fas fa-user"></i> Login</a>
             </li>
           </ul>
         </div>
@@ -117,13 +117,147 @@
       <!-- banner -->
       <div class="text-light text-md-right text-center banner">
         <h1 class="display-5 banner-heading">
-          Welcome to <span class="display-3">Fly with WSB</span>
+          <span class="display-3">Lataj z STORK AIRLINES</span>
         </h1>
         <p class="lead banner-par">
-          Lorem ipsum dolor sit amet consectetur adipisicing.
+          Sprawdź najnowsze pormocje na loty Krajowe !
         </p>
-      </div>
+		
+		<!-- Wyszukiwarka lotów -->
+		<div class="calendar-box">
+			<h1>Wyszukaj dostępny lot:</h1>
+			
+			<fieldset class="trip-types">
+				<ul class="trip-type-list">
+					<li class="type roundtrip active" data-title="W obie strony">
+						<div id="customInput-48351739598431986" class="custom-input"><div id="customInput-mask-48351739598431986" class="mask webfonts radio active"></div><input type="radio" id="TripTypeRoundtrip" name="ot" value="RoundTrip" checked="checked"></div>
+						
+        
+                    		        <label class="radio active" for="TripTypeRoundtrip" style="background-color: transparent;">
+            W obie strony
+
+                    </label>
+					</li>
+					<li class="type oneway" data-title="W jedną stronę">
+						<div id="customInput-6755004340317332" class="custom-input"><div id="customInput-mask-6755004340317332" class="mask webfonts radio"></div><input type="radio" id="TripTypeOneway" name="ot" value="OneWay"></div>
+						
+        
+                    		        <label class="radio" for="TripTypeOneway">
+            W jedną stronę
+
+                    </label>
+					</li>
+
+											<li class="type multicity" data-title="Podróż wieloodcinkowa">
+							<div id="customInput-07743653522645055" class="custom-input"><div id="customInput-mask-07743653522645055" class="mask webfonts radio"></div><input type="radio" id="TripTypeMulticity" name="ot" value="MultiCity"></div>       
+						</li>
+					
+				</ul>
+			</fieldset>
+			
+			
+			
+			<!-- SEKCJA 1 -->
+			<div class="input-group mb-3">
+			
+			<!-- MIEJSCE WYLOTU -->
+			  <div class="input-group-prepend">
+				<button type="button" class="btn btn-primary">Miejsce wylotu:</button>
+				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Warszawa, Zagrzeb</a>
+				  <a class="dropdown-item" href="#">Praga, Wilno</a>
+				</div>
+			  </div>
+			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+			  
+			  <!-- ZMIANA KOLEJNOŚCI -->
+			<div class="input-group-prepend">
+				<a href="#"><i class="fas fa-random"></i></a>
+			</div>
+			  
+			  <!-- MIEJSCE PRZYLOTU -->
+			  <div class="input-group-prepend">
+				<button type="button" class="btn btn-primary">Miejsce przylotu:</button>
+				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Warszawa, Zagrzeb</a>
+				  <a class="dropdown-item" href="#">Praga, Wilno</a>
+				</div>
+			  </div>
+			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+			  
+			  
+			  <!-- Data wylotu -->
+			  <div class="input-group-prepend">
+				<button type="button" class="btn btn-primary">Data wylotu:</button>
+				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Kaledarz</a>
+
+				</div>
+			  </div>
+			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"> 
+			  
+			   <!-- Data przylotu -->
+			  <div class="input-group-prepend">
+				<button type="button" class="btn btn-primary">Data przylotu:</button>
+				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Kaledarz</a>
+
+				</div>
+			  </div>
+			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"> 
+			  
+			 
+			
+					
+		</div><!-- end SEKCJA 1 -->
+		
+		<!-- SEKCJA 2 -->
+		<div class="input-group mb-3">
+		
+		<!-- WYBÓR KLASY -->
+			<div class="dropdown">
+				  <button class="btn btn-secondary dropdown-toggle"
+						  type="button" id="dropdownMenu1" data-toggle="dropdown"
+						  aria-haspopup="true" aria-expanded="false">
+					Wybór klasy
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<a class="dropdown-item" href="#!">Normalna</a>
+					<a class="dropdown-item" href="#!">Ekonomiczna</a>
+					<a class="dropdown-item" href="#!">Biznesowa</a>
+				  </div>
+			</div>
+			
+			<!-- Wybór pasażerów -->
+			<select class="custom-select">
+			  <option selected>Liczba pasażerów</option>
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			</select>
+		
+		</div><!-- end SEKCJA 2 -->
+		
+		
+	</div><!-- end calendar box -->
+			
+	</div>
       <!-- end of banner -->
+	  
+	  
+	  
     </header>
     <!-- end of header -->
 
@@ -447,7 +581,7 @@
         </div>
         <div class="row">
           <div class="col text-center text-light border-top pt-3">
-            <p>&copy; 2018 Copyright, All Rights Reserved</p>
+            <p>&copy; 2020 Copyright, Autorzy: Ryszard Copa, Mirosław Bidziński. Wszystkie prawa zastrzeżone.</p>
           </div>
         </div>
       </div>
