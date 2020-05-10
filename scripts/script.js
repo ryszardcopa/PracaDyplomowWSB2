@@ -1,4 +1,17 @@
 $(document).ready(function() {
+
+
+// ---------------------Logon Verification---------------------------------------------------
+// var $modallogin, $modalpassword, $modallogin__button
+$modallogin = $('#modal-login');
+var $modalpassword = $('#modal-password');
+var $modallogin__button = ('#modal-login__button');
+
+
+
+// ---------------------END Of Logon Verification---------------------------------------------
+
+
   $('.nav-button').click(function() {
     $('.nav-button').toggleClass('change');
   });
