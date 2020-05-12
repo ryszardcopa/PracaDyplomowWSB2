@@ -3,14 +3,16 @@ $(document).ready(function() {
 
 // ---------------------Logon Verification---------------------------------------------------
 var modalLogin, modalPassword, modalLoginButton;
-modalLogin = $('#modalLogin');
-modalPassword = $('#modalPassword');
-modalLoginButton = $('#modalLoginButton');
+$modalLogin = $('#modalLogin');
+$modalPassword = $('#modalPassword');
+$modalLoginButton = $('#modalLoginButton');
+$modalWrongPasswordWarning = $('#modalWrongPasswordWarning')
 
-
-function user (firstName, lastName, email, password, tarrif, AdditionalBaggage, seats ){
+// ----------------Logon Verification user-------------------------
+function user (firstName, lastName, login, email, password, tarrif, AdditionalBaggage, seats ){
   this.firstName =firstName;
   this.lastName = lastName;
+  this.login = login;
   this.email = email;
   this.password = password;
   this.tarrif =tarrif;
@@ -18,20 +20,26 @@ function user (firstName, lastName, email, password, tarrif, AdditionalBaggage, 
   this.seats = seats;
 }
 
-$user1 = new user ('Jan','Kowalski','jan.kowalski@testmail.com','password');
-$user2 = new user ('Jan','Nowak','jan.nowak@testmail.com','password');
-$user3 = new user ('Krzysztof','Kajak','krzysztof.kajak@testmail.com','password');
-$user4 = new user ('admin','Kajak','krzysztof.kajak@testmail.com','admin');
+$user1 = new user ('Jan','Kowalski','jankowalski',"jan.kowalski@test.pl",'password');
+$user2 = new user ('Jan','Nowak','jannowak','jan.nowak@testmail.com','password2');
+$user3 = new user ('Krzysztof','Kajak','krzysztofkajak','krzysztof.kajak@testmail.com','password3');
 
 
+// ---------------------Logon Verification button-----------------------
 
-modalLoginButton.on("click", function(e){
-  // alert("działa");
-  if(modalLogin.val() ==="admin" && modalPassword.val()==="admin"){alert("true")} {alert("false")}
+$modalWrongPasswordWarning.hide();
+$modalPassword.on("focus", function(e){$modalWrongPasswordWarning.hide()})
+
+$modalLoginButton.on("click", function(e){
+  if(
+    $modalLogin.val() ===$user1.login && $modalPassword.val()===$user1.password || 
+    $modalLogin.val() ===$user2.login && $modalPassword.val()===$user2.password || 
+    $modalLogin.val() ===$user3.login && $modalPassword.val()===$user3.password
+    )  
+    {window.open("./NewPassenger.html","_self");}
+    {$modalWrongPasswordWarning.show();};
 
 });
-
-
 
 
 
