@@ -152,64 +152,14 @@ header {
 /* end of customers */
 
 
-/* SEKCJA FOOTER */
+/* footer section */
 
 .bg-dark { background: var(--main-color) !important; color: var(--ff-color) !important; }
 
 
 
 
-/* STYL DLA WYSZUKIWARKI LOTÓW */
 
-.calendar-box { width: 100%; background: rgb(255,255,255,0.8); border-radius: 25px; padding: 25px; margin: 25px; color: var(--main-color); }
-
-
-.flights-qsf .trip-types {
-    margin-bottom: 20px;
-}
-
-.flights-qsf fieldset {
-    float: left;
-    margin-right: 10px;
-}
-
-.trip-types ul li { list-style: none; display: inline-block; }
-
-.flights-qsf .trip-types .custom-input {
-    float: left;
-    margin: 5px 0 0;
-}
-.custom-input {
-    width: auto;
-    display: inline-block;
-    position: relative;
-    line-height: 1;
-    vertical-align: middle;
-}
-.flights-qsf .trip-types li.type input[type="radio"] {
-    height: auto;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-    padding: 0.3rem 0.5rem;
-}
-
-.flights-qsf fieldset input {
-    color: var(--main-color) !important;
-    background-color: var(--ff-color) !important;
-    border-color: var(--second-color) !important;
-}
-
-.svg-inline--fa, .svg-inline--fa fa-random fa-w-16 { margin: 10px; font-size: 1em; }
-
-.input-group > .input-group-prepend > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .btn { 
-	background: var(--main-color);
-	border: 0;
-	border-radius: 4px;
-}
 
 
 
