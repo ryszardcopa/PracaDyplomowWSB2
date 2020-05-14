@@ -47,9 +47,28 @@ $modalLoginButton.on("click", function(e){
 // ---------------------END Of Logon Verification---------------------------------------------
 
 
-  $('.nav-button').click(function() {
-    $('.nav-button').toggleClass('change');
-  });
+
+//-------------------------PASSANGER LIST --------------------------------------------------------
+
+// ------------------HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
+
+
+
+// ------------------END OF HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------END OF PASSENGER LIST --------------------------------------------------------
+
 
 
 
