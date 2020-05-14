@@ -23,14 +23,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/common.css" />
-    <title>Document</title>
+    <title>Fly with WSB</title>
     
 </head>
 
 <body>
- <!-- navbar -->
- <nav class="navbar navbar-expand-lg fixed-top nav-menu ">
-   <a href="#" class="navbar-brand text-light text-uppercase"
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg fixed-top nav-menu ">
+   <a href="index.html" class="navbar-brand text-light text-uppercase"
      >Fly with WSB</a
    >
    <button
@@ -110,80 +111,164 @@
 <!-- end of modal -->
 
     <!-- -----------------------Flight Details------------------------------------- -->
-    <fieldset>
-        <legend>FlightDetails</legend>
-        <form action="" method="get">
-           <label for="DepartureDate">Departure Date</label>
-           <input type="date" name="DepartureDate-form" id="DepartureDate-form" class="DepartureDate-form"><br>
 
-
-            <label for="FlightFrom">Flight from:</label>
-            <select class="flightFrom-form" name="FlightFrom" id="flightFrom-form">
-                <option value="1">Katowice</option>
-                <option value="2">Warszawa</option>
-                <option value="3">Krakow</option>
-            </select><br>
-            <label for="Destination">Flight to:</label>
-            <select class="Destination-form" name="Destination" id="Destination-form">
-                <option value="1">Katowice</option>
-                <option value="2">Warszawa</option>
-                <option value="3">Krakow</option>
-                <option value="4">Stockholm</option>
-                <option value="5">Brussels</option>
-                <option value="6">Frankfurt</option>
-                <option value="7">New York</option>
-                <option value="8">Washington</option>
-                <option value="9">Los Angeles</option>
-            </select><br>
-        </form>
-
-    </fieldset>
-    <fieldset>
-      
-
-
-
-
-        <!------------------------- number of passengers ------------------------------>
-        <legend>Number of passengers</legend>
-        <form action="example" method="post">
-            <label for="NumberOfPassengers">Adult Passengers:</label>
-            <select class="NumberOfAdults-form" name="NumberOfPassengers" id="NumberOfAdults-form">
-                <option value="1">1 adult</option>
-                <option value="2">2 adults</option>
-                <option value="3">3 adults</option>
-                <option value="4">4 adults</option>
-                <option value="5">5 adults</option>
-                <option value="6">6 adults</option>
-                <option value="7">7 adults</option>
-                <option value="8">8 adults</option>
-                <option value="9">9 adults</option>
-            </select><br>
-            <label for="Number of Children">Number of Children:</label>
-            <select class="NumberOfChildren-form" name="NumberOfChildren" id="NumberOfChildren-form">
-                <option value="0">0</option>
-                <option value="1">1 child</option>
-                <option value="2">2 children</option>
-                <option value="3">3 children</option>
-            </select><br>
-            </form> 
+    <div class="container my-5 py-5">
+      <div class="row">
+       <div class="col background-primary py-5">
+         <fieldset>
+            <legend>FlightDetails</legend>
+            <form action="" method="get">
+               <label for="DepartureDate">Departure Date</label>
+               <input type="date" name="DepartureDate-form" id="DepartureDate-form" class="DepartureDate-form"><br>
+    
+    
+                <label for="FlightFrom">Flight from:</label>
+                <select class="flightFrom-form" name="FlightFrom" id="flightFrom-form">
+                    <option value="1">Katowice</option>
+                    <option value="2">Warszawa</option>
+                    <option value="3">Krakow</option>
+                </select><br>
+                <label for="Destination">Flight to:</label>
+                <select class="Destination-form" name="Destination" id="Destination-form">
+                    <option value="1">Katowice</option>
+                    <option value="2">Warszawa</option>
+                    <option value="3">Krakow</option>
+                    <option value="4">Stockholm</option>
+                    <option value="5">Brussels</option>
+                    <option value="6">Frankfurt</option>
+                    <option value="7">New York</option>
+                    <option value="8">Washington</option>
+                    <option value="9">Los Angeles</option>
+                </select><br>
+            </form>
+    
         </fieldset>
-            
-
-            <!-- END of number of number of passengers form -->
-
-
-            <!-- Passenger 1 information -->
-            <fieldset>
-                <legend>Passenger information</legend>
+        <fieldset>
+          
+    
+    
+    
+    
+            <!------------------------- number of passengers ------------------------------>
+            <legend>Number of passengers</legend>
+            <form action="example" method="post">
+                <label for="NumberOfPassengers">Adult Passengers:</label>
+                <select class="NumberOfAdults-form" name="NumberOfPassengers" id="NumberOfAdults-form">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adults</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults</option>
+                    <option value="5">5 adults</option>
+                    <option value="6">6 adults</option>
+                    <option value="7">7 adults</option>
+                    <option value="8">8 adults</option>
+                    <option value="9">9 adults</option>
+                </select><br>
+                <label for="Number of Children">Number of Children:</label>
+                <select class="NumberOfChildren-form" name="NumberOfChildren" id="NumberOfChildren-form">
+                    <option value="0">0</option>
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                </select><br>
+                </form> 
+            </fieldset>
+                
+    
+                <!-- END of number of number of passengers form -->
+    
+    
+                <!-- Passenger 1 information -->
+                <fieldset>
+                    <legend>Passenger information</legend>
+                    <!-- number of adults form -->
+                    <form action="example" method="post">
+                <label for="firstName">First name:</label>
+                <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
+                <label for="firstName">Last name:</label>
+                <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
+                <label for="firstName">E-mail:</label>
+                <input type="text" name="E-mail" placeholder="E-mail" class="personalData-form_email" id="personalData-form_email"><br>
+                
+                <label for="Tarrif">Additional baggage:</label>
+                <select class="tarrif-form" name="tarrif" id="tarrif-form">
+                    <option value="0">Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                </select><br>
+    
+                <label for="AdditionalBaggage">Additional baggage:</label>
+                <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                    </select><br>
+    
+                <label for="Seats">Seats</label>
+                <select class="Seats-form" name="Seats" id="Seats-form">
+                   <option value="A-7-1">A-7-1</option>
+                   <option value="A-8-1">A-8-1</option>
+                   <option value="A-9-1">A-9-1</option>
+                   <option value="B-7-1">B-7-1</option>
+                   <option value="B-8-1">B-8-1</option>
+                   <option value="B-9-1">B-9-1</option>
+                   <option value="D-7-1">C-7-1</option>
+                   <option value="D-8-1">C-8-1</option>
+                   <option value="D-9-1">C-9-1</option>
+                </select><br>
+    
+                <!-- -----------------------------------Children Passenger------------------------------------------------------- -->
+                <!-- CHILD 1 -->
+                <fieldset>
+                   <legend>Child 1</legend>
+                   <!-- number of adults form -->
+                   <form action="example" method="post">
+               <label for="firstName">First name:</label>
+               <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
+               <label for="lastName">Last name:</label>
+               <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
+               <label for="BirthDay">Last name:</label>
+               <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
+    
+               
+               <label for="Tarrif">Additional baggage:</label>
+               <select class="tarrif-form" name="tarrif" id="tarrif-form">
+                   <option value="0">Economic</option>
+                   <option value="1">Business</option>
+                   <option value="2">First class</option>
+               </select><br>
+    
+               <label for="AdditionalBaggage">Additional baggage:</label>
+               <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
+                   <option value="0">No</option>
+                   <option value="1">20 kg</option>
+                   <option value="2">32 kg</option>
+                   </select><br>
+    
+               <label for="Seats">Seats</label>
+               <select class="Seats-form" name="Seats" id="Seats-form">
+                  <option value="A-7-1">A-7-1</option>
+                  <option value="A-8-1">A-8-1</option>
+                  <option value="A-9-1">A-9-1</option>
+                  <option value="B-7-1">B-7-1</option>
+                  <option value="B-8-1">B-8-1</option>
+                  <option value="B-9-1">B-9-1</option>
+                  <option value="D-7-1">C-7-1</option>
+                  <option value="D-8-1">C-8-1</option>
+                  <option value="D-9-1">C-9-1</option>
+               </select><br>
+               <!-- END OF CHILD 1 -->
+               <!-- CHILD 2 -->
+               <fieldset>
+                <legend>Child 2</legend>
                 <!-- number of adults form -->
                 <form action="example" method="post">
             <label for="firstName">First name:</label>
             <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
             <label for="firstName">Last name:</label>
             <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-            <label for="firstName">E-mail:</label>
-            <input type="text" name="E-mail" placeholder="E-mail" class="personalData-form_email" id="personalData-form_email"><br>
+            <label for="BirthDay">Last name:</label>
+            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
             
             <label for="Tarrif">Additional baggage:</label>
             <select class="tarrif-form" name="tarrif" id="tarrif-form">
@@ -191,14 +276,14 @@
                 <option value="1">Business</option>
                 <option value="2">First class</option>
             </select><br>
-
+    
             <label for="AdditionalBaggage">Additional baggage:</label>
             <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
                 <option value="0">No</option>
                 <option value="1">20 kg</option>
                 <option value="2">32 kg</option>
                 </select><br>
-
+    
             <label for="Seats">Seats</label>
             <select class="Seats-form" name="Seats" id="Seats-form">
                <option value="A-7-1">A-7-1</option>
@@ -211,111 +296,104 @@
                <option value="D-8-1">C-8-1</option>
                <option value="D-9-1">C-9-1</option>
             </select><br>
-
-            <!-- -----------------------------------Children Passenger------------------------------------------------------- -->
-            <!-- CHILD 1 -->
-            <fieldset>
-               <legend>Child 1</legend>
-               <!-- number of adults form -->
-               <form action="example" method="post">
-           <label for="firstName">First name:</label>
-           <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
-           <label for="lastName">Last name:</label>
-           <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-           <label for="BirthDay">Last name:</label>
-           <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
-
-           
-           <label for="Tarrif">Additional baggage:</label>
-           <select class="tarrif-form" name="tarrif" id="tarrif-form">
-               <option value="0">Economic</option>
-               <option value="1">Business</option>
-               <option value="2">First class</option>
-           </select><br>
-
-           <label for="AdditionalBaggage">Additional baggage:</label>
-           <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
-               <option value="0">No</option>
-               <option value="1">20 kg</option>
-               <option value="2">32 kg</option>
+            <!-- END OF CHILD 2 -->
+                <!-- -----------------------------------END Children Passenger------------------------------------------------------- -->
+    
+    
+      
+    
+    
+                <!-- Passenger 2 information -->
+                <fieldset>
+                   <legend>Passenger information</legend>
+                   <!-- number of adults form -->
+                   <form action="example" method="post">
+               <label for="firstName">First name:</label>
+               <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
+               <label for="firstName">Last name:</label>
+               <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
+               <label for="firstName">E-mail:</label>
+               <input type="text" name="E-mail" placeholder="E-mail" class="personalData-form_email" id="personalData-form_email"><br>
+               
+               <label for="Tarrif">Additional baggage:</label>
+               <select class="tarrif-form" name="tarrif" id="tarrif-form">
+                   <option value="0">Economic</option>
+                   <option value="1">Business</option>
+                   <option value="2">First class</option>
                </select><br>
-
-           <label for="Seats">Seats</label>
-           <select class="Seats-form" name="Seats" id="Seats-form">
-              <option value="A-7-1">A-7-1</option>
-              <option value="A-8-1">A-8-1</option>
-              <option value="A-9-1">A-9-1</option>
-              <option value="B-7-1">B-7-1</option>
-              <option value="B-8-1">B-8-1</option>
-              <option value="B-9-1">B-9-1</option>
-              <option value="D-7-1">C-7-1</option>
-              <option value="D-8-1">C-8-1</option>
-              <option value="D-9-1">C-9-1</option>
-           </select><br>
-           <!-- END OF CHILD 1 -->
-           <!-- CHILD 2 -->
-           <fieldset>
-            <legend>Child 2</legend>
-            <!-- number of adults form -->
-            <form action="example" method="post">
-        <label for="firstName">First name:</label>
-        <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
-        <label for="firstName">Last name:</label>
-        <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-        <label for="BirthDay">Last name:</label>
-        <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
-        
-        <label for="Tarrif">Additional baggage:</label>
-        <select class="tarrif-form" name="tarrif" id="tarrif-form">
-            <option value="0">Economic</option>
-            <option value="1">Business</option>
-            <option value="2">First class</option>
-        </select><br>
-
-        <label for="AdditionalBaggage">Additional baggage:</label>
-        <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
-            <option value="0">No</option>
-            <option value="1">20 kg</option>
-            <option value="2">32 kg</option>
-            </select><br>
-
-        <label for="Seats">Seats</label>
-        <select class="Seats-form" name="Seats" id="Seats-form">
-           <option value="A-7-1">A-7-1</option>
-           <option value="A-8-1">A-8-1</option>
-           <option value="A-9-1">A-9-1</option>
-           <option value="B-7-1">B-7-1</option>
-           <option value="B-8-1">B-8-1</option>
-           <option value="B-9-1">B-9-1</option>
-           <option value="D-7-1">C-7-1</option>
-           <option value="D-8-1">C-8-1</option>
-           <option value="D-9-1">C-9-1</option>
-        </select><br>
-        <!-- END OF CHILD 2 -->
-            <!-- -----------------------------------END Children Passenger------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Passenger 2 information -->
-            <fieldset>
-               <legend>Passenger information</legend>
+    
+               <label for="AdditionalBaggage">Additional baggage:</label>
+               <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
+                   <option value="0">No</option>
+                   <option value="1">20 kg</option>
+                   <option value="2">32 kg</option>
+                   </select><br>
+    
+               <label for="Seats">Seats</label>
+               <select class="Seats-form" name="Seats" id="Seats-form">
+                  <option value="A-7-1">A-7-1</option>
+                  <option value="A-8-1">A-8-1</option>
+                  <option value="A-9-1">A-9-1</option>
+                  <option value="B-7-1">B-7-1</option>
+                  <option value="B-8-1">B-8-1</option>
+                  <option value="B-9-1">B-9-1</option>
+                  <option value="D-7-1">C-7-1</option>
+                  <option value="D-8-1">C-8-1</option>
+                  <option value="D-9-1">C-9-1</option>
+               </select><br>
+    
+               <!-- -----------------------------------Children Passenger------------------------------------------------------- -->
+               <!-- CHILD 1 -->
+               <fieldset>
+                  <legend>Child 1</legend>
+                  <!-- number of adults form -->
+                  <form action="example" method="post">
+              <label for="firstName">First name:</label>
+              <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
+              <label for="lastName">Last name:</label>
+              <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
+              <label for="BirthDay">Last name:</label>
+              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
+    
+              
+              <label for="Tarrif">Additional baggage:</label>
+              <select class="tarrif-form" name="tarrif" id="tarrif-form">
+                  <option value="0">Economic</option>
+                  <option value="1">Business</option>
+                  <option value="2">First class</option>
+              </select><br>
+    
+              <label for="AdditionalBaggage">Additional baggage:</label>
+              <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
+                  <option value="0">No</option>
+                  <option value="1">20 kg</option>
+                  <option value="2">32 kg</option>
+                  </select><br>
+    
+              <label for="Seats">Seats</label>
+              <select class="Seats-form" name="Seats" id="Seats-form">
+                 <option value="A-7-1">A-7-1</option>
+                 <option value="A-8-1">A-8-1</option>
+                 <option value="A-9-1">A-9-1</option>
+                 <option value="B-7-1">B-7-1</option>
+                 <option value="B-8-1">B-8-1</option>
+                 <option value="B-9-1">B-9-1</option>
+                 <option value="D-7-1">C-7-1</option>
+                 <option value="D-8-1">C-8-1</option>
+                 <option value="D-9-1">C-9-1</option>
+              </select><br>
+              <!-- END OF CHILD 1 -->
+              <!-- CHILD 2 -->
+              <fieldset>
+               <legend>Child 2</legend>
                <!-- number of adults form -->
                <form action="example" method="post">
            <label for="firstName">First name:</label>
            <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
            <label for="firstName">Last name:</label>
            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-           <label for="firstName">E-mail:</label>
-           <input type="text" name="E-mail" placeholder="E-mail" class="personalData-form_email" id="personalData-form_email"><br>
+           <label for="BirthDay">Last name:</label>
+           <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
            
            <label for="Tarrif">Additional baggage:</label>
            <select class="tarrif-form" name="tarrif" id="tarrif-form">
@@ -323,14 +401,14 @@
                <option value="1">Business</option>
                <option value="2">First class</option>
            </select><br>
-
+    
            <label for="AdditionalBaggage">Additional baggage:</label>
            <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
                <option value="0">No</option>
                <option value="1">20 kg</option>
                <option value="2">32 kg</option>
                </select><br>
-
+    
            <label for="Seats">Seats</label>
            <select class="Seats-form" name="Seats" id="Seats-form">
               <option value="A-7-1">A-7-1</option>
@@ -343,143 +421,17 @@
               <option value="D-8-1">C-8-1</option>
               <option value="D-9-1">C-9-1</option>
            </select><br>
+           <!-- END OF CHILD 2 -->
+               <!-- -----------------------------------END Children Passenger------------------------------------------------------- -->
+    
 
-           <!-- -----------------------------------Children Passenger------------------------------------------------------- -->
-           <!-- CHILD 1 -->
-           <fieldset>
-              <legend>Child 1</legend>
-              <!-- number of adults form -->
-              <form action="example" method="post">
-          <label for="firstName">First name:</label>
-          <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
-          <label for="lastName">Last name:</label>
-          <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-          <label for="BirthDay">Last name:</label>
-          <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
-
-          
-          <label for="Tarrif">Additional baggage:</label>
-          <select class="tarrif-form" name="tarrif" id="tarrif-form">
-              <option value="0">Economic</option>
-              <option value="1">Business</option>
-              <option value="2">First class</option>
-          </select><br>
-
-          <label for="AdditionalBaggage">Additional baggage:</label>
-          <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
-              <option value="0">No</option>
-              <option value="1">20 kg</option>
-              <option value="2">32 kg</option>
-              </select><br>
-
-          <label for="Seats">Seats</label>
-          <select class="Seats-form" name="Seats" id="Seats-form">
-             <option value="A-7-1">A-7-1</option>
-             <option value="A-8-1">A-8-1</option>
-             <option value="A-9-1">A-9-1</option>
-             <option value="B-7-1">B-7-1</option>
-             <option value="B-8-1">B-8-1</option>
-             <option value="B-9-1">B-9-1</option>
-             <option value="D-7-1">C-7-1</option>
-             <option value="D-8-1">C-8-1</option>
-             <option value="D-9-1">C-9-1</option>
-          </select><br>
-          <!-- END OF CHILD 1 -->
-          <!-- CHILD 2 -->
-          <fieldset>
-           <legend>Child 2</legend>
-           <!-- number of adults form -->
-           <form action="example" method="post">
-       <label for="firstName">First name:</label>
-       <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName" id="personalData-form_firstName"><br>
-       <label for="firstName">Last name:</label>
-       <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName" id="personalData-form_lastName"><br>
-       <label for="BirthDay">Last name:</label>
-       <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay" id="personalData-form_BirthDay"><br>
-       
-       <label for="Tarrif">Additional baggage:</label>
-       <select class="tarrif-form" name="tarrif" id="tarrif-form">
-           <option value="0">Economic</option>
-           <option value="1">Business</option>
-           <option value="2">First class</option>
-       </select><br>
-
-       <label for="AdditionalBaggage">Additional baggage:</label>
-       <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
-           <option value="0">No</option>
-           <option value="1">20 kg</option>
-           <option value="2">32 kg</option>
-           </select><br>
-
-       <label for="Seats">Seats</label>
-       <select class="Seats-form" name="Seats" id="Seats-form">
-          <option value="A-7-1">A-7-1</option>
-          <option value="A-8-1">A-8-1</option>
-          <option value="A-9-1">A-9-1</option>
-          <option value="B-7-1">B-7-1</option>
-          <option value="B-8-1">B-8-1</option>
-          <option value="B-9-1">B-9-1</option>
-          <option value="D-7-1">C-7-1</option>
-          <option value="D-8-1">C-8-1</option>
-          <option value="D-9-1">C-9-1</option>
-       </select><br>
-       <!-- END OF CHILD 2 -->
-           <!-- -----------------------------------END Children Passenger------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       </div>   
+      </div>
+   
+   
+      <div class="container mb-5 pb-5">
+         <div class="row">
+          <div class="col">
 
 <!-- SEATS SVG -->
 
@@ -4819,10 +4771,20 @@
 
    
 <!-- END SEATS SVG -->
+
+
+   </div> 
+   </div>
+    
+
 </form> 
 </fieldset> 
 
 <!-- End PersonData -->
+
+
+</div>
+ 
 <!-- footer -->
 <footer class="bg-dark px-5">
    <div class="container-fluid">
