@@ -18,6 +18,7 @@
       integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
       crossorigin="anonymous"
     ></script>
+
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
@@ -118,138 +119,86 @@
           Sprawdź najnowsze pormocje na loty Krajowe !
         </p>
 		
-		<!-- Wyszukiwarka lotów -->
+		<!-- end flight selection form -->
 		<div class="calendar-box">
-			<h1>Wyszukaj dostępny lot:</h1>
-			
-			<fieldset class="trip-types">
-				<ul class="trip-type-list">
-					<li class="type roundtrip active" data-title="W obie strony">
-						<div id="customInput-48351739598431986" class="custom-input"><div id="customInput-mask-48351739598431986" class="mask webfonts radio active"></div><input type="radio" id="TripTypeRoundtrip" name="ot" value="RoundTrip" checked="checked"></div>
-						
-        
-                    		        <label class="radio active" for="TripTypeRoundtrip" style="background-color: transparent;">
-            W obie strony
 
-                    </label>
-					</li>
-					<li class="type oneway" data-title="W jedną stronę">
-						<div id="customInput-6755004340317332" class="custom-input"><div id="customInput-mask-6755004340317332" class="mask webfonts radio"></div><input type="radio" id="TripTypeOneway" name="ot" value="OneWay"></div>
-						
-        
-                    		        <label class="radio" for="TripTypeOneway">
-            W jedną stronę
+        <div class="col-md-6">
+            <!-- outlet from-->  
+            <form type="checklist">
+              <label>Wylot z: </label>
+              <select name="outlet from" class="select-bar">
+                <option>Katowice</option>
+                <option>Warszawa</option>
+                <option>Krakow</option>
+                <option>Stockholm</option>
+                <option>Brussels</option>
+                <option>Frankfurt</option>
+                <option>New York</option>
+                <option>Washington</option>
+                <option>Los Angeles</option>
+              </select>
+            </form>
+      </div>
 
-                    </label>
-					</li>
-
-											<li class="type multicity" data-title="Podróż wieloodcinkowa">
-							<div id="customInput-07743653522645055" class="custom-input"><div id="customInput-mask-07743653522645055" class="mask webfonts radio"></div><input type="radio" id="TripTypeMulticity" name="ot" value="MultiCity"></div>       
-						</li>
-					
-				</ul>
-			</fieldset>
-			
-			
-			
-			<!-- SEKCJA 1 -->
-			<div class="input-group mb-3">
-			
-			<!-- MIEJSCE WYLOTU -->
-			  <div class="input-group-prepend">
-				<button type="button" class="btn btn-primary">Miejsce wylotu:</button>
-				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  <span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Warszawa, Zagrzeb</a>
-				  <a class="dropdown-item" href="#">Praga, Wilno</a>
-				</div>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-			  
-			  <!-- ZMIANA KOLEJNOŚCI -->
-			<div class="input-group-prepend">
-				<a href="#"><i class="fas fa-random"></i></a>
-			</div>
-			  
-			  <!-- MIEJSCE PRZYLOTU -->
-			  <div class="input-group-prepend">
-				<button type="button" class="btn btn-primary">Miejsce przylotu:</button>
-				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  <span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Warszawa, Zagrzeb</a>
-				  <a class="dropdown-item" href="#">Praga, Wilno</a>
-				</div>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-			  
-			  
-			  <!-- Data wylotu -->
-			  <div class="input-group-prepend">
-				<button type="data" class="btn btn-primary">Data wylotu:</button>
-				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  <span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Kaledarz</a>
-
-				</div>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"> 
-			  
-			   <!-- Data przylotu -->
-			  <div class="input-group-prepend">
-				<button type="button" class="btn btn-primary">Data przylotu:</button>
-				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  <span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Kaledarz</a>
-
-				</div>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"> 
-			  
-			 
-			
-					
-		</div><!-- end SEKCJA 1 -->
+      <div class="col-md-6">
+            <!-- departure to -->
+            <form type="checklist">
+              <label>Wylot do: </label>
+              <select name="departure to" class="select-bar">
+                <option>Katowice</option>
+                <option>Warszawa</option>
+                <option>Krakow</option>
+                <option>Stockholm</option>
+                <option>Brussels</option>
+                <option>Frankfurt</option>
+                <option>New York</option>
+                <option>Washington</option>
+                <option>Los Angeles</option>
+              </select>
+            </form>
+            <!-- end outlet from--> 
+      </div>	
+    </div><!-- end row -->
+    
+    <!-- row -->
+    <div class="row">
+      <!-- select date outlet from -->
+      <div class="col-md-6">
+		<form>
+			<label>Data wylotu:</label> 
+			<input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar" id="personalData-form_BirthDay"><br>
+		</form>
+      </div>
+      <!-- select date departure to -->
+      <div class="col-md-6">
+		<form>
+			<label>Data przylotu: </label>
+			<input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar" id="personalData-form_BirthDay"><br>
+		</form>
+      </div>
+    </div><!-- end row -->
+	
+	<div class="row">
 		
-		<!-- SEKCJA 2 -->
-		<div class="input-group mb-3">
-		
-		<!-- WYBÓR KLASY -->
-			<div class="dropdown">
-				  <button class="btn btn-secondary dropdown-toggle"
-						  type="button" id="dropdownMenu1" data-toggle="dropdown"
-						  aria-haspopup="true" aria-expanded="false">
-					Wybór klasy
-				  </button>
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<a class="dropdown-item" href="#!">Normalna</a>
-					<a class="dropdown-item" href="#!">Ekonomiczna</a>
-					<a class="dropdown-item" href="#!">Biznesowa</a>
-				  </div>
-			</div>
-			
-			<!-- Wybór pasażerów -->
-			<select class="custom-select">
-			  <option selected>Liczba pasażerów</option>
-			  <option value="1">1</option>
-			  <option value="2">2</option>
-			  <option value="3">3</option>
-			</select>
-		
-		</div><!-- end SEKCJA 2 -->
-		
-		
-	</div><!-- end calendar box -->
-			
+		<div class="col-md-6">
+			<form>
+				<label for="quantity">Liczba pasażerów:</label>
+				<input type="number" id="quantity" name="quantity" min="1" max="5" class="select-bar">
+			</form>
+		</div>
+		<div class="col-md-6">
+			<form>
+				<label>Wyślij zapytanie:</label> 
+				<input type="submit" class="button">
+			</form>
+		</div>
 	</div>
-      <!-- end of banner -->
+	
+	
+	
+  </div><!-- end flight selection form -->	
+	</div><!-- end banner -->
+
 	  
 	  
 	  
