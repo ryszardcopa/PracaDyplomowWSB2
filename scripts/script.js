@@ -51,17 +51,35 @@ $modalLoginButton.on("click", function(e){
 //-------------------------PASSANGER LIST --------------------------------------------------------
 
 // ------------------HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
+$NumberOfAdultsform = $('#NumberOfAdultsform');
+$passengerInformationContainer_Form = $('#passengerInformationContainer_Form')
+$passenger_1_1_form = $('#passenger_1_1_form');
+$passenger_2_1_form = $('#passenger_2_1_form');
+$child_1_1_form = $('#child_1_1_form');
+$child_1_2_form = $('#child_1_2_form');
+
+$passenger_1_1_form.hide();
+$passenger_2_1_form.hide();
+$child_1_1_form.hide();
+$child_1_2_form.hide();
+
+
+
+
+$NumberOfAdultsform.on('change',function(){
+  
+if(this.value >= 2){$passenger_1_1_form.show();}
+else{$passenger_1_1_form.hide()};
+
+if(this.value >=3){$passenger_2_1_form.show()}
+else{$passenger_2_1_form.hide()}
+
+
+});
 
 
 
 // ------------------END OF HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
-
-
-
-
-
-
-
 
 
 

@@ -20,7 +20,7 @@
 <body>
 
   <!------------------------------------------------- navbar ---------------------------------------->
-  <nav class="navbar navbar-expand-lg fixed-top nav-menu ">
+  <nav class="navbar navbar-expand-lg fixed-top nav-menu">
     <a href="index.html" class="navbar-brand text-light text-uppercase">Fly with WSB</a>
     <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
       <div class="bg-light line1"></div>
@@ -101,10 +101,9 @@
 
   <!-- ----------------------- FLIGHT DETAILS  ------------------------------------- -->
 
-  <div class="container">
+  <div class="container mt-5 pt-5">
     <div class="row">
       <div class="col">
-        wiersz1
 
         <fieldset>
           <legend>FlightDetails</legend>
@@ -144,21 +143,20 @@
 
     <div class="row">
       <div class="col">
-        wiersz5
         <fieldset>
           <legend>Number of passengers</legend>
           <form action="example" method="post">
             <label for="NumberOfPassengers">Adult Passengers:</label>
-            <select class="NumberOfAdults-form" name="NumberOfPassengers" id="NumberOfAdults-form">
-              <option value="1">1 adult</option>
-              <option value="2">2 adults</option>
-              <option value="3">3 adults</option>
-              <option value="4">4 adults</option>
-              <option value="5">5 adults</option>
-              <option value="6">6 adults</option>
-              <option value="7">7 adults</option>
-              <option value="8">8 adults</option>
-              <option value="9">9 adults</option>
+            <select class="NumberOfAdults-form" name="NumberOfPassengers" id="NumberOfAdultsform">
+              <option value=1>1 adult</option>
+              <option value=2>2 adults</option>
+              <option value=3>3 adults</option>
+              <option value=4>4 adults</option>
+              <option value=5>5 adults</option>
+              <option value=6>6 adults</option>
+              <option value=7>7 adults</option>
+              <option value=8>8 adults</option>
+              <option value=9>9 adults</option>
             </select><br>
             <label for="Number of Children">Number of Children:</label>
             <select class="NumberOfChildren-form" name="NumberOfChildren" id="NumberOfChildren-form">
@@ -174,20 +172,19 @@
 
   </div>
 
-
-
   <!---------------------------------- END OF NUMBER OF PASSENGERS FORM------------------------->
+
 
 
   <!----------------------------------- PASSENGER MAIN 1 INFORMATION------------------------------- -->
 
-  <div class="container">
+  <div class="container" id="passengerInformationContainer_Form">
 
     <!-- MAIN PASSANGER -->
-    <div class="row">
+    <div class="row" id="mainPassenger_form">
       <div class="col">
         <fieldset>
-          <legend>Passenger 1 information</legend>
+          <legend>Passenger Main information</legend>
           <form action="example" method="post">
             <label for="firstName">First name:</label>
             <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName"
@@ -236,10 +233,10 @@
 
 
     <!-- PASSANGER 1-1 -->
-    <div class="row">
+    <div class="row" id="passenger_1_1_form">
       <div class="col">
         <fieldset>
-          <legend>Passenger 2 information</legend>
+          <legend>Passenger 1 information</legend>
           <form action="example" method="post">
             <label for="firstName">First name:</label>
             <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName"
@@ -288,10 +285,10 @@
 
 
     <!-- PASSANGER 2-1 -->
-    <div class="row">
+    <div class="row" id="passenger_2_1_form">
       <div class="col">
         <fieldset>
-          <legend>Passenger 1 information</legend>
+          <legend>Passenger 2 information</legend>
           <form action="example" method="post">
             <label for="firstName">First name:</label>
             <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName"
@@ -343,7 +340,7 @@
 
     <!-- -----------------------------------Children Passenger------------------------------------------------------- -->
     <!-- CHILD 1 -->
-    <div class="row">
+    <div class="row" id="child_1_1_form">
       <div class="col">
         <fieldset>
           <legend>Child 1</legend>
@@ -394,7 +391,7 @@
 
 
     <!-- CHILD 2 -->
-    <div class="row">
+    <div class="row" id="child_1_2_form">
       <div class="col">
         <fieldset>
           <legend>Child 2</legend>
@@ -448,19 +445,6 @@
 
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
