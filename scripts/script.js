@@ -20,8 +20,8 @@ function user (firstName, lastName, login, email, password, tarrif, AdditionalBa
   this.seats = seats;
 }
 
-$user1 = new user ('Jan','Kowalski','jankowalski',"jan.kowalski@test.pl",'password');
-$user2 = new user ('Jan','Nowak','jannowak','jan.nowak@testmail.com','password2');
+$user1 = new user ('Ryszard','Copa','ryszardcopa',"jan.kowalski@test.pl",'password');
+$user2 = new user ('Miroslaw','Bidzinski','miroslawbidzinski','jan.nowak@testmail.com','haslo');
 $user3 = new user ('Krzysztof','Kajak','krzysztofkajak','krzysztof.kajak@testmail.com','password3');
 
 
@@ -78,6 +78,7 @@ $passenger_5_1_form = $('#passenger_5_1_form');
 $passenger_6_1_form = $('#passenger_6_1_form');
 $child_1_1_form = $('#child_1_1_form');
 $child_1_2_form = $('#child_1_2_form');
+$child_1_3_form = $('#child_1_3_form');
 
 
 $passenger_2_1_form.hide();
@@ -87,7 +88,7 @@ $passenger_5_1_form.hide();
 $passenger_6_1_form.hide();
 $child_1_1_form.hide();
 $child_1_2_form.hide();
-
+$child_1_3_form.hide();
 
 
 
@@ -118,6 +119,8 @@ if(this.value>=1) {$child_1_1_form.show()}
 else{$child_1_1_form.hide()};
 if(this.value>=2){$child_1_2_form.show()}
 else{$child_1_2_form.hide()};
+if(this.value>=3){$child_1_3_form.show()}
+else{$child_1_3_form.hide()};
 })
 
 

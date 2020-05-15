@@ -157,7 +157,7 @@
           <form action="example" method="post">
             <label for="NumberOfPassengers">Adult Passengers:</label>
             <select class="NumberOfAdults-form" name="NumberOfPassengers" id="NumberOfAdultsform">
-              <option value=1 selected="selected">1 adult</option>
+              <option value=1 selected>1 adult</option>
               <option value=2>2 adults</option>
               <option value=3>3 adults</option>
               <option value=4>4 adults</option>
@@ -167,7 +167,7 @@
             </select><br>
             <label for="Number of Children">Number of Children:</label>
             <select class="NumberOfChildren-form" name="NumberOfChildren" id="NumberOfChildren_form">
-              <option value="0">0</option>
+              <option value="0" selected>0</option>
               <option value="1">1 child</option>
               <option value="2">2 children</option>
               <option value="3">3 children</option>
@@ -600,6 +600,56 @@
       </div>
     </div>
     <!-- END OF CHILD 2 -->
+
+    <!-- CHILD 3 -->
+    <div class="row" id="child_1_3_form">
+          <div class="col">
+            <fieldset>
+              <legend>Child 2</legend>
+              <!-- number of adults form -->
+              <form action="example" method="post">
+                <label for="firstName">First name:</label>
+                <input type="text" name="firstName" placeholder="First name" class="personalData-form_firstName"
+                  id="personalData-form_firstName"><br>
+                <label for="firstName">Last name:</label>
+                <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName"
+                  id="personalData-form_lastName"><br>
+                <label for="BirthDay">Last name:</label>
+                <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay"
+                  id="personalData-form_BirthDay"><br>
+    
+                <label for="Tarrif">Additional baggage:</label>
+                <select class="tarrif-form" name="tarrif" id="tarrif-form">
+                  <option value="0">Economic</option>
+                  <option value="1">Business</option>
+                  <option value="2">First class</option>
+                </select><br>
+    
+                <label for="AdditionalBaggage">Additional baggage:</label>
+                <select class="AdditionalBaggage-form" name="AdditionalBaggage" id="AdditionalBaggage-form">
+                  <option value="0">No</option>
+                  <option value="1">20 kg</option>
+                  <option value="2">32 kg</option>
+                </select><br>
+    
+                <label for="Seats">Seats</label>
+                <select class="Seats-form" name="Seats" id="Seats-form">
+                  <option value="A-7-1">A-7-1</option>
+                  <option value="A-8-1">A-8-1</option>
+                  <option value="A-9-1">A-9-1</option>
+                  <option value="B-7-1">B-7-1</option>
+                  <option value="B-8-1">B-8-1</option>
+                  <option value="B-9-1">B-9-1</option>
+                  <option value="D-7-1">C-7-1</option>
+                  <option value="D-8-1">C-8-1</option>
+                  <option value="D-9-1">C-9-1</option>
+                </select><br>
+    
+    
+            </fieldset>
+          </div>
+    </div>
+    <!-- END OF CHILD 3 -->
     <!-- -----------------------------------END Children Passenger------------------------------------------------------- -->
     <!----------------------------------- END MAIN PASSENGER 1 INFORMATION------------------------------- -->
 
