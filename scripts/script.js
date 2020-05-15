@@ -55,11 +55,17 @@ $NumberOfAdultsform = $('#NumberOfAdultsform');
 $passengerInformationContainer_Form = $('#passengerInformationContainer_Form')
 $passenger_1_1_form = $('#passenger_1_1_form');
 $passenger_2_1_form = $('#passenger_2_1_form');
+$passenger_3_1_form = $('#passenger_3_1_form');
+$passenger_4_1_form = $('#passenger_4_1_form');
+$passenger_5_1_form = $('#passenger_5_1_form');
 $child_1_1_form = $('#child_1_1_form');
 $child_1_2_form = $('#child_1_2_form');
 
 $passenger_1_1_form.hide();
 $passenger_2_1_form.hide();
+$passenger_3_1_form.hide();
+$passenger_4_1_form.hide();
+$passenger_5_1_form.hide();
 $child_1_1_form.hide();
 $child_1_2_form.hide();
 
@@ -74,6 +80,11 @@ else{$passenger_1_1_form.hide()};
 if(this.value >=3){$passenger_2_1_form.show()}
 else{$passenger_2_1_form.hide()}
 
+if(this.value >=4){$passenger_2_1_form.show()}
+else{$passenger_3_1_form.hide()}
+
+if(this.value >=5){$passenger_2_1_form.show()}
+else{$passenger_4_1_form.hide()}
 
 });
 
