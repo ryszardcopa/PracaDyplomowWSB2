@@ -64,10 +64,7 @@ body {
   .calendar-box {
       width: 60%;
       background: rgb(255,255,255,0.8);
-<<<<<<< HEAD
-=======
-      border-radius: 25px;
->>>>>>> e0db6daac50fa1f092849cd0f4d86aa518c4dadd
+      border-radius: 5px;
       padding: 25px;
       margin: 25px auto;
       color: var(--main-color);
