@@ -16,12 +16,12 @@ body { --main-color: #000080; --second-color: #D4AA00; --ff-color: #fff; }
 /* navbar */
 
 .svg-inline--fa { font-size: inherit; color: var(--main-color); }
-.nav-logo { max-width: 8rem; height: auto; }
-.nav-menu { background: linear-gradient(rgba(255, 255, 255, .8), rgba(240, 240, 240, .5)); padding: 30px; transition: all .7s; }
+.nav-logo { max-width: 6rem; height: auto; }
+.nav-menu { background: linear-gradient(rgba(255, 255, 255, .8), rgba(240, 240, 240, .5)); padding: 15px 30px; transition: all .7s; }
 .nav-active { color: var(--main-color) !important; }
 .nav-active:hover { color: var(--second-color) !important; }
-.navbar-expand-lg .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; color: var(--ff-color); }
-.menu-item { font-size: 13px; letter-spacing: 1px; color: var(--ff-color); transition: color .5s; }
+.navbar-expand-lg .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; color: var(--main-color); }
+.menu-item { font-size: 13px; letter-spacing: 1px; color: var(--main-color); transition: color .5s; }
 
 
 .btn-secondary {
@@ -34,7 +34,7 @@ body { --main-color: #000080; --second-color: #D4AA00; --ff-color: #fff; }
 
 header {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url(../images/samolot.svg) no-repeat center center /cover;
+    background: var(--ff-color) url(../images/samolot.svg) no-repeat center center /cover;
 }
 
 .banner {
@@ -73,8 +73,11 @@ header {
 
 /* mission */
 .mission {
-  background: #000080;
+  background: var(--main-color); ;
 }
+
+.white-bg { background: var(--ff-color); color: var(--main-color) !important; }
+
 
 .text-danger {
     color: var(--second-color) !important;
@@ -82,7 +85,7 @@ header {
 
 .underline {
   width: 150px;
-  border: 3px solid #eee;
+  border: 3px solid var(--second-color);
   margin: auto;
 }
 
