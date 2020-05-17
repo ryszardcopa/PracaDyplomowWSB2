@@ -5,8 +5,12 @@ body {
   /* global styles */
   
   .btm-md-clr { padding: 25px 0; }
-  
-  
+
+  .text-light { color: var(--ff-color) !important; }
+  .text-dark { color:var(--main-color) !important; }
+  .text-shadow-dark { text-shadow: 2px 2px 15px var(--main-color); }
+  .text-shadow-light { text-shadow: 2px 2px 15px var(--ff-color); }
+
   /* header */
   
   header {
@@ -63,7 +67,7 @@ body {
   /* flight selection form */
   .calendar-box {
       width: 60%;
-      background: rgb(255,255,255,0.8);
+      background: rgb(255,255,255,0.5);
       border-radius: 5px;
       padding: 25px;
       margin: 25px auto;
@@ -71,19 +75,22 @@ body {
   }
 
   .select-bar {
-      text-transform: none;
-      width: 100%;
-      height: 2rem;
-      border: 2px solid var(--main-color);
+     transform: none;
+     width: 100%;
+     height: 2.5rem;
+     border: 2px solid var(--main-color);
+     border-radius: 5px;
   }
   
   .button { 
 	  text-transform: none;
-	  background: var(--main-color);
-	  color: var(--ff-color);
-      width: 100%;
-      height: 2rem;
-	  border: 0;
+    background: var(--main-color);
+    color: var(--ff-color);
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    font-weight: bold;
   }
 
 

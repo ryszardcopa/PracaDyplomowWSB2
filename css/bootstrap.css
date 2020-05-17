@@ -10083,7 +10083,7 @@ a.text-danger:hover, a.text-danger:focus {
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: #f8f9fa;
 }
 
 a.text-light:hover, a.text-light:focus {
@@ -10091,7 +10091,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #343a40;
 }
 
 a.text-dark:hover, a.text-dark:focus {
