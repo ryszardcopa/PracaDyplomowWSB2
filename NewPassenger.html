@@ -114,11 +114,11 @@
 
 
   <!-- ----------------------- FLIGHT DETAILS ----------------------------- -->
-  <section class="flightDetails_section">
-    <div class="container-fluid mt-5 pt-5">
+  <section class="flightDetails_section ">
+    <div class="container-fluid mt-5 pt-5 clearfix">
       <div class="row text-center pt-5">
-        <div class="col m-4">
-
+        <div class="col-3"></div>
+        <div class="col-6 m-4">
           <fieldset class="form-group">
             <legend class="h3 display-5">FlightDetails</legend>
             <div class="underline mb-4"></div>
@@ -127,7 +127,7 @@
               <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
               <input type="date" name="DepartureDate-form" id="DepartureDate-form"
                 class="DepartureDate-form form-control"><br>
-              <label for="FlightFrom">Flight from:</label>
+              <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
               <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom-form">
                 <option value="1">Katowice</option>
                 <option value="2">Warszawa</option>
@@ -157,6 +157,8 @@
             </form>
           </fieldset>
         </div>
+        <div class="col-3"></div>
+
       </div>
     </div>
   </section>
@@ -165,11 +167,11 @@
 
 
   <!------------------------- NUMBER OF PASSENGERS ------------------------------>
-  <section class="passengerInfo">
+  <section class="passengerInfo ">
     <div class="container-fluid text-center">
-
-      <div class="row">
-        <div class="col">
+      <div class="row text-center">
+        <div class="col-3"></div>
+        <div class="col-6 m-4">
           <fieldset class="form-group">
             <legend class="h3 display-5">Number of passengers</legend>
             <div class="underline mb-4"></div>
@@ -194,6 +196,7 @@
             </form>
           </fieldset>
         </div>
+        <div class="col-3"></div>
       </div>
 
     </div>
@@ -207,9 +210,10 @@
   <section class="passanger1Info">
     <div class="container-fluid text-center" id="passengerInformationContainer_Form">
 
-      <!-- PASSANGER 1 - 1 -->
-      <div class="row py-3" id="passenger_1_1_form">
-        <div class="col">
+
+      <div class="row py-4">
+        <!-- PASSANGER 1 - 1 -->
+        <div class="mx-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 mw-25" id="passenger_1_1_form">
           <fieldset class="form-group">
             <legend class="h4 display-5">Passenger 1 information</legend>
             <div class="underline mb-4"></div>
@@ -255,21 +259,18 @@
 
           </fieldset>
         </div>
-      </div>
-      <!-- END MAIN PASSANGER -->
+        <!-- END MAIN PASSANGER -->
 
 
-
-      <!-- PASSANGER 2-1 -->
-      <div class="row" id="passenger_2_1_form">
-        <div class="col">
+        <!-- PASSANGER 2-1 -->
+        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_2_1_form">
           <fieldset class="form-group">
             <legend class="h4 display-5">Passenger 2 information</legend>
             <div class="underline mb-4"></div>
             <form action="example" method="post">
               <label class="input-group-prepend" for="firstName">First name:</label>
               <input type="text" name="firstName" placeholder="First name"
-                class="personalData-form_firstName form-control select-bar" id="personalData-form_firstName"><br>
+                class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
 
               <label class="input-group-prepend" for="firstName">Last name:</label>
               <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
@@ -308,15 +309,12 @@
 
           </fieldset>
         </div>
-      </div>
-      <!-- END PASSANGER 2-1 -->
+        <!-- END PASSANGER 2-1 -->
 
 
-
-      <!-- PASSANGER 3-1 -->
-      <div class="row" id="passenger_3_1_form">
-        <div class="col">
-          <fieldset class="form-group">
+        <!-- PASSANGER 3-1 -->
+        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_3_1_form">
+          <fieldset class=" form-group">
             <legend class="h4 display-5">Passenger 3 information</legend>
             <div class="underline mb-4"></div>
             <form action="example" method="post">
@@ -361,14 +359,11 @@
 
           </fieldset>
         </div>
-      </div>
-      <!-- END PASSANGER 3-1 -->
+        <!-- END PASSANGER 3-1 -->
 
 
-
-      <!-- PASSANGER 4-1 -->
-      <div class="row" id="passenger_4_1_form">
-        <div class="col">
+        <!-- PASSANGER 4-1 -->
+        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_4_1_form">
           <fieldset class="form-group">
             <legend class="h4 display-5">Passenger 4 information</legend>
             <div class="underline mb-4"></div>
@@ -414,15 +409,11 @@
 
           </fieldset>
         </div>
-      </div>
-      <!-- END PASSANGER 4-1 -->
+        <!-- END PASSANGER 4-1 -->
 
 
-
-
-      <!-- PASSANGER 5-1 -->
-      <div class="row" id="passenger_5_1_form">
-        <div class="col">
+        <!-- PASSANGER 5-1 -->
+        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_5_1_form">
           <fieldset form-group>
             <legend class="h4 display-5">Passenger 5 information</legend>
             <div class="underline mb-4"></div>
@@ -468,15 +459,12 @@
 
           </fieldset>
         </div>
-      </div>
-      <!-- END PASSANGER 5-1 -->
+        <!-- END PASSANGER 5-1 -->
 
 
-
-      <!-- PASSANGER 6-1 -->
-      <div class="row" id="passenger_6_1_form">
-        <div class="col">
-          <fieldset class="form-group">
+        <!-- PASSANGER 6-1 -->
+        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-2 mw-25 " id="passenger_6_1_form">
+          <fieldset class=" form-group">
             <legend class="h4 display-5">Passenger 6 information</legend>
             <div class="underline mb-4"></div>
             <form action="example" method="post">
@@ -521,165 +509,180 @@
 
           </fieldset>
         </div>
+        <!-- END PASSANGER 6-1 -->
+
+
       </div>
-      <!-- END PASSANGER 6-1 -->
+
+
+
+
+
+
+
+      <div class="row" ">
+
+      </div>
+
 
 
       <!-- ------------Children Passenger---------------------------- -->
+      
+      <div class=" row" ">
       <!-- CHILD 1 -->
-      <div class="row" id="child_1_1_form">
-        <div class="col">
-          <fieldset class="form-group">
-            <legend class="h4 display-5">Child 1</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
+        <div class=" col" id="child_1_1_form">
+        <fieldset class="form-group">
+          <legend class="h4 display-5">Child 1</legend>
+          <div class="underline mb-4"></div>
+          <form action="example" method="post">
 
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
+            <label class="input-group-prepend" for="firstName">First name:</label>
+            <input type="text" name="firstName" placeholder="First name"
+              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
 
-              <label class="input-group-prepend" for="lastName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-                id="personalData-form_lastName"><br>
-              <label class="input-group-prepend" for="BirthDay">Last name:</label>
-              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-                id="personalData-form_BirthDay"><br>
+            <label class="input-group-prepend" for="lastName">Last name:</label>
+            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
+              id="personalData-form_lastName"><br>
+            <label class="input-group-prepend" for="BirthDay">Last name:</label>
+            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
+              id="personalData-form_BirthDay"><br>
 
 
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-                <option value="0">Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
+            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
+              <option value="0">Economic</option>
+              <option value="1">Business</option>
+              <option value="2">First class</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
+            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
+              <option value="0">No</option>
+              <option value="1">20 kg</option>
+              <option value="2">32 kg</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="Seats-form form-control" name="Seats" id="Seats-form">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-          </fieldset>
-        </div>
+            <label class="input-group-prepend" for="Seats">Seats</label>
+            <select class="Seats-form form-control" name="Seats" id="Seats-form">
+              <option value="A-7-1">A-7-1</option>
+              <option value="A-8-1">A-8-1</option>
+              <option value="A-9-1">A-9-1</option>
+              <option value="B-7-1">B-7-1</option>
+              <option value="B-8-1">B-8-1</option>
+              <option value="B-9-1">B-9-1</option>
+              <option value="D-7-1">C-7-1</option>
+              <option value="D-8-1">C-8-1</option>
+              <option value="D-9-1">C-9-1</option>
+            </select><br>
+        </fieldset>
       </div>
       <!-- END OF CHILD 1 -->
 
-
-
       <!-- CHILD 2 -->
-      <div class="row" id="child_1_2_form">
-        <div class="col">
-          <fieldset class="form-group">
-            <legend class="h4 display-5">Child 2</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-                id="personalData-form_lastName"><br>
-              <label class="input-group-prepend" for="BirthDay">Last name:</label>
-              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-                id="personalData-form_BirthDay"><br>
+      <div class="col" id="child_1_2_form">
+        <fieldset class="form-group">
+          <legend class="h4 display-5">Child 2</legend>
+          <div class="underline mb-4"></div>
+          <form action="example" method="post">
+            <label class="input-group-prepend" for="firstName">First name:</label>
+            <input type="text" name="firstName" placeholder="First name"
+              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
+            <label class="input-group-prepend" for="firstName">Last name:</label>
+            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
+              id="personalData-form_lastName"><br>
+            <label class="input-group-prepend" for="BirthDay">Last name:</label>
+            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
+              id="personalData-form_BirthDay"><br>
 
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-                <option value="0">Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
+            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
+              <option value="0">Economic</option>
+              <option value="1">Business</option>
+              <option value="2">First class</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
+            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
+              <option value="0">No</option>
+              <option value="1">20 kg</option>
+              <option value="2">32 kg</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="Seats-form form-control" name="Seats" id="Seats-form">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
+            <label class="input-group-prepend" for="Seats">Seats</label>
+            <select class="Seats-form form-control" name="Seats" id="Seats-form">
+              <option value="A-7-1">A-7-1</option>
+              <option value="A-8-1">A-8-1</option>
+              <option value="A-9-1">A-9-1</option>
+              <option value="B-7-1">B-7-1</option>
+              <option value="B-8-1">B-8-1</option>
+              <option value="B-9-1">B-9-1</option>
+              <option value="D-7-1">C-7-1</option>
+              <option value="D-8-1">C-8-1</option>
+              <option value="D-9-1">C-9-1</option>
+            </select><br>
 
 
-          </fieldset>
-        </div>
+        </fieldset>
       </div>
       <!-- END OF CHILD 2 -->
 
+
       <!-- CHILD 3 -->
-      <div class="row" id="child_1_3_form">
-        <div class="col">
-          <fieldset form-group>
-            <legend class="h4 display-5">Child 3</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-                id="personalData-form_lastName"><br>
-              <label class="input-group-prepend" for="BirthDay">Last name:</label>
-              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-                id="personalData-form_BirthDay"><br>
+      <div class="col" id="child_1_3_form">
+        <fieldset form-group>
+          <legend class="h4 display-5">Child 3</legend>
+          <div class="underline mb-4"></div>
+          <form action="example" method="post">
+            <label class="input-group-prepend" for="firstName">First name:</label>
+            <input type="text" name="firstName" placeholder="First name"
+              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
+            <label class="input-group-prepend" for="firstName">Last name:</label>
+            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
+              id="personalData-form_lastName"><br>
+            <label class="input-group-prepend" for="BirthDay">Last name:</label>
+            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
+              id="personalData-form_BirthDay"><br>
 
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-                <option value="0">Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
+            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
+              <option value="0">Economic</option>
+              <option value="1">Business</option>
+              <option value="2">First class</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
+            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
+              <option value="0">No</option>
+              <option value="1">20 kg</option>
+              <option value="2">32 kg</option>
+            </select><br>
 
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="Seats-form form-control" name="Seats" id="Seats-form">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
+            <label class="input-group-prepend" for="Seats">Seats</label>
+            <select class="Seats-form form-control" name="Seats" id="Seats-form">
+              <option value="A-7-1">A-7-1</option>
+              <option value="A-8-1">A-8-1</option>
+              <option value="A-9-1">A-9-1</option>
+              <option value="B-7-1">B-7-1</option>
+              <option value="B-8-1">B-8-1</option>
+              <option value="B-9-1">B-9-1</option>
+              <option value="D-7-1">C-7-1</option>
+              <option value="D-8-1">C-8-1</option>
+              <option value="D-9-1">C-9-1</option>
+            </select><br>
 
 
-          </fieldset>
-        </div>
+        </fieldset>
       </div>
       <!-- END OF CHILD 3 -->
       <!-- ------------------END Children Passenger---------------------- -->
       <!----------------- END MAIN PASSENGER 1 INFORMATION----------------- -->
+    </div>
+
+
+
+
+
+
 
 
 
@@ -12909,6 +12912,7 @@
     <!-- ------------SCRIPTS---------------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
