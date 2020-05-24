@@ -28,7 +28,7 @@ $(document).ready(function () {
   }
 
   $.ajax({
-    url: '../logins.json',
+    url: 'https://api.jsonbin.io/b/5eca5aafe91d1e45d110686c/1',
     success: function (data) {
       console.log(data);
     },
