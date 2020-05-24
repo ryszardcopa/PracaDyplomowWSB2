@@ -93,5 +93,11 @@ body {
     font-weight: bold;
   }
 
+  /* table */
+
+  .table-dark {
+    color: #fff;
+    background-color: var(--main-color) !important;
+}
 
   
