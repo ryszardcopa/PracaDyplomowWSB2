@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "firstName": "Ryszard",
+    "lastName": "Copa",
+    "login": "ryszardcopa",
+    "email": "email",
+    "password": "password",
+    "tarrif": "tarrif",
+    "AdditionalBaggage": "AdditionalBaggage",
+    "seats": [],
+    "SubPassengers": []
+  },
+  {
+    "id": 2,
+    "firstName": "Miroslaw",
+    "lastName": "Bidzinski",
+    "login": "miroslawbidzinski",
+    "email": "email",
+    "password": "password",
+    "tarrif": "tarrif",
+    "AdditionalBaggage": "AdditionalBaggage",
+    "seats": [],
+    "SubPassengers": []
+  },
+  {
+    "id": 3,
+    "firstName": "Marcin",
+    "lastName": "Dłubis",
+    "login": "marcindlubis",
+    "email": "email",
+    "password": "password",
+    "tarrif": "tarrif",
+    "AdditionalBaggage": "AdditionalBaggage",
+    "seats": [],
+    "SubPassengers": []
+  }
+]
