@@ -116,8 +116,6 @@
           <div class="card-body">
             <h4 class="card-title">Details of order</h4>
             <p class="card-text"><span>No Of adults: </span><span>2</span></p>
-            <p class="card-text"><span>No Of children: </span><span>2</span></p>
-            <p class="card-text"><span>No Of children: </span><span>2</span></p>
             <p class="card-text"><span>Additional Baggage Total: </span><span>2</span></p>
             <p class="card-text"><span>Additional Baggage Total: </span><span>2</span></p>
             <a class="btn btn-dark" href="#">Pay</a>
@@ -198,23 +196,17 @@
             <legend class="h3 display-5">Number of passengers</legend>
             <div class="underline mb-4"></div>
             <form action="example" method="post">
-              <label class="input-group-prepend" for="NumberOfPassengers">Adult Passengers:</label>
-              <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfAdultsform">
-                <option value=1 selected>1 adult</option>
-                <option value=2>2 adults</option>
-                <option value=3>3 adults</option>
-                <option value=4>4 adults</option>
-                <option value=5>5 adults</option>
-                <option value=6>6 adults</option>
+              <label class="input-group-prepend" for="NumberOfPassengers">Passengers:</label>
+              <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfPassengers">
+                <option value=1 selected>1 passenger</option>
+                <option value=2>2 passengers</option>
+                <option value=3>3 passengers</option>
+                <option value=4>4 passengers</option>
+                <option value=5>5 passengers</option>
+                <option value=6>6 passengers</option>
 
               </select><br>
-              <label class="input-group-prepend" for="Number of Children">Number of Children:</label>
-              <select class="NumberOfChildren-form form-control" name="NumberOfChildren" id="NumberOfChildren_form">
-                <option value="0" selected>0</option>
-                <option value="1">1 child</option>
-                <option value="2">2 children</option>
-                <option value="3">3 children</option>
-              </select><br>
+
             </form>
           </fieldset>
         </div>
@@ -540,163 +532,6 @@
 
 
 
-
-
-      <div class="row" ">
-
-      </div>
-
-
-
-      <!-- ------------Children Passenger---------------------------- -->
-      
-      <div class=" row" ">
-      <!-- CHILD 1 -->
-        <div class=" col" id="child_1_1_form">
-        <fieldset class="form-group">
-          <legend class="h4 display-5">Child 1</legend>
-          <div class="underline mb-4"></div>
-          <form action="example" method="post">
-
-            <label class="input-group-prepend" for="firstName">First name:</label>
-            <input type="text" name="firstName" placeholder="First name"
-              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
-
-            <label class="input-group-prepend" for="lastName">Last name:</label>
-            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-              id="personalData-form_lastName"><br>
-            <label class="input-group-prepend" for="BirthDay">Last name:</label>
-            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-              id="personalData-form_BirthDay"><br>
-
-
-            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-              <option value="0">Economic</option>
-              <option value="1">Business</option>
-              <option value="2">First class</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-              <option value="0">No</option>
-              <option value="1">20 kg</option>
-              <option value="2">32 kg</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="Seats">Seats</label>
-            <select class="Seats-form form-control" name="Seats" id="Seats-form">
-              <option value="A-7-1">A-7-1</option>
-              <option value="A-8-1">A-8-1</option>
-              <option value="A-9-1">A-9-1</option>
-              <option value="B-7-1">B-7-1</option>
-              <option value="B-8-1">B-8-1</option>
-              <option value="B-9-1">B-9-1</option>
-              <option value="D-7-1">C-7-1</option>
-              <option value="D-8-1">C-8-1</option>
-              <option value="D-9-1">C-9-1</option>
-            </select><br>
-        </fieldset>
-      </div>
-      <!-- END OF CHILD 1 -->
-
-      <!-- CHILD 2 -->
-      <div class="col" id="child_1_2_form">
-        <fieldset class="form-group">
-          <legend class="h4 display-5">Child 2</legend>
-          <div class="underline mb-4"></div>
-          <form action="example" method="post">
-            <label class="input-group-prepend" for="firstName">First name:</label>
-            <input type="text" name="firstName" placeholder="First name"
-              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
-            <label class="input-group-prepend" for="firstName">Last name:</label>
-            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-              id="personalData-form_lastName"><br>
-            <label class="input-group-prepend" for="BirthDay">Last name:</label>
-            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-              id="personalData-form_BirthDay"><br>
-
-            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-              <option value="0">Economic</option>
-              <option value="1">Business</option>
-              <option value="2">First class</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-              <option value="0">No</option>
-              <option value="1">20 kg</option>
-              <option value="2">32 kg</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="Seats">Seats</label>
-            <select class="Seats-form form-control" name="Seats" id="Seats-form">
-              <option value="A-7-1">A-7-1</option>
-              <option value="A-8-1">A-8-1</option>
-              <option value="A-9-1">A-9-1</option>
-              <option value="B-7-1">B-7-1</option>
-              <option value="B-8-1">B-8-1</option>
-              <option value="B-9-1">B-9-1</option>
-              <option value="D-7-1">C-7-1</option>
-              <option value="D-8-1">C-8-1</option>
-              <option value="D-9-1">C-9-1</option>
-            </select><br>
-
-
-        </fieldset>
-      </div>
-      <!-- END OF CHILD 2 -->
-
-
-      <!-- CHILD 3 -->
-      <div class="col" id="child_1_3_form">
-        <fieldset form-group>
-          <legend class="h4 display-5">Child 3</legend>
-          <div class="underline mb-4"></div>
-          <form action="example" method="post">
-            <label class="input-group-prepend" for="firstName">First name:</label>
-            <input type="text" name="firstName" placeholder="First name"
-              class="personalData-form_firstName form-control" id="personalData-form_firstName"><br>
-            <label class="input-group-prepend" for="firstName">Last name:</label>
-            <input type="text" name="lastName" placeholder="Last name" class="personalData-form_lastName form-control"
-              id="personalData-form_lastName"><br>
-            <label class="input-group-prepend" for="BirthDay">Last name:</label>
-            <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay form-control"
-              id="personalData-form_BirthDay"><br>
-
-            <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-            <select class="tarrif-form form-control" name="tarrif" id="tarrif-form">
-              <option value="0">Economic</option>
-              <option value="1">Business</option>
-              <option value="2">First class</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-            <select class="AdditionalBaggage-form form-control" name="AdditionalBaggage" id="AdditionalBaggage-form">
-              <option value="0">No</option>
-              <option value="1">20 kg</option>
-              <option value="2">32 kg</option>
-            </select><br>
-
-            <label class="input-group-prepend" for="Seats">Seats</label>
-            <select class="Seats-form form-control" name="Seats" id="Seats-form">
-              <option value="A-7-1">A-7-1</option>
-              <option value="A-8-1">A-8-1</option>
-              <option value="A-9-1">A-9-1</option>
-              <option value="B-7-1">B-7-1</option>
-              <option value="B-8-1">B-8-1</option>
-              <option value="B-9-1">B-9-1</option>
-              <option value="D-7-1">C-7-1</option>
-              <option value="D-8-1">C-8-1</option>
-              <option value="D-9-1">C-9-1</option>
-            </select><br>
-
-
-        </fieldset>
-      </div>
-      <!-- END OF CHILD 3 -->
-      <!-- ------------------END Children Passenger---------------------- -->
       <!----------------- END MAIN PASSENGER 1 INFORMATION----------------- -->
     </div>
 
