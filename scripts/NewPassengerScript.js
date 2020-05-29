@@ -22,19 +22,106 @@ $(document).ready(function () {
   $passenger_5_1_form = $('#passenger_5_1_form');
   $passenger_6_1_form = $('#passenger_6_1_form');
 
+  $p_1_1_personalDataForm_firstName = $('#p_1_1_personalDataForm_firstName');
+  $p_2_1_personalDataForm_firstName = $('#p_2_1_personalDataForm_firstName');
+  $p_3_1_personalDataForm_firstName = $('#p_3_1_personalDataForm_firstName');
+  $p_4_1_personalDataForm_firstName = $('#p_4_1_personalDataForm_firstName');
+  $p_5_1_personalDataForm_firstName = $('#p_5_1_personalDataForm_firstName');
+  $p_6_1_personalDataForm_firstName = $('#p_6_1_personalDataForm_firstName');
+
+  $p_1_1_personalDataForm_lastName = $('#p_1_1_personalDataForm_lastName');
+  $p_2_1_personalDataForm_lastName = $('#p_2_1_personalDataForm_lastName');
+  $p_3_1_personalDataForm_lastName = $('#p_3_1_personalDataForm_lastName');
+  $p_4_1_personalDataForm_lastName = $('#p_4_1_personalDataForm_lastName');
+  $p_5_1_personalDataForm_lastName = $('#p_5_1_personalDataForm_lastName');
+  $p_6_1_personalDataForm_lastName = $('#p_6_1_personalDataForm_lastName');
+
+  $p1_1_tarrifForm = $('#p1_1_tarrifForm');
+  $p2_1_tarrifForm = $('#p2_1_tarrifForm');
+  $p3_1_tarrifForm = $('#p3_1_tarrifForm');
+  $p4_1_tarrifForm = $('#p4_1_tarrifForm');
+  $p5_1_tarrifForm = $('#p5_1_tarrifForm');
+  $p6_1_tarrifForm = $('#p6_1_tarrifForm');
+
+  $p1_1_AdditionalBaggageForm = $('#p1_1_AdditionalBaggageForm');
+  $p2_1_AdditionalBaggageForm = $('#p2_1_AdditionalBaggageForm');
+  $p3_1_AdditionalBaggageForm = $('#p3_1_AdditionalBaggageForm');
+  $p4_1_AdditionalBaggageForm = $('#p4_1_AdditionalBaggageForm');
+  $p5_1_AdditionalBaggageForm = $('#p5_1_AdditionalBaggageForm');
+  $p6_1_AdditionalBaggageForm = $('#p6_1_AdditionalBaggageForm');
+
+  $p1_1_SeatsForm = $('#p1_1_SeatsForm');
+  $p1_2_SeatsForm = $('#p2_1_SeatsForm');
+  $p1_3_SeatsForm = $('#p3_1_SeatsForm');
+  $p1_4_SeatsForm = $('#p4_1_SeatsForm');
+  $p1_5_SeatsForm = $('#p5_1_SeatsForm');
+  $p1_6_SeatsForm = $('#p6_1_SeatsForm');
+
+  // -- PRICES -- //
+  $WAR_BER = 300;
+  $WAR_NY = 1200;
+  $BER_NY = 1500;
+
+  // --- FLIGHT FROM TO SCRIPTS --//
+
+  $flight_from_opt_selected = parseInt($('.flight_from_opt').val() - 1);
+  $('.dest_opt')[$flight_from_opt_selected].remove();
+  // $dest_opt_selected = parseInt($('.dest_opt').val() - 1);
+  // $('.flight_from_opt')[$dest_opt_selected].remove();
+
+  $flightFromform.on('change', function () {
+    // alert('dziala');
+    if (
+      ($flightFromform.val() == 1 && $Destinationform.val() == 2) ||
+      ($flightFromform.val() == 2 && $Destinationform.val() == 1)
+    ) {
+      console.log('flightWA<->BER');
+    } else {
+      console.log('other');
+    }
+  });
+
+  $Destinationform.on('change', function () {
+    // -- WAR_BER --//
+
+    if (
+      ($flightFromform.val() == 1 && $Destinationform.val() == 2) ||
+      ($flightFromform.val() == 2 && $Destinationform.val() == 1)
+    ) {
+      console.log('flightWA<->BER');
+    }
+
+    // -- BER_NY --//
+    else if (
+      ($flightFromform.val() == 1 && $Destinationform.val() == 3) ||
+      ($flightFromform.val() == 3 && $Destinationform.val() == 1)
+    ) {
+      console.log('flightWA<->NY');
+    }
+
+    // -- BER_NY --//
+    else if (
+      ($flightFromform.val() == 2 && $Destinationform.val() == 3) ||
+      ($flightFromform.val() == 3 && $Destinationform.val() == 2)
+    ) {
+      console.log('flightBER<->NY');
+    } else {
+      console.log('other');
+    }
+  });
+
   // -- "YOUR ORDER" VARIABLES --//
   $calcNoPassengers = $('#calcNoPassengers');
   $calctarrif = $('#calctarrif');
   $calcAdditBag = $('#calcAdditBag');
   $calcSeat = $('#calcSeat');
+  $calculationTotal = $('#calculationTotal');
 
-  $calctarrif.on('change');
   $calcNoPassengers.text('1');
   $calctarrif.append('test');
   $calcAdditBag.append('test');
   $calcSeat.append('test');
-
-  console.log($NumberOfPassengers.val());
+  $calculationTotal.append(' 2 386 PLN;');
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
@@ -111,6 +198,4 @@ $(document).ready(function () {
   // ------------------END OF HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
 
   //---------------------END OF PASSENGER LIST --------------------------------------------------------
-
-  // --- FLIGHT PRICES AND PLANES --- //
 });
