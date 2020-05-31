@@ -1,9 +1,10 @@
-function myFunction() {
+function logonTimeout() {
   setTimeout(() => {
     alert('You have been log out!! Please login again');
     window.open('./index.html', '_self');
   }, 10800000);
 }
+
 $(document).ready(function () {
   // ----------------LOGON TIMEOUT---------------------------
 
@@ -64,57 +65,50 @@ $(document).ready(function () {
   $WAR_NY = 1200;
   $BER_NY = 1500;
 
+  // -- "YOUR ORDER" VARIABLES --//
+  $calcNoPassengers = $('#calcNoPassengers');
+  $calcFlightCost = $('#calcFlightCost');
+  $calctarrif = $('#calctarrif');
+  $calcAdditBag = $('#calcAdditBag');
+  $calcSeat = $('#calcSeat');
+  $calculationTotal = $('#calculationTotal');
+
   // --- FLIGHT FROM TO SCRIPTS --//
 
-  //PARTLY WORKING!!!!!
-  // $('.dest_opt').removeAttr('disabled');
-  // $dest_opt
-  //   .eq(parseInt($flightFromform.val() - 1))
-  //   .attr('disabled', 'disabled');
-
-  // $flightFromform.on('change', function () {
-  //   $('.dest_opt').removeAttr('disabled');
-  //   $dest_opt
-  //     .eq(parseInt($flightFromform.val() - 1))
-  //     .attr('disabled', 'disabled');
-  //   // -- WAR_BER --//
-  //   if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
-  //     console.log('flightWA<->BER');
-  //     console.log($flightFromform.val() - 1);
-  //   } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
-  //     console.log('flightWA<->BER');
-  //     console.log($flightFromform.val() - 1);
-  //   }
-
-  //   // -- BER_NY --//
-  //   else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
-  //     console.log('flightWA<->NY');
-  //     console.log($flightFromform.val());
-  //   } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
-  //     console.log('flightWA<->NY');
-  //     console.log($flightFromform.val());
-  //   }
-
-  //   // -- BER_NY --//
-  //   else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
-  //     console.log('flightBER<->NY');
-  //     console.log($flightFromform.val());
-  //   } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
-  //     console.log('flightBER<->NY');
-  //     console.log($flightFromform.val());
-  //     $('.dest_opt').removeAttr('disabled');
-  //     $dest_opt
-  //       .eq(parseInt($flightFromform.val() - 1))
-  //       .attr('disabled', 'disabled');
-  //   } else {
-  //     console.log('other');
-  //   }
-  // });
-
+  //-- INITIAL SETUP-- //
   $('.dest_opt').removeAttr('disabled');
   $dest_opt
     .eq(parseInt($flightFromform.val() - 1))
     .attr('disabled', 'disabled');
+
+  // -- WAR_BER --//
+  if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
+    $calcFlightSelected = $WAR_BER;
+    $calcFlightCost.text($calcFlightSelected);
+  } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
+    $calcFlightSelected = $WAR_BER;
+    $calcFlightCost.text($calcFlightSelected);
+  }
+
+  // -- $WAR_NY --//
+  else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
+    $calcFlightSelected = $WAR_NY;
+    $calcFlightCost.text($calcFlightSelected);
+  } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
+    $calcFlightSelected = $WAR_NY;
+    $calcFlightCost.text($calcFlightSelected);
+  }
+
+  // -- BER_NY --//
+  else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
+    $calcFlightSelected = $BER_NY;
+  } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
+    $calcFlightSelected = $BER_NY;
+  } else {
+    alert('wrong destionations');
+  }
+
+  //-- UPDATES -- //
 
   $flightFromform.on('change', function () {
     recalculate();
@@ -129,42 +123,47 @@ $(document).ready(function () {
     $dest_opt
       .eq(parseInt($flightFromform.val() - 1))
       .attr('disabled', 'disabled');
+
     // -- WAR_BER --//
     if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
-      console.log('flightWA<->BER');
+      $calcFlightSelected = $WAR_BER;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
-      console.log('flightWA<->BER');
+      $calcFlightSelected = $WAR_BER;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     }
 
-    // -- BER_NY --//
+    // -- WAR_NY --//
     else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
-      console.log('flightWA<->NY');
+      $calcFlightSelected = $WAR_NY;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
-      console.log('flightWA<->NY');
+      $calcFlightSelected = $WAR_NY;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     }
 
     // -- BER_NY --//
     else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
-      console.log('flightBER<->NY');
+      $calcFlightSelected = $BER_NY;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
-      console.log('flightBER<->NY');
-      $('.dest_opt').removeAttr('disabled');
-      $dest_opt
-        .eq(parseInt($flightFromform.val() - 1))
-        .attr('disabled', 'disabled');
+      $calcFlightSelected = $BER_NY;
+      console.log($calcFlightSelected);
+      $calcFlightCost.text($calcFlightSelected);
     } else {
-      console.log('other');
+      alert('Wrong destination');
     }
   }
 
-  // -- "YOUR ORDER" VARIABLES --//
-  $calcNoPassengers = $('#calcNoPassengers');
-  $calctarrif = $('#calctarrif');
-  $calcAdditBag = $('#calcAdditBag');
-  $calcSeat = $('#calcSeat');
-  $calculationTotal = $('#calculationTotal');
+  // VARIABLES FROM SCRIPTS //
 
   $calcNoPassengers.text('1');
+  $calcFlightCost.text($calcFlightSelected);
   $calctarrif.append('test');
   $calcAdditBag.append('test');
   $calcSeat.append('test');
@@ -242,7 +241,7 @@ $(document).ready(function () {
     }
   });
 
-  // ------------------END OF HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS-----------------------
+  // --END OF HIDING UNHIDING FORMS DEPENDING OF NUMBER OF PASSENGERS--//
 
-  //---------------------END OF PASSENGER LIST --------------------------------------------------------
+  //--END OF PASSENGER LIST--//
 });
