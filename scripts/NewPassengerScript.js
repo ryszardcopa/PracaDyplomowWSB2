@@ -11,7 +11,9 @@ $(document).ready(function () {
   // -- VARIABLES FLIGHT --//
   $DepartureDateform = $('#DepartureDate-form');
   $flightFromform = $('#flightFrom-form');
-  $Destinationform = $('#Destination-form');
+  $flight_from_opt = $('.flight_from_opt');
+  $Destinationform = $('#Destinationform');
+  $dest_opt = $('.dest_opt');
   $NumberOfPassengers = $('#NumberOfPassengers');
 
   // -- VARIABLES PASSENGERS--//
@@ -64,51 +66,96 @@ $(document).ready(function () {
 
   // --- FLIGHT FROM TO SCRIPTS --//
 
-  $flight_from_opt_selected = parseInt($('.flight_from_opt').val() - 1);
-  $('.dest_opt')[$flight_from_opt_selected].remove();
-  // $dest_opt_selected = parseInt($('.dest_opt').val() - 1);
-  // $('.flight_from_opt')[$dest_opt_selected].remove();
+  //PARTLY WORKING!!!!!
+  // $('.dest_opt').removeAttr('disabled');
+  // $dest_opt
+  //   .eq(parseInt($flightFromform.val() - 1))
+  //   .attr('disabled', 'disabled');
+
+  // $flightFromform.on('change', function () {
+  //   $('.dest_opt').removeAttr('disabled');
+  //   $dest_opt
+  //     .eq(parseInt($flightFromform.val() - 1))
+  //     .attr('disabled', 'disabled');
+  //   // -- WAR_BER --//
+  //   if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
+  //     console.log('flightWA<->BER');
+  //     console.log($flightFromform.val() - 1);
+  //   } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
+  //     console.log('flightWA<->BER');
+  //     console.log($flightFromform.val() - 1);
+  //   }
+
+  //   // -- BER_NY --//
+  //   else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
+  //     console.log('flightWA<->NY');
+  //     console.log($flightFromform.val());
+  //   } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
+  //     console.log('flightWA<->NY');
+  //     console.log($flightFromform.val());
+  //   }
+
+  //   // -- BER_NY --//
+  //   else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
+  //     console.log('flightBER<->NY');
+  //     console.log($flightFromform.val());
+  //   } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
+  //     console.log('flightBER<->NY');
+  //     console.log($flightFromform.val());
+  //     $('.dest_opt').removeAttr('disabled');
+  //     $dest_opt
+  //       .eq(parseInt($flightFromform.val() - 1))
+  //       .attr('disabled', 'disabled');
+  //   } else {
+  //     console.log('other');
+  //   }
+  // });
+
+  $('.dest_opt').removeAttr('disabled');
+  $dest_opt
+    .eq(parseInt($flightFromform.val() - 1))
+    .attr('disabled', 'disabled');
 
   $flightFromform.on('change', function () {
-    // alert('dziala');
-    if (
-      ($flightFromform.val() == 1 && $Destinationform.val() == 2) ||
-      ($flightFromform.val() == 2 && $Destinationform.val() == 1)
-    ) {
-      console.log('flightWA<->BER');
-    } else {
-      console.log('other');
-    }
+    recalculate();
   });
 
   $Destinationform.on('change', function () {
-    // -- WAR_BER --//
+    recalculate();
+  });
 
-    if (
-      ($flightFromform.val() == 1 && $Destinationform.val() == 2) ||
-      ($flightFromform.val() == 2 && $Destinationform.val() == 1)
-    ) {
+  function recalculate() {
+    $('.dest_opt').removeAttr('disabled');
+    $dest_opt
+      .eq(parseInt($flightFromform.val() - 1))
+      .attr('disabled', 'disabled');
+    // -- WAR_BER --//
+    if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
+      console.log('flightWA<->BER');
+    } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
       console.log('flightWA<->BER');
     }
 
     // -- BER_NY --//
-    else if (
-      ($flightFromform.val() == 1 && $Destinationform.val() == 3) ||
-      ($flightFromform.val() == 3 && $Destinationform.val() == 1)
-    ) {
+    else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
+      console.log('flightWA<->NY');
+    } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
       console.log('flightWA<->NY');
     }
 
     // -- BER_NY --//
-    else if (
-      ($flightFromform.val() == 2 && $Destinationform.val() == 3) ||
-      ($flightFromform.val() == 3 && $Destinationform.val() == 2)
-    ) {
+    else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
       console.log('flightBER<->NY');
+    } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
+      console.log('flightBER<->NY');
+      $('.dest_opt').removeAttr('disabled');
+      $dest_opt
+        .eq(parseInt($flightFromform.val() - 1))
+        .attr('disabled', 'disabled');
     } else {
       console.log('other');
     }
-  });
+  }
 
   // -- "YOUR ORDER" VARIABLES --//
   $calcNoPassengers = $('#calcNoPassengers');
