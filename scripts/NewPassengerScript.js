@@ -72,6 +72,7 @@ $(document).ready(function () {
   $calcAdditBag = $('#calcAdditBag');
   $calcSeat = $('#calcSeat');
   $calculationTotal = $('#calculationTotal');
+  $calcFlightSelected = $WAR_BER;
 
   // --- FLIGHT FROM TO SCRIPTS --//
 
@@ -112,10 +113,14 @@ $(document).ready(function () {
 
   $flightFromform.on('change', function () {
     recalculate();
+    updatePrice();
+    appendUpdatesToCalc();
   });
 
   $Destinationform.on('change', function () {
     recalculate();
+    updatePrice();
+    appendUpdatesToCalc();
   });
 
   function recalculate() {
@@ -160,14 +165,25 @@ $(document).ready(function () {
     }
   }
 
-  // VARIABLES FROM SCRIPTS //
+  function updatePrice() {
+    $TotalPrice = parseInt($NumberOfPassengers.val()) * $calcFlightSelected;
+    return $TotalPrice;
+  }
+
+  updatePrice();
 
   $calcNoPassengers.text('1');
   $calcFlightCost.text($calcFlightSelected);
   $calctarrif.append('test');
   $calcAdditBag.append('test');
   $calcSeat.append('test');
-  $calculationTotal.append(' 2 386 PLN;');
+  $calculationTotal.text($TotalPrice + ' PLN');
+
+  // VARIABLES FROM SCRIPTS //
+
+  function appendUpdatesToCalc() {
+    $calculationTotal.text($TotalPrice + ' PLN');
+  }
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
@@ -210,6 +226,8 @@ $(document).ready(function () {
   $NumberOfPassengers.on('change', function () {
     $calcNoPassengers.remove(this.value);
     $calcNoPassengers.text(this.value);
+    updatePrice();
+    appendUpdatesToCalc();
     if (this.value >= 2) {
       $passenger_2_1_form.show();
     } else {
