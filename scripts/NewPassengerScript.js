@@ -174,7 +174,7 @@ $(document).ready(function () {
 
   $calcNoPassengers.text('1');
   $calcFlightCost.text($calcFlightSelected);
-  $calctarrif.append('test');
+  // $calctarrif.append('test');
   $calcAdditBag.append('test');
   $calcSeat.append('test');
   $calculationTotal.text($TotalPrice + ' PLN');
@@ -184,6 +184,36 @@ $(document).ready(function () {
   function appendUpdatesToCalc() {
     $calculationTotal.text($TotalPrice + ' PLN');
   }
+
+  // --UPDATE OF TARRIF --//
+  $calctarrif.append(
+    '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Economic class</span></p>'
+  );
+
+  $p1_1_tarrifForm.on('change', function () {
+    console.log($p1_1_tarrifForm.val());
+    p1_1_calcTarrifParagraph.remove();
+    if ($p1_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p1_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Business class</span></p>'
+      );
+    } else if ($p1_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">First class</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  // $p2_1_tarrifForm;
+  // $p3_1_tarrifForm;
+  // $p4_1_tarrifForm;
+  // $p5_1_tarrifForm;
+  // $p6_1_tarrifForm;
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
