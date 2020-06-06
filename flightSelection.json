@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "to": "Berlin",
+        "departure date": "21.04.20",
+        "number of passengers": "2",
+        "avaiable": true
+    },
+    {
+       "id": 2,
+        "to": "New York",
+        "departure date": "25.04.20",
+        "number of passengers": "4",
+        "avaiable": true
+    },
+    {
+        "id": 3,
+         "to": "New York",
+         "departure date": "14.05.20",
+         "number of passengers": "2",
+         "avaiable": false
+     },
+     {
+        "id": 4,
+         "to": "Warszawa",
+         "departure date": "15.05.20",
+         "number of passengers": "2",
+         "avaiable": true
+     },
+     {
+        "id": 5,
+         "to": "Berlin",
+         "departure date": "04.06.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 6,
+         "to": "Berlin",
+         "departure date": "06.06.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 7,
+         "to": "Berlin",
+         "departure date": "24.07.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 8,
+         "to": "Berlin",
+         "departure date": "30.07.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 9,
+         "to": "Berlin",
+         "departure date": "24.08.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 10,
+         "to": "Berlin",
+         "departure date": "12.09.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 11,
+         "to": "Berlin",
+         "departure date": "15.11.20",
+         "number of passengers": "2"
+     },
+     {
+        "id": 12,
+         "to": "Berlin",
+         "departure date": "5.12.20",
+         "number of passengers": "2"
+     }
+
+]

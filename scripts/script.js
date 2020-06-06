@@ -219,3 +219,29 @@ $(document).ready(function () {
 
   // ---------------------Move of picture in MISSION Section--------------------------------
 });
+
+
+
+
+
+// --------------------------------- IMPORT FLIGHT SELECTION AND VIEW IN TABLE RESULT -------------------------------
+
+$a = $("#flightSelectionSummary");
+$b = $("#tableResults");
+
+$.getJSON(url,
+  function (data) {
+      var tr;
+      for (var i = 0; i < data.length; i++) {
+          tr = $('<tr/>');
+          tr.append("<td>" + data[i].id + "</td>");
+          tr.append("<td>" + data[i].to + "</td>");
+          tr.append("<td>" + data[i].date + "</td>");
+          tr.append("<td>" + data[i].passenger + "</td>");
+          tr.append("<td>" + data[i].status + "</td>");
+          $('table').append(tr);
+      }
+  });
+
+
+// --------------------------------- IMPORT FLIGHT SELECTION -------------------------------

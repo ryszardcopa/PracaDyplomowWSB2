@@ -118,96 +118,59 @@
         <p class="lead banner-par text-shadow-dark">
           Sprawdź najnowsze pormocje na loty Krajowe !
         </p>
-		
-		<!-- end flight selection form -->
-		<div class="calendar-box">
+    
+     
+        
    
+    <!-- calendar box -->
+		<div class="calendar-box">
+
+    <!-- flight selection form -->
+    <form name="flightForm" id="flightForm" method="post">
+
     <!-- row -->
     <div class="row">
         <div class="col-md-12">
           <h1 class="text-center">Wyszukaj dostępny lot:</h1>
         </div>
-
-
         <div class="col-md-6">
-            <!-- outlet from-->  
-            <form type="checklist">
-              <label>Wylot z: </label>
-              <select name="outlet from" class="select-bar">
-                <option>Katowice</option>
-                <option>Warszawa</option>
-                <option>Krakow</option>
-                <option>Stockholm</option>
-                <option>Brussels</option>
-                <option>Frankfurt</option>
-                <option>New York</option>
-                <option>Washington</option>
-                <option>Los Angeles</option>
-              </select>
-            </form>
-      </div>
-
-      <div class="col-md-6">
-            <!-- departure to -->
-            <form type="checklist">
+            <!-- departure to-->         
               <label>Wylot do: </label>
-              <select name="departure to" class="select-bar">
-                <option>Katowice</option>
+              <select type="checklist" name="outlet from" class="select-bar" id="departureTo">
                 <option>Warszawa</option>
-                <option>Krakow</option>
-                <option>Stockholm</option>
-                <option>Brussels</option>
-                <option>Frankfurt</option>
                 <option>New York</option>
-                <option>Washington</option>
-                <option>Los Angeles</option>
+                <option>Berlin</option>
               </select>
-            </form>
-            <!-- end outlet from--> 
+            <!-- end departure to -->  
+      </div>
+      <div class="col-md-6">
+            <!-- select departure date -->
+            <label>Data wylotu:</label> 
+			      <input type="date" name="" placeholder="Birth Day" class="select-bar" id="departureDate"><br>
       </div>	
     </div><!-- end row -->
     
-    <!-- row -->
-    <div class="row">
-      <!-- select date outlet from -->
-      <div class="col-md-6">
-		<form>
-			<label>Data wylotu:</label> 
-			<input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar" id="personalData-form_BirthDay"><br>
-		</form>
-      </div>
-      <!-- select date departure to -->
-      <div class="col-md-6">
-		<form>
-			<label>Data przylotu: </label>
-			<input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar" id="personalData-form_BirthDay"><br>
-		</form>
-      </div>
-    </div><!-- end row -->
+    
 	
 	<div class="row">
-		
 		<div class="col-md-6">
-			<form>
 				<label for="quantity">Liczba pasażerów:</label>
-				<input type="number" id="quantity" name="quantity" min="1" max="5" class="select-bar">
-			</form>
+				<input type="number" id="quantity" name="quantity" min="1" max="9" class="select-bar" id="passengerNumber">
 		</div>
-		<div class="col-md-6">
-			<form>
-				<label>Wyślij zapytanie:</label> 
-				<input type="submit" class="button">
-			</form>
-		</div>
+		<div class="col-md-6">	
+        <label>Wyślij zapytanie:</label> 
+        
+        <!-- /* wysłanie zapytania do javascript */ -->
+        <input type="submit" class="button" id="flightSelectionSummary">
+    
+    </div>
 	</div>
-	
-	
-	
-  </div><!-- end flight selection form -->	
+</form><!-- end flight selection form -->
+
+  </div><!-- end calendar box -->	
 	</div><!-- end banner -->
 
-	  
-	  
+	
 	  
     </header>
     <!-- end of header -->
@@ -218,99 +181,69 @@
        <div class="col md-12">
         <div class="col-md-12 col-12">
           <h3 class="text-muted text-center mb-3">Dostępne loty</h3>
-          <table class="table table-dark table-hover text-center">
+
+
+          <!-- start table Results-->
+          <div id="tableResults">
+          <!-- /* tabela powinna się zaciągać z pliku JSON flightSelection.json - można użyć pętli for a poniższy przykład usunąć */ -->
+          <!-- /* poniżej przykładowa tabela */ -->
+          <table class="table table-dark table-hover text-center" id="tableResults">
             <thead>
               <tr class="text-muted">
                 <th>#</th>
-                <th>Z:</th>
                 <th>DO:</th>
                 <th>Data wylotu:</th>
-                <th>Data przylotu:</th>
+                <th>Liczba pasażerów:</th>
                 <th>Status lotu:</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th>1</th>
-                <td>Katowice</td>
                 <td>Warszawa</td>
                 <td>23/06/2020</td>
-                <td>25/06/2020</td>
-                <td><span class="badge badge-success w-75 py-2">Dostępny</span></td>
+                <td>5</td>
+                <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
               </tr>
               <tr>
                 <th>2</th>
-                <td>Warszawa</td>
                 <td>Frankfurt</td>
                 <td>27/06/2020</td>
-                <td>30/06/2020</td>
-                <td><span class="badge badge-success w-75 py-2">Dostępny</span></td>
+                <td>2</td>
+                <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
               </tr>
               <tr>
                 <th>3</th>
-                <td>Brussels</td>
                 <td>Frankfurt</td>
                 <td>01/07/2020</td>
-                <td>06/07/2020</td>
-                <td><span class="badge badge-danger w-75 py-2">Niedostępny</span></td>
+                <td>2</td>
+                <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
               </tr>
               <tr>
                 <th>4</th>
-                <td>Los Angeles</td>
                 <td>Washington</td>
                 <td>10/07/2020</td>
-                <td>13/07/2020</td>
-                <td><span class="badge badge-danger w-75 py-2">Niedostępny</span></td>
+                <td>9</td>
+                <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
               </tr>
               <tr>
                 <th>5</th>
-                <td>New York</td>
                 <td>Stockholm</td>
                 <td>12/07/2020</td>
-                <td>15/07/2020</td>
-                <td><span class="badge badge-success w-75 py-2">Dostępny</span></td>
+                <td>5</td>
+                <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
               </tr>
               <tr>
                 <th>6</th>
-                <td>Frankfurt</td>
                 <td>Stockholm</td>
                 <td>23/07/2020</td>
-                <td>27/07/2020</td>
-                <td><span class="badge badge-danger w-75 py-2">Niedostępny</span></td>
+                <td>3</td>
+                <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
               </tr>
             </tbody>
           </table>
-           <!-- pagination -->
-           <nav>
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a href="#" class="page-link py-2 px-3">
-                  <span>Wstecz</span>
-                </a>
-              </li>
-              <li class="page-item active">
-                <a href="#" class="page-link py-2 px-3">
-                  1
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link py-2 px-3">
-                  2
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link py-2 px-3">
-                  3
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link py-2 px-3">
-                  <span>Dalej</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- end of pagination -->
+        </div><!-- end table Results-->
+
         </div>
        </div>
     </section>
