@@ -116,9 +116,9 @@
             <h4 class="card-title">Details of order</h4>
             <p class="card-text"><span>No Of passengers: </span><span id="calcNoPassengers"></span></p>
             <p class="card-text"><span>Flight Cost: </span><span id="calcFlightCost"></span></p>
-            <p class="card-text"><span id="calctarrif">Tarrif: </span><span>2</span></p>
-            <p class="card-text"><span id="calcAdditBag">Additional Baggage: </span><span>2</span></p>
-            <p class="card-text"><span id="calcSeat">Seat: </span><span>2</span></p>
+            <p class="card-text"><span>Tarrif: </span><span id="calctarrif"></span></p>
+            <p class="card-text"><span>Additional Baggage: </span><span id="calcAdditBag">2</span></p>
+            <p class="card-text"><span>Seat: </span><span id="calcSeat">2</span></p>
             <a class="btn btn-dark" href="#">Pay</a>
           </div>
           <div class="card-footer text-muted">
@@ -246,8 +246,8 @@
                 id="p_1_1_personalDataForm_email"><br>
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p1_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm">
-                <option value="0">Economic</option>
+              <select class="p1_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm" value="1">
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
@@ -298,10 +298,11 @@
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
               <select class="p2_1_tarrifForm form-control" name="tarrif" id="p2_1_tarrifForm">
-                <option value="0">Economic</option>
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
+
 
               <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
               <select class="p2_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
@@ -349,7 +350,7 @@
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
               <select class="p3_1_tarrifForm form-control" name="tarrif" id="p3_1_tarrifForm">
-                <option value="0">Economic</option>
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
@@ -400,7 +401,7 @@
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
               <select class="p4_1_tarrifForm form-control" name="tarrif" id="p4_1_tarrifForm">
-                <option value="0">Economic</option>
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
@@ -451,7 +452,7 @@
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
               <select class="p5_1_tarrifForm form-control" name="tarrif" id="p5_1_tarrifForm">
-                <option value="0">Economic</option>
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
@@ -502,7 +503,7 @@
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
               <select class="p6_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm">
-                <option value="0">Economic</option>
+                <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
               </select><br>
