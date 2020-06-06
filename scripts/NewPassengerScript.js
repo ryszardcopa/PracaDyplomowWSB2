@@ -65,6 +65,9 @@ $(document).ready(function () {
   $WAR_NY = 1200;
   $BER_NY = 1500;
 
+  $TarrifBusiness = 200;
+  $TarrifFirstClass = 400;
+
   // -- "YOUR ORDER" VARIABLES --//
   $calcNoPassengers = $('#calcNoPassengers');
   $calcFlightCost = $('#calcFlightCost');
@@ -185,13 +188,15 @@ $(document).ready(function () {
     $calculationTotal.text($TotalPrice + ' PLN');
   }
 
-  // --UPDATE OF TARRIF --//
+  // --UPDATE OF TARRIF INITIAL SETUP--//
   $calctarrif.append(
     '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Economic class</span></p>'
   );
 
+  // --UPDATE OF TARRIF CHANGES--//
+
+  // --PASSENGER 1_1 --//
   $p1_1_tarrifForm.on('change', function () {
-    console.log($p1_1_tarrifForm.val());
     p1_1_calcTarrifParagraph.remove();
     if ($p1_1_tarrifForm.val() == 0) {
       $calctarrif.append(
@@ -199,11 +204,287 @@ $(document).ready(function () {
       );
     } else if ($p1_1_tarrifForm.val() == 1) {
       $calctarrif.append(
-        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Business class</span></p>'
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
       );
     } else if ($p1_1_tarrifForm.val() == 2) {
       $calctarrif.append(
-        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">First class</span></p>'
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p1_1_tarrifForm.on('change', function () {
+    p1_1_calcTarrifParagraph.remove();
+    if ($p1_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p1_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p1_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+
+  // --PASSENGER 2_1 --//
+  $p2_1_tarrifForm.on('change', function () {
+    p2_1_calcTarrifParagraph.remove();
+    if ($p2_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p2_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p2_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p2_1_tarrifForm.on('change', function () {
+    p2_1_calcTarrifParagraph.remove();
+    if ($p2_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p2_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p2_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p2_1_calcTarrifParagraph">Passenger1: <span id="p2_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  // --PASSENGER 3_1 --//
+  $p3_1_tarrifForm.on('change', function () {
+    p3_1_calcTarrifParagraph.remove();
+    if ($p3_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p3_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p3_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p3_1_tarrifForm.on('change', function () {
+    p3_1_calcTarrifParagraph.remove();
+    if ($p3_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p3_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p3_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p3_1_calcTarrifParagraph">Passenger1: <span id="p3_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  // --PASSENGER 4_1 --//
+  $p4_1_tarrifForm.on('change', function () {
+    p4_1_calcTarrifParagraph.remove();
+    if ($p4_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p4_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p4_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p4_1_tarrifForm.on('change', function () {
+    p4_1_calcTarrifParagraph.remove();
+    if ($p4_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p4_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p4_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p4_1_calcTarrifParagraph">Passenger1: <span id="p4_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  // --PASSENGER 5_1 --//
+  $p5_1_tarrifForm.on('change', function () {
+    p5_1_calcTarrifParagraph.remove();
+    if ($p5_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p5_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p5_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p5_1_tarrifForm.on('change', function () {
+    p5_1_calcTarrifParagraph.remove();
+    if ($p5_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p5_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p5_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p5_1_calcTarrifParagraph">Passenger1: <span id="p5_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  // --PASSENGER 6_1 --//
+  $p6_1_tarrifForm.on('change', function () {
+    p6_1_calcTarrifParagraph.remove();
+    if ($p6_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p6_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p6_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else {
+      alert('Something went wrong');
+    }
+  });
+  $p6_1_tarrifForm.on('change', function () {
+    p6_1_calcTarrifParagraph.remove();
+    if ($p6_1_tarrifForm.val() == 0) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">Economic class</span></p>'
+      );
+    } else if ($p6_1_tarrifForm.val() == 1) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">Business class+' +
+          $TarrifBusiness +
+          ' PLN' +
+          '</span></p>'
+      );
+    } else if ($p6_1_tarrifForm.val() == 2) {
+      $calctarrif.append(
+        '<p id="p6_1_calcTarrifParagraph">Passenger1: <span id="p6_1_actualClass">FirstClass class+' +
+          $TarrifFirstClass +
+          ' PLN' +
+          '</span></p>'
       );
     } else {
       alert('Something went wrong');
