@@ -197,7 +197,7 @@ $(document).ready(function () {
 
   // --PASSENGER 1_1 --//
   $p1_1_tarrifForm.on('change', function () {
-    p1_1_calcTarrifParagraph.remove();
+    $('#p1_1_calcTarrifParagraph').remove();
     if ($p1_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p1_1_calcTarrifParagraph">Passenger1: <span id="p1_1_actualClass">Economic class</span></p>'
@@ -223,7 +223,7 @@ $(document).ready(function () {
 
   // --PASSENGER 2_1 --//
   $p2_1_tarrifForm.on('change', function () {
-    p2_1_calcTarrifParagraph.remove();
+    $('#p2_1_calcTarrifParagraph').remove();
     if ($p2_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p2_1_calcTarrifParagraph">Passenger2: <span id="p2_1_actualClass">Economic class</span></p>'
@@ -249,7 +249,7 @@ $(document).ready(function () {
 
   // --PASSENGER 3_1 --//
   $p3_1_tarrifForm.on('change', function () {
-    p3_1_calcTarrifParagraph.remove();
+    $('#p3_1_calcTarrifParagraph').remove();
     if ($p3_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p3_1_calcTarrifParagraph">Passenger3: <span id="p3_1_actualClass">Economic class</span></p>'
@@ -274,7 +274,7 @@ $(document).ready(function () {
   });
   // --PASSENGER 4_1 --//
   $p4_1_tarrifForm.on('change', function () {
-    p4_1_calcTarrifParagraph.remove();
+    $('#p4_1_calcTarrifParagraph').remove();
     if ($p4_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p4_1_calcTarrifParagraph">Passenger4: <span id="p4_1_actualClass">Economic class</span></p>'
@@ -300,7 +300,7 @@ $(document).ready(function () {
 
   // --PASSENGER 5_1 --//
   $p5_1_tarrifForm.on('change', function () {
-    p5_1_calcTarrifParagraph.remove();
+    $('#p5_1_calcTarrifParagraph').remove();
     if ($p5_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p5_1_calcTarrifParagraph">Passenger5: <span id="p5_1_actualClass">Economic class</span></p>'
@@ -326,7 +326,7 @@ $(document).ready(function () {
 
   // --PASSENGER 6_1 --//
   $p6_1_tarrifForm.on('change', function () {
-    p6_1_calcTarrifParagraph.remove();
+    $('#p6_1_calcTarrifParagraph').remove();
     if ($p6_1_tarrifForm.val() == 0) {
       $calctarrif.append(
         '<p id="p6_1_calcTarrifParagraph">Passenger6: <span id="p6_1_actualClass">Economic class</span></p>'
@@ -401,7 +401,7 @@ $(document).ready(function () {
     } else {
       $passenger_2_1_form.hide();
       if ($('#p2_1_calcTarrifParagraph').length) {
-        p2_1_calcTarrifParagraph.remove();
+        $('#p2_1_calcTarrifParagraph').remove();
       }
     }
 
@@ -413,7 +413,7 @@ $(document).ready(function () {
     } else {
       $passenger_3_1_form.hide();
       if ($('#p3_1_calcTarrifParagraph').length) {
-        p3_1_calcTarrifParagraph.remove();
+        $('#p3_1_calcTarrifParagraph').remove();
       }
     }
 
@@ -425,7 +425,7 @@ $(document).ready(function () {
     } else {
       $passenger_4_1_form.hide();
       if ($('#p4_1_calcTarrifParagraph').length) {
-        p4_1_calcTarrifParagraph.remove();
+        $('#p4_1_calcTarrifParagraph').remove();
       }
     }
 
@@ -437,7 +437,7 @@ $(document).ready(function () {
     } else {
       $passenger_5_1_form.hide();
       if ($('#p5_1_calcTarrifParagraph').length) {
-        p5_1_calcTarrifParagraph.remove();
+        $('#p5_1_calcTarrifParagraph').remove();
       }
     }
 
@@ -449,7 +449,7 @@ $(document).ready(function () {
     } else {
       $passenger_6_1_form.hide();
       if ($('#p6_1_calcTarrifParagraph').length) {
-        p6_1_calcTarrifParagraph.remove();
+        $('#p6_1_calcTarrifParagraph').remove();
       }
     }
   });
