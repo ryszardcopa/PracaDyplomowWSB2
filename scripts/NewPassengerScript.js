@@ -70,6 +70,9 @@ $(document).ready(function () {
   $TarrifBusiness = 200;
   $TarrifFirstClass = 400;
 
+  $AddBag20 = 50;
+  $AddBag30 = 80;
+
   // -- "YOUR ORDER" VARIABLES --//
   $calcNoPassengers = $('#calcNoPassengers');
   $calcFlightCost = $('#calcFlightCost');
@@ -127,7 +130,6 @@ $(document).ready(function () {
   });
 
   $NumberOfPassengers.on('change', function () {
-    console.log('change in number of passengers');
     TarrifUpdate();
     updatePrice();
   });
@@ -208,33 +210,33 @@ $(document).ready(function () {
     // -- WAR_BER --//
     if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
       $calcFlightSelected = $WAR_BER;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
       $calcFlightSelected = $WAR_BER;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     }
 
     // -- WAR_NY --//
     else if ($flightFromform.val() == '1' && $Destinationform.val() == '3') {
       $calcFlightSelected = $WAR_NY;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == '3' && $Destinationform.val() == '1') {
       $calcFlightSelected = $WAR_NY;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     }
 
     // -- BER_NY --//
     else if ($flightFromform.val() == '2' && $Destinationform.val() == '3') {
       $calcFlightSelected = $BER_NY;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     } else if ($flightFromform.val() == '3' && $Destinationform.val() == '2') {
       $calcFlightSelected = $BER_NY;
-      console.log($calcFlightSelected);
+
       $calcFlightCost.text($calcFlightSelected);
     } else {
       alert('Wrong destination');
@@ -423,6 +425,27 @@ $(document).ready(function () {
       updatePrice();
     }
   });
+
+  // --ADDITIONAL BAGGAGE --//
+  // --PASSENGER 1_1 --//
+
+  $('#p1_1_AdditionalBaggageForm').on('change', function () {
+    // alert('tarrifchangeWorking');
+    if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
+      $('#p1_1_calc_AddBagg').append(
+        '<p id="p1_2_addBagg_paragraph">' + $AddBag20 + ' PLN' + '</p>'
+      );
+    } else {
+      $('#p1_1_calc_AddBagg').append(
+        '<p id="p1_2_addBagg_paragraph">' + $AddBag30 + ' PLN' + '</p>'
+      );
+    }
+  });
+  // --PASSENGER 2_1 --//
+  // --PASSENGER 3_1 --//
+  // --PASSENGER 4_1 --//
+  // --PASSENGER 5_1 --//
+  // --PASSENGER 6_1 --//
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
