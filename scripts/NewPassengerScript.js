@@ -71,7 +71,7 @@ $(document).ready(function () {
   $TarrifFirstClass = 400;
 
   $AddBag20 = 50;
-  $AddBag30 = 80;
+  $AddBag32 = 80;
 
   // -- "YOUR ORDER" VARIABLES --//
   $calcNoPassengers = $('#calcNoPassengers');
@@ -431,21 +431,142 @@ $(document).ready(function () {
 
   $('#p1_1_AdditionalBaggageForm').on('change', function () {
     // alert('tarrifchangeWorking');
+
+    $('.p1_1_addBagg_paragraph').remove();
     if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
       $('#p1_1_calc_AddBagg').append(
-        '<p id="p1_2_addBagg_paragraph">' + $AddBag20 + ' PLN' + '</p>'
+        '<p class="p1_1_addBagg_paragraph">Passenger1->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p1_1_AdditionalBaggageForm').val() == 2) {
+      $('#p1_1_calc_AddBagg').append(
+        '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+: ' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
       );
     } else {
-      $('#p1_1_calc_AddBagg').append(
-        '<p id="p1_2_addBagg_paragraph">' + $AddBag30 + ' PLN' + '</p>'
-      );
+      $('.p1_1_addBagg_paragraph').remove();
     }
   });
+
   // --PASSENGER 2_1 --//
+  $('#p2_1_AdditionalBaggageForm').on('change', function () {
+    alert('tarrifchangeWorking');
+
+    $('.p2_1_addBagg_paragraph').remove();
+    if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
+      $('#p2_1_calc_AddBagg').append(
+        '<p class="p2_1_addBagg_paragraph">Passenger2->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p2_1_AdditionalBaggageForm').val() == 2) {
+      $('#p2_1_calc_AddBagg').append(
+        '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
+      );
+    } else {
+      $('.p2_1_addBagg_paragraph').remove();
+    }
+  });
   // --PASSENGER 3_1 --//
+  $('#p3_1_AdditionalBaggageForm').on('change', function () {
+    // alert('tarrifchangeWorking');
+
+    $('.p3_1_addBagg_paragraph').remove();
+    if ($('#p3_1_AdditionalBaggageForm').val() == 1) {
+      $('#p3_1_calc_AddBagg').append(
+        '<p class="p3_1_addBagg_paragraph">Passenger3->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p3_1_AdditionalBaggageForm').val() == 2) {
+      $('#p3_1_calc_AddBagg').append(
+        '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
+      );
+    } else {
+      $('.p3_1_addBagg_paragraph').remove();
+    }
+  });
   // --PASSENGER 4_1 --//
+  $('#p4_1_AdditionalBaggageForm').on('change', function () {
+    // alert('tarrifchangeWorking');
+
+    $('.p4_1_addBagg_paragraph').remove();
+    if ($('#p4_1_AdditionalBaggageForm').val() == 1) {
+      $('#p4_1_calc_AddBagg').append(
+        '<p class="p4_1_addBagg_paragraph">Passenger4->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p4_1_AdditionalBaggageForm').val() == 2) {
+      $('#p4_1_calc_AddBagg').append(
+        '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
+      );
+    } else {
+      $('.p4_1_addBagg_paragraph').remove();
+    }
+  });
   // --PASSENGER 5_1 --//
+  $('#p5_1_AdditionalBaggageForm').on('change', function () {
+    // alert('tarrifchangeWorking');
+
+    $('.p5_1_addBagg_paragraph').remove();
+    if ($('#p5_1_AdditionalBaggageForm').val() == 1) {
+      $('#p5_1_calc_AddBagg').append(
+        '<p class="p5_1_addBagg_paragraph">Passenger5->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p5_1_AdditionalBaggageForm').val() == 2) {
+      $('#p5_1_calc_AddBagg').append(
+        '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
+      );
+    } else {
+      $('.p5_1_addBagg_paragraph').remove();
+    }
+  });
   // --PASSENGER 6_1 --//
+  $('#p6_1_AdditionalBaggageForm').on('change', function () {
+    // alert('tarrifchangeWorking');
+
+    $('.p6_1_addBagg_paragraph').remove();
+    if ($('#p6_1_AdditionalBaggageForm').val() == 1) {
+      $('#p6_1_calc_AddBagg').append(
+        '<p class="p6_1_addBagg_paragraph">Passenger6->20kg+' +
+          $AddBag20 +
+          ' PLN' +
+          '</p>'
+      );
+    } else if ($('#p6_1_AdditionalBaggageForm').val() == 2) {
+      $('#p6_1_calc_AddBagg').append(
+        '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+' +
+          $AddBag32 +
+          ' PLN' +
+          '</p>'
+      );
+    } else {
+      $('.p6_1_addBagg_paragraph').remove();
+    }
+  });
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
