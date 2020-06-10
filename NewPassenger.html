@@ -116,7 +116,14 @@
             <h4 class="card-title">Details of order</h4>
             <p class="card-text"><span>No Of passengers: </span><span id="calcNoPassengers"></span></p>
             <p class="card-text"><span>Flight Cost: </span><span id="calcFlightCost"></span></p>
-            <p class="card-text"><span>Tarrif: </span><span id="calctarrif"></span></p>
+            <div class="card-text"><span>Tarrif: </span><span id="calctarrif"></span>
+              <dev id="p1_1_calcTarrif"></dev>
+              <dev id="p2_1_calcTarrif"></dev>
+              <dev id="p3_1_calcTarrif"></dev>
+              <dev id="p4_1_calcTarrif"></dev>
+              <dev id="p5_1_calcTarrif"></dev>
+              <dev id="p6_1_calcTarrif"></dev>
+            </div>
             <p class="card-text"><span>Additional Baggage: </span><span id="calcAdditBag">2</span></p>
             <p class="card-text"><span>Seat: </span><span id="calcSeat">2</span></p>
             <a class="btn btn-dark" href="#">Pay</a>
@@ -154,7 +161,7 @@
               <input type="date" name="DepartureDate-form" id="DepartureDate-form"
                 class="DepartureDate-form form-control"><br>
               <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
-              <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom-form">
+              <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
                 <option class="flight_from_opt" value="1">Warszawa</option>
                 <option class="flight_from_opt" value="2">Berlin</option>
                 <option class="flight_from_opt" value="3">Nowy Jork</option>
@@ -502,7 +509,7 @@
                 id="p_6_1_personalDataForm_email"><br>
 
               <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p6_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm">
+              <select class="p6_1_tarrifForm form-control" name="tarrif" id="p6_1_tarrifForm">
                 <option value="0" selected>Economic</option>
                 <option value="1">Business</option>
                 <option value="2">First class</option>
