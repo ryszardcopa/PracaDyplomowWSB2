@@ -454,7 +454,7 @@ $(document).ready(function () {
 
   // --PASSENGER 2_1 --//
   $('#p2_1_AdditionalBaggageForm').on('change', function () {
-    alert('tarrifchangeWorking');
+    // alert('tarrifchangeWorking');
 
     $('.p2_1_addBagg_paragraph').remove();
     if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
