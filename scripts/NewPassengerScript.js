@@ -262,7 +262,6 @@ $(document).ready(function () {
 
   $calcNoPassengers.text('1');
   $calcFlightCost.text($calcFlightSelected);
-  // $calctarrif.append('test');
   $calcAdditBag.append('test');
   $calcSeat.append('test');
   $calculationTotal.text($TotalPrice + ' PLN');
@@ -435,14 +434,14 @@ $(document).ready(function () {
     $('.p1_1_addBagg_paragraph').remove();
     if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
       $('#p1_1_calc_AddBagg').append(
-        '<p class="p1_1_addBagg_paragraph">Passenger1->20kg+' +
+        '<p class="p1_1_addBagg_paragraph">Passenger1->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p1_1_AdditionalBaggageForm').val() == 2) {
       $('#p1_1_calc_AddBagg').append(
-        '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+: ' +
+        '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+<span class="32kg"></span>: ' +
           $AddBag32 +
           ' PLN' +
           '</p>'
@@ -459,14 +458,14 @@ $(document).ready(function () {
     $('.p2_1_addBagg_paragraph').remove();
     if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
       $('#p2_1_calc_AddBagg').append(
-        '<p class="p2_1_addBagg_paragraph">Passenger2->20kg+' +
+        '<p class="p2_1_addBagg_paragraph">Passenger2->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p2_1_AdditionalBaggageForm').val() == 2) {
       $('#p2_1_calc_AddBagg').append(
-        '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+' +
+        '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+<span class="32kg"></span>' +
           $AddBag32 +
           ' PLN' +
           '</p>'
@@ -482,14 +481,14 @@ $(document).ready(function () {
     $('.p3_1_addBagg_paragraph').remove();
     if ($('#p3_1_AdditionalBaggageForm').val() == 1) {
       $('#p3_1_calc_AddBagg').append(
-        '<p class="p3_1_addBagg_paragraph">Passenger3->20kg+' +
+        '<p class="p3_1_addBagg_paragraph">Passenger3->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p3_1_AdditionalBaggageForm').val() == 2) {
       $('#p3_1_calc_AddBagg').append(
-        '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+' +
+        '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+<span class="32kg"></span>' +
           $AddBag32 +
           ' PLN' +
           '</p>'
@@ -505,14 +504,14 @@ $(document).ready(function () {
     $('.p4_1_addBagg_paragraph').remove();
     if ($('#p4_1_AdditionalBaggageForm').val() == 1) {
       $('#p4_1_calc_AddBagg').append(
-        '<p class="p4_1_addBagg_paragraph">Passenger4->20kg+' +
+        '<p class="p4_1_addBagg_paragraph">Passenger4->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p4_1_AdditionalBaggageForm').val() == 2) {
       $('#p4_1_calc_AddBagg').append(
-        '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+' +
+        '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+<span class="32kg"></span>' +
           $AddBag32 +
           ' PLN' +
           '</p>'
@@ -528,14 +527,14 @@ $(document).ready(function () {
     $('.p5_1_addBagg_paragraph').remove();
     if ($('#p5_1_AdditionalBaggageForm').val() == 1) {
       $('#p5_1_calc_AddBagg').append(
-        '<p class="p5_1_addBagg_paragraph">Passenger5->20kg+' +
+        '<p class="p5_1_addBagg_paragraph">Passenger5->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p5_1_AdditionalBaggageForm').val() == 2) {
       $('#p5_1_calc_AddBagg').append(
-        '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+' +
+        '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+<span class="32kg"></span>' +
           $AddBag32 +
           ' PLN' +
           '</p>'
@@ -551,14 +550,14 @@ $(document).ready(function () {
     $('.p6_1_addBagg_paragraph').remove();
     if ($('#p6_1_AdditionalBaggageForm').val() == 1) {
       $('#p6_1_calc_AddBagg').append(
-        '<p class="p6_1_addBagg_paragraph">Passenger6->20kg+' +
+        '<p class="p6_1_addBagg_paragraph">Passenger6->20kg+<span class="20kg"></span>' +
           $AddBag20 +
           ' PLN' +
           '</p>'
       );
     } else if ($('#p6_1_AdditionalBaggageForm').val() == 2) {
       $('#p6_1_calc_AddBagg').append(
-        '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+' +
+        '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+<span class="32kg"></span>' +
           $AddBag32 +
           ' PLN' +
           '</p>'
