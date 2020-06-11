@@ -248,7 +248,9 @@ $(document).ready(function () {
     $TotalPrice =
       parseInt($NumberOfPassengers.val()) * $calcFlightSelected +
       $('.BusinessClass').length * $TarrifBusiness +
-      $('.FirstClass').length * $TarrifFirstClass;
+      $('.FirstClass').length * $TarrifFirstClass +
+      $('.32kg').length * $AddBag32 +
+      $('.20kg').length * $AddBag20;
     appendUpdatesToCalc();
     return $TotalPrice;
   }
@@ -439,6 +441,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p1_1_AdditionalBaggageForm').val() == 2) {
       $('#p1_1_calc_AddBagg').append(
         '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+<span class="32kg"></span>: ' +
@@ -446,10 +449,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p1_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
 
   // --PASSENGER 2_1 --//
   $('#p2_1_AdditionalBaggageForm').on('change', function () {
@@ -463,6 +468,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p2_1_AdditionalBaggageForm').val() == 2) {
       $('#p2_1_calc_AddBagg').append(
         '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+<span class="32kg"></span>' +
@@ -470,10 +476,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p2_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
   // --PASSENGER 3_1 --//
   $('#p3_1_AdditionalBaggageForm').on('change', function () {
     // alert('tarrifchangeWorking');
@@ -486,6 +494,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p3_1_AdditionalBaggageForm').val() == 2) {
       $('#p3_1_calc_AddBagg').append(
         '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+<span class="32kg"></span>' +
@@ -493,10 +502,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p3_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
   // --PASSENGER 4_1 --//
   $('#p4_1_AdditionalBaggageForm').on('change', function () {
     // alert('tarrifchangeWorking');
@@ -509,6 +520,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p4_1_AdditionalBaggageForm').val() == 2) {
       $('#p4_1_calc_AddBagg').append(
         '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+<span class="32kg"></span>' +
@@ -516,10 +528,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p4_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
   // --PASSENGER 5_1 --//
   $('#p5_1_AdditionalBaggageForm').on('change', function () {
     // alert('tarrifchangeWorking');
@@ -532,6 +546,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p5_1_AdditionalBaggageForm').val() == 2) {
       $('#p5_1_calc_AddBagg').append(
         '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+<span class="32kg"></span>' +
@@ -539,10 +554,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p5_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
   // --PASSENGER 6_1 --//
   $('#p6_1_AdditionalBaggageForm').on('change', function () {
     // alert('tarrifchangeWorking');
@@ -555,6 +572,7 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else if ($('#p6_1_AdditionalBaggageForm').val() == 2) {
       $('#p6_1_calc_AddBagg').append(
         '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+<span class="32kg"></span>' +
@@ -562,10 +580,12 @@ $(document).ready(function () {
           ' PLN' +
           '</p>'
       );
+      updatePrice();
     } else {
       $('.p6_1_addBagg_paragraph').remove();
     }
   });
+  updatePrice();
 
   // --Plane selection --//
   $PlaneType_Form = $('#PlaneType_Form');
