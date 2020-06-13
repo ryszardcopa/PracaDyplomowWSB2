@@ -1,33 +1,12 @@
-/** KOLORY PODSTAWOWE 
-/** kolor główny: #;
-	kolor wyróżniający: #D4AA00;
-
-**/
-
-/* sekcja body */
-
-body {
-  --main-color: #000080;
-  --second-color: #D4AA00;
-  --ff-color: #fff;
-}
-
-.text-info {
-  color: var(--second-color) !important;
-}
-
-.text-primary {
-  color: var(--second-color) !important;
-}
-
-
-
+/* global section */
 /* navbar */
-
+.text-info, .text-primary {
+  color: #D4AA00;
+}
 
 .svg-inline--fa {
   font-size: inherit;
-  color: var(--main-color);
+  color: #000080;
 }
 
 .nav-logo {
@@ -36,44 +15,42 @@ body {
 }
 
 .nav-menu {
-  background: linear-gradient(rgba(255, 255, 255, .8), rgba(240, 240, 240, .5));
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.5));
   padding: 15px 30px;
   transition: all .7s;
 }
 
 .nav-active {
-  color: var(--main-color) !important;
+  color: #000080 !important;
 }
 
 .nav-active:hover {
-  color: var(--second-color) !important;
+  color: #D4AA00 !important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: .5rem;
   padding-left: .5rem;
-  color: var(--main-color);
+  color: #000080;
 }
 
 .menu-item {
   font-size: 13px;
   letter-spacing: 1px;
-  color: var(--main-color);
+  color: #000080;
   transition: color .5s;
 }
 
-
 .btn-secondary {
   color: #fff;
-  background-color: var(--main-color);
+  background-color: #000080;
   border: none;
 }
 
 /* banner */
-
 header {
   height: 100vh;
-  background: var(--ff-color) url(../images/samolot.svg) no-repeat center center /cover;
+  background: #fff url(../images/samolot.svg) no-repeat center center/cover;
 }
 
 .banner {
@@ -101,7 +78,6 @@ header {
     transform: translateX(-100px);
     opacity: 0;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -109,28 +85,24 @@ header {
 }
 
 /* end of banner */
-
 /* end of header */
-
 /* mission */
 .mission {
-  background: var(--main-color);
-  ;
+  background: #000080;
 }
 
 .white-bg {
-  background: var(--ff-color);
-  color: var(--main-color) !important;
+  background: #fff;
+  color: #000080 !important;
 }
 
-
 .text-danger {
-  color: var(--second-color) !important;
+  color: #D4AA00 !important;
 }
 
 .underline {
   width: 150px;
-  border: 3px solid var(--second-color);
+  border: 3px solid #D4AA00;
   margin: auto;
 }
 
@@ -149,7 +121,6 @@ header {
     transform: translateX(-120px);
     opacity: 0;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -161,7 +132,6 @@ header {
     transform: translateX(30px);
     opacity: 0;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -169,7 +139,6 @@ header {
 }
 
 /* end of mission */
-
 /* collection */
 .card-shadow {
   box-shadow: 5px 8px 20px #444;
@@ -193,21 +162,15 @@ header {
 }
 
 /* end of collection */
-
-
-
 /* customers */
 .customers {
-  background: var(--main-color);
-  color: var(--ff-color);
+  background: #000080;
+  color: #fff;
 }
 
 /* end of customers */
-
-
 /* footer section */
-
 .bg-dark {
-  background: var(--main-color) !important;
-  color: var(--ff-color) !important;
+  background: #000080 !important;
+  color: #fff !important;
 }

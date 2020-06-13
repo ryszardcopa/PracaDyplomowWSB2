@@ -1,0 +1,112 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+@mixin lighten-alpha { 
+  background: rgba(255, 255, 255, 0.8);
+}
+@mixin darker-alpha { 
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* global section */
+$main-color: #000080; 
+$second-color: #D4AA00; 
+$ff-color: #fff;
+
+/* global styles */
+
+.btm-md-clr { padding: 25px 0; }
+.text-light { color: $ff-color; }
+.text-dark { color: $main-color; }
+.text-shadow-dark { text-shadow: 2px 2px 15px $main-color; }
+.text-shadow-light { text-shadow: 2px 2px 15px $ff-color; }
+
+/* header */
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url(../images/plane.jpg) no-repeat center center /cover;}
+
+/* navbar */
+.nav-menu {
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+  padding: 30px;
+  transition: all .7s;
+}
+
+.menu-item {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #eee;
+  transition: color .5s;
+}
+
+.menu-item:hover {
+  color: #70aed2;
+}
+
+.nav-active {
+  color: #70aed2;
+}
+
+.line1, .line2, .line3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all .4s;
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.custom-navbar {
+  padding: 5px 30px;
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
+}
+/* end of navbar */
+
+/* flight selection form */
+.calendar-box {
+    width: 60%;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 25px auto;
+    color: $main-color;
+    @include lighten-alpha;
+}
+
+.select-bar {
+   transform: none;
+   width: 100%;
+   height: 2.5rem;
+   border: 2px solid $main-color;
+   border-radius: 5px;
+}
+
+.button { 
+  text-transform: none;
+  background: $main-color;
+  color: $ff-color;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 2px solid $main-color;
+  font-weight: bold;
+}
+
+/* table */
+
+.table-dark {
+  color: $ff-color;;
+  background-color: $main-color;
+}
+
