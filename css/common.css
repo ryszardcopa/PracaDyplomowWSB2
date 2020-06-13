@@ -3,17 +3,18 @@ body {
 }
 
 /* global color */
+/* font-weight */
 /* global styles */
 .btm-md-clr {
   padding: 25px 0;
 }
 
 .text-light {
-  color: #fff;
+  color: #fff !important;
 }
 
 .text-dark {
-  color: #000080;
+  color: #000080 !important;
 }
 
 .text-shadow-dark {
@@ -32,7 +33,7 @@ header {
 
 /* collection */
 .card-shadow {
-  box-shadow: 1px 1px 10px #111111;
+  box-shadow: 1px 1px 10px black;
 }
 
 .heading {
@@ -64,11 +65,8 @@ header {
 
 /* banner */
 .banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  height: auto;
+  padding: 20vh 0 0 0;
 }
 
 .banner-heading {
@@ -162,12 +160,13 @@ header {
 
 /* flight selection form */
 .calendar-box {
-  width: 60%;
-  border-radius: 5px;
-  padding: 25px;
-  margin: 25px auto;
+  width: 40vw;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
   color: #000080;
   background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 1.5rem #ccc;
 }
 
 .select-bar {
@@ -256,4 +255,62 @@ header {
 .customers {
   background: #000080;
   color: #fff;
+}
+
+/* MEDIA QUERIES */
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 1rem 0;
+    height: auto;
+  }
+  .display-3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .banner {
+    height: auto;
+    padding: 12vh 0 0 0;
+  }
+  .calendar-box {
+    width: 80%;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+  .calendar-box h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .display-3, .banner-par {
+    color: #fff;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  header {
+    padding: 1rem 0;
+    height: auto;
+  }
+  .display-3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .banner {
+    height: auto;
+    padding: 12vh 0 0 0;
+  }
+  .calendar-box {
+    width: 80%;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+  .calendar-box h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .display-3, .banner-par {
+    color: #fff;
+  }
 }
