@@ -106,21 +106,17 @@
 
       
     <div class="calendar-box">
-
+    
+    <!-- flight selection form-->
+    <form id="flight-selection-form">
     <!-- row -->
     <div class="row">
-			  <div class="col-md-12"><h1 class="text-center">Wyszukaj dostępny lot:</h1></div>
-    </div>
 
-		<!-- flight selection form -->
-		<form id="departure">
+        <div class="col-md-12"><h1 class="text-center">Wyszukaj dostępny lot:</h1></div>
       
-    <!-- row -->
-    <div class="row">
-
 			  <div class="col-md-6">  
 				  <!-- departure from -->         
-				  <label>Wylot do: </label>
+				  <label class="mt-1 font-weight-bold">Wylot do: </label>
 				  <select name="Departure to" class="select-bar" id="flight-selection-departure-to">
 					<option>Warszawa</option>
 					<option>Berlin</option>
@@ -130,39 +126,37 @@
 
 			  <div class="col-md-6">
 					<!-- departure date -->   
-					<label>Data wylotu:</label>
+					<label class="mt-1 font-weight-bold">Data wylotu:</label>
 					<input type="date" name="Departure date" class="select-bar" id="flight-selection-departure-date">
-			  </div>
-    </div>
-	  <!-- end row -->
+        </div>
+        
+    </div><!-- end row -->
 
     <!-- row -->
     <div class="row">
 
 			  <!-- number of passengers -->
 			  <div class="col-md-6">
-					<label for="">Liczba pasażerów:</label>
+					<label class="mt-1 font-weight-bold">Liczba pasażerów:</label>
 					<input type="number" id="passenger-number" name="flight-selection-passenger" min="1" max="9" class="select-bar"> 
         </div>
         
 			  <!-- send button -->
 			  <div class="col-md-6">
-					<label>Wyślij zapytanie:</label>
+					<label class="mt-1 font-weight-bold">Wyślij zapytanie:</label>
 					<input type="submit" class="button" id="flight-selection-submit">
         </div>
-    </div> 
+        
+    </div><!-- end row -->
+  </form><!-- end flight selection form-->
     
-  </form><!-- end flight selection form -->  
-
   </div><!-- end calendar box -->
-
-       
 
 
   </header>
   <!-- end of header -->
 
-
+  
   <!-- section table -->
   <section class="p-5 white-bg">
     <div class="col md-12">
