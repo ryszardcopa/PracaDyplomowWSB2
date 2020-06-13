@@ -98,103 +98,65 @@
     <!-- banner -->
     <div class="text-light text-center banner">
       <h1 class="display-5 banner-heading">
-        <span class="display-3 text-shadow-dark">Lataj z STORK AIRLINES</span>
+        <span class="display-3 text-shadow-dark">Lataj ze Stork Airlines!</span>
       </h1>
       <p class="lead banner-par text-shadow-dark">
-        Sprawdź najnowsze pormocje na loty Krajowe !
+        Sprawdź loty krajowe i zagraniczne
       </p>
 
-      <!-- end flight selection form -->
-      <div class="calendar-box">
+      
+    <div class="calendar-box">
 
-        <!-- row -->
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="text-center">Wyszukaj dostępny lot:</h1>
-          </div>
+    <!-- row -->
+    <div class="row">
+			  <div class="col-md-12"><h1 class="text-center">Wyszukaj dostępny lot:</h1></div>
+    </div>
 
+		<!-- flight selection form -->
+		<form id="departure">
+      
+    <!-- row -->
+    <div class="row">
 
-          <div class="col-md-6">
+			  <div class="col-md-6">  
+				  <!-- departure from -->         
+				  <label>Wylot do: </label>
+				  <select name="Departure to" class="select-bar" id="flight-selection-departure-to">
+					<option>Warszawa</option>
+					<option>Berlin</option>
+					<option>Nowy York</option>
+				  </select>
+			  </div>
 
-            <!-- outlet from-->
-            <form type="checklist">
-              <label>Wylot z: </label>
-              <select name="outlet from" class="select-bar">
-                <option>Katowice</option>
-                <option>Warszawa</option>
-                <option>Krakow</option>
-                <option>Stockholm</option>
-                <option>Brussels</option>
-                <option>Frankfurt</option>
-                <option>New York</option>
-                <option>Washington</option>
-                <option>Los Angeles</option>
-              </select>
-            </form>
-          </div>
+			  <div class="col-md-6">
+					<!-- departure date -->   
+					<label>Data wylotu:</label>
+					<input type="date" name="Departure date" class="select-bar" id="flight-selection-departure-date">
+			  </div>
+    </div>
+	  <!-- end row -->
 
-          <div class="col-md-6">
-            <!-- departure to -->
-            <form type="checklist">
-              <label>Wylot do: </label>
-              <select name="departure to" class="select-bar">
-                <option>Katowice</option>
-                <option>Warszawa</option>
-                <option>Krakow</option>
-                <option>Stockholm</option>
-                <option>Brussels</option>
-                <option>Frankfurt</option>
-                <option>New York</option>
-                <option>Washington</option>
-                <option>Los Angeles</option>
-              </select>
-            </form>
-            <!-- end outlet from-->
-          </div>
-        </div><!-- end row -->
+    <!-- row -->
+    <div class="row">
 
-        <!-- row -->
-        <div class="row">
-          <!-- select date outlet from -->
-          <div class="col-md-6">
-            <form>
-              <label>Data wylotu:</label>
-              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar"
-                id="personalData-form_BirthDay"><br>
-            </form>
-          </div>
-          <!-- select date departure to -->
-          <div class="col-md-6">
-            <form>
-              <label>Data przylotu: </label>
-              <input type="date" name="BirthDay" placeholder="Birth Day" class="personalData-form_birthDay select-bar"
-                id="personalData-form_BirthDay"><br>
-            </form>
-          </div>
-        </div><!-- end row -->
-
-        <div class="row">
-
-          <div class="col-md-6">
-            <form>
-              <label for="quantity">Liczba pasażerów:</label>
-              <input type="number" id="quantity" name="quantity" min="1" max="5" class="select-bar">
-            </form>
-          </div>
-          <div class="col-md-6">
-            <form>
-              <label>Wyślij zapytanie:</label>
-              <input type="submit" class="button">
-            </form>
-          </div>
+			  <!-- number of passengers -->
+			  <div class="col-md-6">
+					<label for="">Liczba pasażerów:</label>
+					<input type="number" id="passenger-number" name="flight-selection-passenger" min="1" max="9" class="select-bar"> 
         </div>
+        
+			  <!-- send button -->
+			  <div class="col-md-6">
+					<label>Wyślij zapytanie:</label>
+					<input type="submit" class="button" id="flight-selection-submit">
+        </div>
+    </div> 
+    
+  </form><!-- end flight selection form -->  
 
+  </div><!-- end calendar box -->
 
-
-      </div><!-- end flight selection form -->
-    </div><!-- end banner -->
-
-
+       
 
 
   </header>
@@ -210,95 +172,50 @@
           <thead>
             <tr class="text-muted">
               <th>#</th>
-              <th>Z:</th>
               <th>DO:</th>
               <th>Data wylotu:</th>
-              <th>Data przylotu:</th>
               <th>Status lotu:</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th>1</th>
-              <td>Katowice</td>
               <td>Warszawa</td>
-              <td>23/06/2020</td>
               <td>25/06/2020</td>
               <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
             </tr>
             <tr>
               <th>2</th>
               <td>Warszawa</td>
-              <td>Frankfurt</td>
-              <td>27/06/2020</td>
               <td>30/06/2020</td>
               <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
             </tr>
             <tr>
               <th>3</th>
-              <td>Brussels</td>
-              <td>Frankfurt</td>
-              <td>01/07/2020</td>
+              <td>Nowy York</td>
               <td>06/07/2020</td>
               <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
             </tr>
             <tr>
               <th>4</th>
-              <td>Los Angeles</td>
-              <td>Washington</td>
-              <td>10/07/2020</td>
+              <td>Berlin</td>
               <td>13/07/2020</td>
               <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
             </tr>
             <tr>
               <th>5</th>
-              <td>New York</td>
-              <td>Stockholm</td>
-              <td>12/07/2020</td>
+              <td>Berlin</td>
               <td>15/07/2020</td>
               <td><button class="badge badge-success w-75 py-2 border-0">Dostępny</span></td>
             </tr>
             <tr>
               <th>6</th>
-              <td>Frankfurt</td>
-              <td>Stockholm</td>
-              <td>23/07/2020</td>
+              <td>Warszawa</td>
               <td>27/07/2020</td>
               <td><button class="badge badge-danger w-75 py-2 border-0">Niedostępny</span></td>
             </tr>
           </tbody>
         </table>
-        <!-- pagination -->
-        <nav>
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <a href="#" class="page-link py-2 px-3">
-                <span>Wstecz</span>
-              </a>
-            </li>
-            <li class="page-item active">
-              <a href="#" class="page-link py-2 px-3">
-                1
-              </a>
-            </li>
-            <li class="page-item">
-              <a href="#" class="page-link py-2 px-3">
-                2
-              </a>
-            </li>
-            <li class="page-item">
-              <a href="#" class="page-link py-2 px-3">
-                3
-              </a>
-            </li>
-            <li class="page-item">
-              <a href="#" class="page-link py-2 px-3">
-                <span>Dalej</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- end of pagination -->
       </div>
     </div>
   </section>
@@ -606,6 +523,4 @@
     crossorigin="anonymous"></script>
   <script src="./scripts/script.js"></script>
 </body>
-
->>>>>>> a8d02a23e01a3f333d43e5dfb5adebaa16637f5f
 </html>
