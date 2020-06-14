@@ -104,9 +104,8 @@
 
 
   <!-- CALCULATIONS SECTION -->
-
   <section>
-    <div class="row offset-10 pr-4 position-fixed my-5">
+    <div class="row offset-9 position-fixed mt-5 pr-3">
       <div class="col">
         <div class="card text-center">
           <div class="card-header">
@@ -143,96 +142,101 @@
         </div>
       </div>
     </div>
-
-
-
   </section>
+  <!-- END OF CALCULATIONS SECTION -->
 
 
 
+  <div class="row">
+    <div class="col-8">
+      <!-- FLIGHT DETAILS -->
+      <section class="flightDetails_section ">
+        <div class="container-fluid mt-5 pt-5 clearfix">
+          <div class="row text-center pt-5">
+            <div class="col-3"></div>
+            <div class="col-6 m-4">
+              <fieldset class="form-group">
+                <legend class="h3 display-5">FlightDetails</legend>
+                <div class="underline mb-4"></div>
+                <div class=""></div>
+                <form action="" method="get">
+                  <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
+                  <input type="date" name="DepartureDate-form" id="DepartureDate-form"
+                    class="DepartureDate-form form-control"><br>
+                  <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
+                  <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
+                    <option class="flight_from_opt" value="1">Warszawa</option>
+                    <option class="flight_from_opt" value="2">Berlin</option>
+                    <option class="flight_from_opt" value="3">Nowy Jork</option>
+                  </select><br>
+                  <label class="input-group-prepend" for="Destination">Flight to:</label>
+                  <select class="Destination-form form-control" name="Destination" id="Destinationform">
+                    <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
+                    <option value="2" id="Dest2" class="dest_opt">Berlin</option>
+                    <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
+
+                  </select><br>
+                  <label class="input-group-prepend" for="PlaneType_Form">Plane</label>
+                  <select class="PlaneType_Form form-control" name="PlaneType_Form" id="PlaneType_Form">
+                    <option value=1 selected="selected">Airbus319</option>
+                    <option value=2>Boeing737</option>
+                    <option value=3>Boeing757</option>
+                  </select><br>
 
 
 
+                </form>
+              </fieldset>
+            </div>
+            <div class="col-3"></div>
 
-  <!-- FLIGHT DETAILS -->
-  <section class="flightDetails_section ">
-    <div class="container-fluid mt-5 pt-5 clearfix">
-      <div class="row text-center pt-5">
-        <div class="col-3"></div>
-        <div class="col-6 m-4">
-          <fieldset class="form-group">
-            <legend class="h3 display-5">FlightDetails</legend>
-            <div class="underline mb-4"></div>
-            <div class=""></div>
-            <form action="" method="get">
-              <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
-              <input type="date" name="DepartureDate-form" id="DepartureDate-form"
-                class="DepartureDate-form form-control"><br>
-              <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
-              <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
-                <option class="flight_from_opt" value="1">Warszawa</option>
-                <option class="flight_from_opt" value="2">Berlin</option>
-                <option class="flight_from_opt" value="3">Nowy Jork</option>
-              </select><br>
-              <label class="input-group-prepend" for="Destination">Flight to:</label>
-              <select class="Destination-form form-control" name="Destination" id="Destinationform">
-                <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
-                <option value="2" id="Dest2" class="dest_opt">Berlin</option>
-                <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
-
-              </select><br>
-              <label class="input-group-prepend" for="PlaneType_Form">Plane</label>
-              <select class="PlaneType_Form form-control" name="PlaneType_Form" id="PlaneType_Form">
-                <option value=1 selected="selected">Airbus319</option>
-                <option value=2>Boeing737</option>
-                <option value=3>Boeing757</option>
-              </select><br>
-
-
-
-            </form>
-          </fieldset>
+          </div>
         </div>
-        <div class="col-3"></div>
-
-      </div>
-    </div>
-  </section>
-  <!-- END OF  FLIGHT DETAILS -->
+      </section>
+      <!-- END OF  FLIGHT DETAILS -->
 
 
+      <!--NUMBER OF PASSENGERS-->
+      <section class="passengerInfo ">
+        <div class="container-fluid text-center">
+          <div class="row text-center">
+            <div class="col-3"></div>
+            <div class="col-6 m-4">
+              <fieldset class="form-group">
+                <legend class="h3 display-5">Number of passengers</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="NumberOfPassengers">Passengers:</label>
+                  <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfPassengers">
+                    <option value=1 selected>1 passenger</option>
+                    <option value=2>2 passengers</option>
+                    <option value=3>3 passengers</option>
+                    <option value=4>4 passengers</option>
+                    <option value=5>5 passengers</option>
+                    <option value=6>6 passengers</option>
 
-  <!--NUMBER OF PASSENGERS-->
-  <section class="passengerInfo ">
-    <div class="container-fluid text-center">
-      <div class="row text-center">
-        <div class="col-3"></div>
-        <div class="col-6 m-4">
-          <fieldset class="form-group">
-            <legend class="h3 display-5">Number of passengers</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="NumberOfPassengers">Passengers:</label>
-              <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfPassengers">
-                <option value=1 selected>1 passenger</option>
-                <option value=2>2 passengers</option>
-                <option value=3>3 passengers</option>
-                <option value=4>4 passengers</option>
-                <option value=5>5 passengers</option>
-                <option value=6>6 passengers</option>
+                  </select><br>
 
-              </select><br>
+                </form>
+              </fieldset>
+            </div>
+            <div class="col-3"></div>
+          </div>
 
-            </form>
-          </fieldset>
         </div>
-        <div class="col-3"></div>
-      </div>
+      </section>
+      <!--END OF NUMBER OF PASSENGERS FORM-->
 
     </div>
-  </section>
 
-  <!--END OF NUMBER OF PASSENGERS FORM-->
+    <div class="col-4">
+    </div>
+
+  </div>
+
+
+
+
 
 
 
@@ -240,316 +244,331 @@
   <section class="passanger1Info">
     <div class="container-fluid text-center" id="passengerInformationContainer_Form">
 
+      <div class="row">
+        <div class="col-8 ml-5 pl-5">
+          <div class="row">
+            <!-- PASSANGER 1 - 1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_1_1_form">
+              <fieldset class="form-group">
+                <legend class="h4 display-5">Passenger 1 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_1_1_personalDataForm_firstName form-control" id="p_1_1_personalDataForm_firstName"><br>
 
-      <div class="row p-5 m-5">
-        <!-- PASSANGER 1 - 1 -->
-        <div class="mx-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 mw-25" id="passenger_1_1_form">
-          <fieldset class="form-group">
-            <legend class="h4 display-5">Passenger 1 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_1_1_personalDataForm_firstName form-control" id="p_1_1_personalDataForm_firstName"><br>
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_1_1_personalDataForm_lastName form-control" id="p_1_1_personalDataForm_lastName"><br>
 
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_1_1_personalDataForm_lastName form-control" id="p_1_1_personalDataForm_lastName"><br>
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_1_1_personalDataForm_email form-control" id="p_1_1_personalDataForm_email"><br>
 
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_1_1_personalDataForm_email form-control"
-                id="p_1_1_personalDataForm_email"><br>
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p1_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm" value="1">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
 
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p1_1_tarrifForm form-control" name="tarrif" id="p1_1_tarrifForm" value="1">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p1_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p1_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
 
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p1_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p1_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p1_1_SeatsForm form-control" name="Seats" id="p1_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
 
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p1_1_SeatsForm form-control" name="Seats" id="p1_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
+              </fieldset>
+            </div>
+            <!-- END MAIN PASSANGER -->
 
-          </fieldset>
+
+            <!-- PASSANGER 2-1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_2_1_form">
+              <fieldset class="form-group">
+                <legend class="h4 display-5">Passenger 2 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_2_1_personalDataForm_firstName form-control" id="p_2_1_personalDataForm_firstName"><br>
+
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_2_1_personalDataForm_lastName form-control" id="p_2_1_personalDataForm_lastName"><br>
+
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_2_1_personalDataForm_email form-control" id="p_2_1_personalDataForm_email"><br>
+
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p2_1_tarrifForm form-control" name="tarrif" id="p2_1_tarrifForm">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
+
+
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p2_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p2_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p2_1_SeatsForm form-control" name="Seats" id="p2_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
+
+              </fieldset>
+            </div>
+            <!-- END PASSANGER 2-1 -->
+
+
+            <!-- PASSANGER 3-1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_3_1_form">
+              <fieldset class=" form-group">
+                <legend class="h4 display-5">Passenger 3 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_3_1_personalDataForm_firstName form-control" id="p_3_1_personalDataForm_firstName"><br>
+
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_3_1_personalDataForm_lastName form-control" id="p_3_1_personalDataForm_lastName"><br>
+
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_3_1_personalDataForm_email form-control" id="p_3_1_personalDataForm_email"><br>
+
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p3_1_tarrifForm form-control" name="tarrif" id="p3_1_tarrifForm">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p3_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p3_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p3_1_SeatsForm form-control" name="Seats" id="p3_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
+
+              </fieldset>
+            </div>
+            <!-- END PASSANGER 3-1 -->
+          </div>
+
+          <div class="row">
+            <!-- PASSANGER 4-1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_4_1_form">
+              <fieldset class="form-group">
+                <legend class="h4 display-5">Passenger 4 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_4_1_personalDataForm_firstName form-control" id="p_4_1_personalDataForm_firstName"><br>
+
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_4_1_personalDataForm_lastName form-control" id="p_4_1_personalDataForm_lastName"><br>
+
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_4_1_personalDataForm_email form-control" id="p_4_1_personalDataForm_email"><br>
+
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p4_1_tarrifForm form-control" name="tarrif" id="p4_1_tarrifForm">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p4_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p4_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p4_1_SeatsForm form-control" name="Seats" id="p4_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
+
+              </fieldset>
+            </div>
+            <!-- END PASSANGER 4-1 -->
+
+
+            <!-- PASSANGER 5-1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_5_1_form">
+              <fieldset form-group>
+                <legend class="h4 display-5">Passenger 5 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_5_1_personalDataForm_firstName form-control" id="p_5_1_personalDataForm_firstName"><br>
+
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_5_1_personalDataForm_lastName form-control" id="p_5_1_personalDataForm_lastName"><br>
+
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_5_1_personalDataForm_email form-control" id="p_5_1_personalDataForm_email"><br>
+
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p5_1_tarrifForm form-control" name="tarrif" id="p5_1_tarrifForm">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p5_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p5_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p5_1_SeatsForm form-control" name="Seats" id="p5_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
+
+              </fieldset>
+            </div>
+            <!-- END PASSANGER 5-1 -->
+
+
+            <!-- PASSANGER 6-1 -->
+            <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33 " id="passenger_6_1_form">
+              <fieldset class=" form-group">
+                <legend class="h4 display-5">Passenger 6 information</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="firstName">First name:</label>
+                  <input type="text" name="firstName" placeholder="First name"
+                    class="p_6_1_personalDataForm_firstName form-control" id="p_6_1_personalDataForm_firstName"><br>
+
+                  <label class="input-group-prepend" for="firstName">Last name:</label>
+                  <input type="text" name="lastName" placeholder="Last name"
+                    class="p_6_1_personalDataForm_lastName form-control" id="p_6_1_personalDataForm_lastName"><br>
+
+                  <label class="input-group-prepend" for="firstName">E-mail:</label>
+                  <input type="text" name="E-mail" placeholder="E-mail"
+                    class="p_6_1_personalDataForm_email form-control" id="p_6_1_personalDataForm_email"><br>
+
+                  <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
+                  <select class="p6_1_tarrifForm form-control" name="tarrif" id="p6_1_tarrifForm">
+                    <option value="0" selected>Economic</option>
+                    <option value="1">Business</option>
+                    <option value="2">First class</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
+                  <select class="p6_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
+                    id="p6_1_AdditionalBaggageForm">
+                    <option value="0">No</option>
+                    <option value="1">20 kg</option>
+                    <option value="2">32 kg</option>
+                  </select><br>
+
+                  <label class="input-group-prepend" for="Seats">Seats</label>
+                  <select class="p6_1_SeatsForm form-control" name="Seats" id="p6_1_SeatsForm">
+                    <option value="A-7-1">A-7-1</option>
+                    <option value="A-8-1">A-8-1</option>
+                    <option value="A-9-1">A-9-1</option>
+                    <option value="B-7-1">B-7-1</option>
+                    <option value="B-8-1">B-8-1</option>
+                    <option value="B-9-1">B-9-1</option>
+                    <option value="D-7-1">C-7-1</option>
+                    <option value="D-8-1">C-8-1</option>
+                    <option value="D-9-1">C-9-1</option>
+                  </select><br>
+
+              </fieldset>
+            </div>
+            <!-- END PASSANGER 6-1 -->
+
+          </div>
         </div>
-        <!-- END MAIN PASSANGER -->
 
+        <div class="col-4">
 
-        <!-- PASSANGER 2-1 -->
-        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_2_1_form">
-          <fieldset class="form-group">
-            <legend class="h4 display-5">Passenger 2 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_2_1_personalDataForm_firstName form-control" id="p_2_1_personalDataForm_firstName"><br>
-
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_2_1_personalDataForm_lastName form-control" id="p_2_1_personalDataForm_lastName"><br>
-
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_2_1_personalDataForm_email form-control"
-                id="p_2_1_personalDataForm_email"><br>
-
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p2_1_tarrifForm form-control" name="tarrif" id="p2_1_tarrifForm">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
-
-
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p2_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p2_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p2_1_SeatsForm form-control" name="Seats" id="p2_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-
-          </fieldset>
         </div>
-        <!-- END PASSANGER 2-1 -->
-
-
-        <!-- PASSANGER 3-1 -->
-        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_3_1_form">
-          <fieldset class=" form-group">
-            <legend class="h4 display-5">Passenger 3 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_3_1_personalDataForm_firstName form-control" id="p_3_1_personalDataForm_firstName"><br>
-
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_3_1_personalDataForm_lastName form-control" id="p_3_1_personalDataForm_lastName"><br>
-
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_3_1_personalDataForm_email form-control"
-                id="p_3_1_personalDataForm_email"><br>
-
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p3_1_tarrifForm form-control" name="tarrif" id="p3_1_tarrifForm">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p3_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p3_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p3_1_SeatsForm form-control" name="Seats" id="p3_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-
-          </fieldset>
-        </div>
-        <!-- END PASSANGER 3-1 -->
-
-
-        <!-- PASSANGER 4-1 -->
-        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_4_1_form">
-          <fieldset class="form-group">
-            <legend class="h4 display-5">Passenger 4 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_4_1_personalDataForm_firstName form-control" id="p_4_1_personalDataForm_firstName"><br>
-
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_4_1_personalDataForm_lastName form-control" id="p_4_1_personalDataForm_lastName"><br>
-
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_4_1_personalDataForm_email form-control"
-                id="p_4_1_personalDataForm_email"><br>
-
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p4_1_tarrifForm form-control" name="tarrif" id="p4_1_tarrifForm">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p4_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p4_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p4_1_SeatsForm form-control" name="Seats" id="p4_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-
-          </fieldset>
-        </div>
-        <!-- END PASSANGER 4-1 -->
-
-
-        <!-- PASSANGER 5-1 -->
-        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-3 mw-25" id="passenger_5_1_form">
-          <fieldset form-group>
-            <legend class="h4 display-5">Passenger 5 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_5_1_personalDataForm_firstName form-control" id="p_5_1_personalDataForm_firstName"><br>
-
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_5_1_personalDataForm_lastName form-control" id="p_5_1_personalDataForm_lastName"><br>
-
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_5_1_personalDataForm_email form-control"
-                id="p_5_1_personalDataForm_email"><br>
-
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p5_1_tarrifForm form-control" name="tarrif" id="p5_1_tarrifForm">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p5_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p5_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p5_1_SeatsForm form-control" name="Seats" id="p5_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-
-          </fieldset>
-        </div>
-        <!-- END PASSANGER 5-1 -->
-
-
-        <!-- PASSANGER 6-1 -->
-        <div class="mx-auto col-sm-6 col-md-6 col-lg-3 col-xl-2 mw-25 " id="passenger_6_1_form">
-          <fieldset class=" form-group">
-            <legend class="h4 display-5">Passenger 6 information</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="firstName">First name:</label>
-              <input type="text" name="firstName" placeholder="First name"
-                class="p_6_1_personalDataForm_firstName form-control" id="p_6_1_personalDataForm_firstName"><br>
-
-              <label class="input-group-prepend" for="firstName">Last name:</label>
-              <input type="text" name="lastName" placeholder="Last name"
-                class="p_6_1_personalDataForm_lastName form-control" id="p_6_1_personalDataForm_lastName"><br>
-
-              <label class="input-group-prepend" for="firstName">E-mail:</label>
-              <input type="text" name="E-mail" placeholder="E-mail" class="p_6_1_personalDataForm_email form-control"
-                id="p_6_1_personalDataForm_email"><br>
-
-              <label class="input-group-prepend" for="Tarrif">Tarrif:</label>
-              <select class="p6_1_tarrifForm form-control" name="tarrif" id="p6_1_tarrifForm">
-                <option value="0" selected>Economic</option>
-                <option value="1">Business</option>
-                <option value="2">First class</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="AdditionalBaggage">Additional baggage:</label>
-              <select class="p6_1_AdditionalBaggageForm form-control" name="AdditionalBaggage"
-                id="p6_1_AdditionalBaggageForm">
-                <option value="0">No</option>
-                <option value="1">20 kg</option>
-                <option value="2">32 kg</option>
-              </select><br>
-
-              <label class="input-group-prepend" for="Seats">Seats</label>
-              <select class="p6_1_SeatsForm form-control" name="Seats" id="p6_1_SeatsForm">
-                <option value="A-7-1">A-7-1</option>
-                <option value="A-8-1">A-8-1</option>
-                <option value="A-9-1">A-9-1</option>
-                <option value="B-7-1">B-7-1</option>
-                <option value="B-8-1">B-8-1</option>
-                <option value="B-9-1">B-9-1</option>
-                <option value="D-7-1">C-7-1</option>
-                <option value="D-8-1">C-8-1</option>
-                <option value="D-9-1">C-9-1</option>
-              </select><br>
-
-          </fieldset>
-        </div>
-        <!-- END PASSANGER 6-1 -->
-
 
       </div>
+
+
+
+
+
+
+
 
 
 
