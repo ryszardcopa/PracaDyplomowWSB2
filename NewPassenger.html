@@ -104,9 +104,8 @@
 
 
   <!-- CALCULATIONS SECTION -->
-
   <section>
-    <div class="row offset-10 pr-4 position-fixed my-5" style="width: 400px;">
+    <div class="row offset-9 position-fixed mt-5 pr-3">
       <div class="col">
         <div class="card text-center">
           <div class="card-header">
@@ -143,96 +142,101 @@
         </div>
       </div>
     </div>
-
-
-
   </section>
+  <!-- END OF CALCULATIONS SECTION -->
 
 
 
+  <div class="row">
+    <div class="col-8">
+      <!-- FLIGHT DETAILS -->
+      <section class="flightDetails_section ">
+        <div class="container-fluid mt-5 pt-5 clearfix">
+          <div class="row text-center pt-5">
+            <div class="col-3"></div>
+            <div class="col-6 m-4">
+              <fieldset class="form-group">
+                <legend class="h3 display-5">FlightDetails</legend>
+                <div class="underline mb-4"></div>
+                <div class=""></div>
+                <form action="" method="get">
+                  <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
+                  <input type="date" name="DepartureDate-form" id="DepartureDate-form"
+                    class="DepartureDate-form form-control"><br>
+                  <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
+                  <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
+                    <option class="flight_from_opt" value="1">Warszawa</option>
+                    <option class="flight_from_opt" value="2">Berlin</option>
+                    <option class="flight_from_opt" value="3">Nowy Jork</option>
+                  </select><br>
+                  <label class="input-group-prepend" for="Destination">Flight to:</label>
+                  <select class="Destination-form form-control" name="Destination" id="Destinationform">
+                    <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
+                    <option value="2" id="Dest2" class="dest_opt">Berlin</option>
+                    <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
+
+                  </select><br>
+                  <label class="input-group-prepend" for="PlaneType_Form">Plane</label>
+                  <select class="PlaneType_Form form-control" name="PlaneType_Form" id="PlaneType_Form">
+                    <option value=1 selected="selected">Airbus319</option>
+                    <option value=2>Boeing737</option>
+                    <option value=3>Boeing757</option>
+                  </select><br>
 
 
 
+                </form>
+              </fieldset>
+            </div>
+            <div class="col-3"></div>
 
-  <!-- FLIGHT DETAILS -->
-  <section class="flightDetails_section ">
-    <div class="container-fluid mt-5 pt-5 clearfix">
-      <div class="row text-center pt-5">
-        <div class="col-3"></div>
-        <div class="col-6 m-4">
-          <fieldset class="form-group">
-            <legend class="h3 display-5">FlightDetails</legend>
-            <div class="underline mb-4"></div>
-            <div class=""></div>
-            <form action="" method="get">
-              <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
-              <input type="date" name="DepartureDate-form" id="DepartureDate-form"
-                class="DepartureDate-form form-control"><br>
-              <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
-              <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
-                <option class="flight_from_opt" value="1">Warszawa</option>
-                <option class="flight_from_opt" value="2">Berlin</option>
-                <option class="flight_from_opt" value="3">Nowy Jork</option>
-              </select><br>
-              <label class="input-group-prepend" for="Destination">Flight to:</label>
-              <select class="Destination-form form-control" name="Destination" id="Destinationform">
-                <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
-                <option value="2" id="Dest2" class="dest_opt">Berlin</option>
-                <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
-
-              </select><br>
-              <label class="input-group-prepend" for="PlaneType_Form">Plane</label>
-              <select class="PlaneType_Form form-control" name="PlaneType_Form" id="PlaneType_Form">
-                <option value=1 selected="selected">Airbus319</option>
-                <option value=2>Boeing737</option>
-                <option value=3>Boeing757</option>
-              </select><br>
-
-
-
-            </form>
-          </fieldset>
+          </div>
         </div>
-        <div class="col-3"></div>
-
-      </div>
-    </div>
-  </section>
-  <!-- END OF  FLIGHT DETAILS -->
+      </section>
+      <!-- END OF  FLIGHT DETAILS -->
 
 
+      <!--NUMBER OF PASSENGERS-->
+      <section class="passengerInfo ">
+        <div class="container-fluid text-center">
+          <div class="row text-center">
+            <div class="col-3"></div>
+            <div class="col-6 m-4">
+              <fieldset class="form-group">
+                <legend class="h3 display-5">Number of passengers</legend>
+                <div class="underline mb-4"></div>
+                <form action="example" method="post">
+                  <label class="input-group-prepend" for="NumberOfPassengers">Passengers:</label>
+                  <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfPassengers">
+                    <option value=1 selected>1 passenger</option>
+                    <option value=2>2 passengers</option>
+                    <option value=3>3 passengers</option>
+                    <option value=4>4 passengers</option>
+                    <option value=5>5 passengers</option>
+                    <option value=6>6 passengers</option>
 
-  <!--NUMBER OF PASSENGERS-->
-  <section class="passengerInfo ">
-    <div class="container-fluid text-center">
-      <div class="row text-center">
-        <div class="col-3"></div>
-        <div class="col-6 m-4">
-          <fieldset class="form-group">
-            <legend class="h3 display-5">Number of passengers</legend>
-            <div class="underline mb-4"></div>
-            <form action="example" method="post">
-              <label class="input-group-prepend" for="NumberOfPassengers">Passengers:</label>
-              <select class="NumberOfAdults-form form-control" name="NumberOfPassengers" id="NumberOfPassengers">
-                <option value=1 selected>1 passenger</option>
-                <option value=2>2 passengers</option>
-                <option value=3>3 passengers</option>
-                <option value=4>4 passengers</option>
-                <option value=5>5 passengers</option>
-                <option value=6>6 passengers</option>
+                  </select><br>
 
-              </select><br>
+                </form>
+              </fieldset>
+            </div>
+            <div class="col-3"></div>
+          </div>
 
-            </form>
-          </fieldset>
         </div>
-        <div class="col-3"></div>
-      </div>
+      </section>
+      <!--END OF NUMBER OF PASSENGERS FORM-->
 
     </div>
-  </section>
 
-  <!--END OF NUMBER OF PASSENGERS FORM-->
+    <div class="col-4">
+    </div>
+
+  </div>
+
+
+
+
 
 
 
