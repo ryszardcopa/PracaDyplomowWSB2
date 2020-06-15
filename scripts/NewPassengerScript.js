@@ -27,19 +27,6 @@ $(document).ready(function () {
   $passenger_5_1_form = $('#passenger_5_1_form');
   $passenger_6_1_form = $('#passenger_6_1_form');
 
-  $p_1_1_personalDataForm_firstName = $('#p_1_1_personalDataForm_firstName');
-  $p_2_1_personalDataForm_firstName = $('#p_2_1_personalDataForm_firstName');
-  $p_3_1_personalDataForm_firstName = $('#p_3_1_personalDataForm_firstName');
-  $p_4_1_personalDataForm_firstName = $('#p_4_1_personalDataForm_firstName');
-  $p_5_1_personalDataForm_firstName = $('#p_5_1_personalDataForm_firstName');
-  $p_6_1_personalDataForm_firstName = $('#p_6_1_personalDataForm_firstName');
-
-  $p_1_1_personalDataForm_lastName = $('#p_1_1_personalDataForm_lastName');
-  $p_2_1_personalDataForm_lastName = $('#p_2_1_personalDataForm_lastName');
-  $p_3_1_personalDataForm_lastName = $('#p_3_1_personalDataForm_lastName');
-  $p_4_1_personalDataForm_lastName = $('#p_4_1_personalDataForm_lastName');
-  $p_5_1_personalDataForm_lastName = $('#p_5_1_personalDataForm_lastName');
-  $p_6_1_personalDataForm_lastName = $('#p_6_1_personalDataForm_lastName');
 
   $p1_1_tarrifForm = $('#p1_1_tarrifForm');
   $p2_1_tarrifForm = $('#p2_1_tarrifForm');
@@ -61,6 +48,11 @@ $(document).ready(function () {
   $p1_4_SeatsForm = $('#p4_1_SeatsForm');
   $p1_5_SeatsForm = $('#p5_1_SeatsForm');
   $p1_6_SeatsForm = $('#p6_1_SeatsForm');
+
+  // --Plane selection --//
+  $plane1 = $('#plane1');
+  $plane2 = $('#plane2');
+  $plane3 = $('#plane3');
 
   // -- PRICES -- //
   $WAR_BER = 300;
@@ -89,11 +81,14 @@ $(document).ready(function () {
   $dest_opt
     .eq(parseInt($flightFromform.val() - 1))
     .attr('disabled', 'disabled');
+  $calcFlightSelected = $WAR_BER
 
   // -- WAR_BER --//
   if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
     $calcFlightSelected = $WAR_BER;
     $calcFlightCost.text($calcFlightSelected);
+
+
   } else if ($flightFromform.val() == 2 && $Destinationform.val() == 1) {
     $calcFlightSelected = $WAR_BER;
     $calcFlightCost.text($calcFlightSelected);
@@ -117,22 +112,53 @@ $(document).ready(function () {
     alert('wrong destionations');
   }
 
+
+
+
+
+
+
   //-- UPDATES -- //
 
   $flightFromform.on('change', function () {
     recalculate();
     updatePrice();
+    PlaneSelection()
   });
 
   $Destinationform.on('change', function () {
     recalculate();
     updatePrice();
+    PlaneSelection()
   });
 
   $NumberOfPassengers.on('change', function () {
     TarrifUpdate();
     updatePrice();
   });
+
+  function PlaneSelection() {
+    if ($calcFlightSelected == $WAR_BER) {
+
+      $plane1.show()
+    } else {
+      $plane1.hide();
+    }
+    if ($calcFlightSelected == $WAR_NY) {
+
+      $plane2.show()
+    } else {
+      $plane2.hide();
+    }
+    if ($calcFlightSelected == $BER_NY) {
+
+      $plane3.show();
+    } else {
+      $plane3.hide();
+    }
+  }
+
+  PlaneSelection();
 
   function TarrifUpdate() {
     if ($NumberOfPassengers.val() == 1) {
@@ -283,17 +309,17 @@ $(document).ready(function () {
     if ($p1_1_tarrifForm.val() == 1) {
       $p1_1_calcTarrif.append(
         '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p1_1_tarrifForm.val() == 2) {
       $p1_1_calcTarrif.append(
         '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="FirstClass">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -309,17 +335,17 @@ $(document).ready(function () {
     if ($p2_1_tarrifForm.val() == 1) {
       $('#p2_1_calcTarrif').append(
         '<p id="p2_1_calcTarrifParagraph">Passenger2: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p2_1_tarrifForm.val() == 2) {
       $('#p2_1_calcTarrif').append(
         '<p id="p2_1_calcTarrifParagraph">Passenger2: <span class="FirstClass">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -334,17 +360,17 @@ $(document).ready(function () {
     if ($p3_1_tarrifForm.val() == 1) {
       $('#p3_1_calcTarrif').append(
         '<p id="p3_1_calcTarrifParagraph">Passenger3: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p3_1_tarrifForm.val() == 2) {
       $('#p3_1_calcTarrif').append(
         '<p id="p3_1_calcTarrifParagraph">Passenger3: <span class="FirstClass">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -358,17 +384,17 @@ $(document).ready(function () {
     if ($p4_1_tarrifForm.val() == 1) {
       $('#p4_1_calcTarrif').append(
         '<p id="p4_1_calcTarrifParagraph">Passenger4: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p4_1_tarrifForm.val() == 2) {
       $('#p4_1_calcTarrif').append(
         '<p id="p4_1_calcTarrifParagraph">Passenger4: <span class="FirstClass">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -383,17 +409,17 @@ $(document).ready(function () {
     if ($p5_1_tarrifForm.val() == 1) {
       $('#p5_1_calcTarrif').append(
         '<p id="p5_1_calcTarrifParagraph">Passenger5: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p5_1_tarrifForm.val() == 2) {
       $('#p5_1_calcTarrif').append(
         '<p id="p5_1_calcTarrifParagraph">Passenger5: <span id="FirstClass_paragraph">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -408,17 +434,17 @@ $(document).ready(function () {
     if ($p6_1_tarrifForm.val() == 1) {
       $('#p6_1_calcTarrif').append(
         '<p id="p6_1_calcTarrifParagraph">Passenger6: <span class="BusinessClass">Business class+' +
-          $TarrifBusiness +
-          ' PLN' +
-          '</span></p>'
+        $TarrifBusiness +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else if ($p6_1_tarrifForm.val() == 2) {
       $('#p6_1_calcTarrif').append(
         '<p id="p6_1_calcTarrifParagraph">Passenger6: <span class="FirstClass">FirstClass class+' +
-          $TarrifFirstClass +
-          ' PLN' +
-          '</span></p>'
+        $TarrifFirstClass +
+        ' PLN' +
+        '</span></p>'
       );
       updatePrice();
     } else {
@@ -437,17 +463,17 @@ $(document).ready(function () {
     if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
       $('#p1_1_calc_AddBagg').append(
         '<p class="p1_1_addBagg_paragraph">Passenger1->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p1_1_AdditionalBaggageForm').val() == 2) {
       $('#p1_1_calc_AddBagg').append(
         '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+<span class="32kg"></span>: ' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -464,17 +490,17 @@ $(document).ready(function () {
     if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
       $('#p2_1_calc_AddBagg').append(
         '<p class="p2_1_addBagg_paragraph">Passenger2->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p2_1_AdditionalBaggageForm').val() == 2) {
       $('#p2_1_calc_AddBagg').append(
         '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+<span class="32kg"></span>' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -490,17 +516,17 @@ $(document).ready(function () {
     if ($('#p3_1_AdditionalBaggageForm').val() == 1) {
       $('#p3_1_calc_AddBagg').append(
         '<p class="p3_1_addBagg_paragraph">Passenger3->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p3_1_AdditionalBaggageForm').val() == 2) {
       $('#p3_1_calc_AddBagg').append(
         '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+<span class="32kg"></span>' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -516,17 +542,17 @@ $(document).ready(function () {
     if ($('#p4_1_AdditionalBaggageForm').val() == 1) {
       $('#p4_1_calc_AddBagg').append(
         '<p class="p4_1_addBagg_paragraph">Passenger4->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p4_1_AdditionalBaggageForm').val() == 2) {
       $('#p4_1_calc_AddBagg').append(
         '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+<span class="32kg"></span>' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -542,17 +568,17 @@ $(document).ready(function () {
     if ($('#p5_1_AdditionalBaggageForm').val() == 1) {
       $('#p5_1_calc_AddBagg').append(
         '<p class="p5_1_addBagg_paragraph">Passenger5->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p5_1_AdditionalBaggageForm').val() == 2) {
       $('#p5_1_calc_AddBagg').append(
         '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+<span class="32kg"></span>' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -568,17 +594,17 @@ $(document).ready(function () {
     if ($('#p6_1_AdditionalBaggageForm').val() == 1) {
       $('#p6_1_calc_AddBagg').append(
         '<p class="p6_1_addBagg_paragraph">Passenger6->20kg+<span class="20kg"></span>' +
-          $AddBag20 +
-          ' PLN' +
-          '</p>'
+        $AddBag20 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else if ($('#p6_1_AdditionalBaggageForm').val() == 2) {
       $('#p6_1_calc_AddBagg').append(
         '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+<span class="32kg"></span>' +
-          $AddBag32 +
-          ' PLN' +
-          '</p>'
+        $AddBag32 +
+        ' PLN' +
+        '</p>'
       );
       updatePrice();
     } else {
@@ -587,33 +613,10 @@ $(document).ready(function () {
   });
   updatePrice();
 
-  // --Plane selection --//
-  $PlaneType_Form = $('#PlaneType_Form');
-  $plane1 = $('#plane1');
-  $plane2 = $('#plane2');
-  $plane3 = $('#plane3');
 
-  $plane2.hide().slideUp();
-  $plane3.hide().slideUp();
 
-  $PlaneType_Form.on('change', function () {
-    if (this.value == 1) {
-      $plane1.show().slideDown();
-    } else {
-      $plane1.slideUp().hide();
-    }
-    if (this.value == 2) {
-      $plane2.show().slideDown();
-    } else {
-      $plane2.slideUp().hide();
-    }
-    if (this.value == 3) {
-      $plane3.show().slideDown();
-    } else {
-      $plane3.slideUp().hide();
-    }
-  });
-  // --END OF Plane selection--//
+
+
 
   //--PASSENGER LIST--//
 
