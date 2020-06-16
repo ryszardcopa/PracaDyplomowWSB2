@@ -27,7 +27,7 @@ $weight-thin: 500;
 .text-shadow-light { text-shadow: 2px 2px 15px $ff-color; }
 
 /* header */
-header { height: 100vh; background: $ff-color url(../images/samolot.svg) no-repeat center center /cover; }
+header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/samolot.svg) no-repeat center center /cover; }
 
 /* collection */
 .card-shadow { box-shadow: 1px 1px 10px darken($dark-grey, 40%); }
@@ -40,7 +40,7 @@ header { height: 100vh; background: $ff-color url(../images/samolot.svg) no-repe
 }
 
 /* banner */
-.banner { height: auto; padding: 20vh 0 0 0; }
+.banner { height: auto; padding: 30vh 0 0 0; }
 .banner-heading { animation-name: anim; animation-duration: 2s; }
 .banner-par { animation-duration: 2s; animation-delay: .5s; animation-fill-mode: backwards; }
 
@@ -48,7 +48,9 @@ header { height: 100vh; background: $ff-color url(../images/samolot.svg) no-repe
 .text-info { color: $second-color; } 
 .text-primary { color: $second-color; }
 .svg-inline--fa { font-size: inherit; color: $main-color; }
-@mixin grad { background: linear-gradient(rgba(255, 255, 255, .8), rgba(240, 240, 240, .5)); }
+.nav-button { background: $main-color; }
+
+@mixin grad { background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 1)); }
 
 /* nav menu */
 .nav-logo { max-width: 6rem; height: auto; }
@@ -64,12 +66,12 @@ header { height: 100vh; background: $ff-color url(../images/samolot.svg) no-repe
 .change .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
 .change .line2 { opacity: 0; }
 .change .line3 { transform: rotate(45deg) translate(-5px, -6px); }
-.custom-navbar { padding: 5px 30px; background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)); }
+.custom-navbar { padding: 5px 30px; background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 1)); }
 
 /* flight selection form */
 .calendar-box { width: 40vw; border-radius: 1rem; padding: 2rem; margin: 2rem auto; color: $main-color; background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 1.5rem $grey; }
 .select-bar { transform: none; width: 100%; height: 2.5rem; border: 2px solid $main-color; border-radius: 5px; }
-.button { text-transform: none; background: $main-color; color: $ff-color; width: 100%; height: 2.5rem; border-radius: 5px; border: 2px solid $main-color; font-weight: bold; }
+.button { text-transform: none; background: $main-color; color: $ff-color; width: 100%; height: 2.5rem; border-radius: 5px; border: 2px solid $main-color; font-weight: $weight-bold; }
 
 /* table */
 .table-dark { color: $ff-color; background-color: $main-color; }
@@ -96,33 +98,45 @@ header { height: 100vh; background: $ff-color url(../images/samolot.svg) no-repe
 /* customers */
 .customers { background: $main-color; color: $ff-color; }
 
+/* icons */
+.icons { max-width: 4rem; height: 4rem; }
 
 /* MEDIA QUERIES */
 
-/* tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+// /* tablet */
+// @media (min-width: 768px) and (max-width: 1024px) {
+//   header { padding: 1rem 0; height: auto; }
+//   .display-3 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
+//   .banner { height: auto; padding: 12vh 0 0 0; }
+//   .calendar-box { width: 80%; padding: 2rem; margin: 2rem auto; }
+//   .calendar-box {
+//     h1 {
+//       font-size: 1.3rem; font-weight: $weight-bold; 
+//     }
+//   }
+//   .display-3, .banner-par { color: $ff-color; }
+// }
+
+/** kindle **/
+@media (min-width: 1024px) and (max-width: 1780px) {
   header { padding: 1rem 0; height: auto; }
-  .display-3 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
-  .banner { height: auto; padding: 12vh 0 0 0; }
-  .calendar-box { width: 80%; padding: 2rem; margin: 2rem auto; }
-  .calendar-box {
-    h1 {
-      font-size: 1.3rem; font-weight: $weight-bold; 
-    }
-  }
-  .display-3, .banner-par { color: $ff-color; }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+/** tablet version **/
+@media (min-width: 768px) and (max-width: 1024px ) {
   header { padding: 1rem 0; height: auto; }
-  .display-3 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
-  .banner { height: auto; padding: 12vh 0 0 0; }
-  .calendar-box { width: 80%; padding: 2rem; margin: 2rem auto; }
-  .calendar-box {
-    h1 {
-      font-size: 1.3rem; font-weight: $weight-bold; 
-    }
-  }
-  .display-3, .banner-par { color: $ff-color; }
+  .calendar-box { margin: 0 25px; width: auto; }
+  h1 { font-size: 1.5rem; }
+  .display-3 { font-size: 3.5rem; }
+  .display-4 { font-size: 2.5rem; }
 }
 
+/** mobile version **/
+@media (min-width: 320px) and (max-width: 768px) {
+header { padding: 1rem 0; height: auto; }
+
+.display-3 { font-size: 2.5rem; }
+.display-4 { font-size: 1.5rem; }
+.calendar-box { margin: 0 25px; width: auto; }
+.lead { font-size: 1rem; }
+} 

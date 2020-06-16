@@ -28,6 +28,7 @@ body {
 /* header */
 header {
   height: 100vh;
+  margin-top: -9px;
   background: #fff url(../images/samolot.svg) no-repeat center center/cover;
 }
 
@@ -66,7 +67,7 @@ header {
 /* banner */
 .banner {
   height: auto;
-  padding: 20vh 0 0 0;
+  padding: 30vh 0 0 0;
 }
 
 .banner-heading {
@@ -94,6 +95,10 @@ header {
   color: #000080;
 }
 
+.nav-button {
+  background: #000080;
+}
+
 /* nav menu */
 .nav-logo {
   max-width: 6rem;
@@ -103,7 +108,7 @@ header {
 .nav-menu {
   padding: 15px 30px;
   transition: all .7s;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.5));
+  background: linear-gradient(rgba(255, 255, 255, 0.8), white);
 }
 
 .menu-item {
@@ -155,7 +160,7 @@ header {
 
 .custom-navbar {
   padding: 5px 30px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(255, 255, 255, 0.8), white);
 }
 
 /* flight selection form */
@@ -185,7 +190,7 @@ header {
   height: 2.5rem;
   border-radius: 5px;
   border: 2px solid #000080;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* table */
@@ -257,60 +262,59 @@ header {
   color: #fff;
 }
 
+/* icons */
+.icons {
+  max-width: 4rem;
+  height: 4rem;
+}
+
 /* MEDIA QUERIES */
-/* tablet */
+/** kindle **/
+@media (min-width: 1024px) and (max-width: 1780px) {
+  header {
+    padding: 1rem 0;
+    height: auto;
+  }
+}
+
+/** tablet version **/
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     padding: 1rem 0;
     height: auto;
   }
-  .display-3 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  .banner {
-    height: auto;
-    padding: 12vh 0 0 0;
-  }
   .calendar-box {
-    width: 80%;
-    padding: 2rem;
-    margin: 2rem auto;
+    margin: 0 25px;
+    width: auto;
   }
-  .calendar-box h1 {
-    font-size: 1.3rem;
-    font-weight: 700;
+  h1 {
+    font-size: 1.5rem;
   }
-  .display-3, .banner-par {
-    color: #fff;
+  .display-3 {
+    font-size: 3.5rem;
+  }
+  .display-4 {
+    font-size: 2.5rem;
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+/** mobile version **/
+@media (min-width: 320px) and (max-width: 768px) {
   header {
     padding: 1rem 0;
     height: auto;
   }
   .display-3 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 2.5rem;
   }
-  .banner {
-    height: auto;
-    padding: 12vh 0 0 0;
+  .display-4 {
+    font-size: 1.5rem;
   }
   .calendar-box {
-    width: 80%;
-    padding: 2rem;
-    margin: 2rem auto;
+    margin: 0 25px;
+    width: auto;
   }
-  .calendar-box h1 {
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-  .display-3, .banner-par {
-    color: #fff;
+  .lead {
+    font-size: 1rem;
   }
 }
