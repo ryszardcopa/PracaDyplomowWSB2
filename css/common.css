@@ -234,6 +234,11 @@ header {
   animation-duration: 3s;
 }
 
+/* calculations section */
+.card {
+  z-index: 1;
+}
+
 @keyframes fromLeft {
   0% {
     transform: translateX(-120px);
@@ -269,7 +274,7 @@ header {
 }
 
 /* MEDIA QUERIES */
-/** kindle **/
+/** desktop version **/
 @media (min-width: 1024px) and (max-width: 1780px) {
   header {
     padding: 1rem 0;

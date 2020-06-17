@@ -85,6 +85,11 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .fromLeft { animation-name: fromLeft; animation-duration: 3s; }
 .fromRight { animation-name: fromRight; animation-duration: 3s; }
   
+/* calculations section */
+.card  {
+  z-index:1;
+}
+
 @keyframes fromLeft {
   0% { transform: translateX(-120px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
@@ -103,21 +108,7 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 
 /* MEDIA QUERIES */
 
-// /* tablet */
-// @media (min-width: 768px) and (max-width: 1024px) {
-//   header { padding: 1rem 0; height: auto; }
-//   .display-3 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
-//   .banner { height: auto; padding: 12vh 0 0 0; }
-//   .calendar-box { width: 80%; padding: 2rem; margin: 2rem auto; }
-//   .calendar-box {
-//     h1 {
-//       font-size: 1.3rem; font-weight: $weight-bold; 
-//     }
-//   }
-//   .display-3, .banner-par { color: $ff-color; }
-// }
-
-/** kindle **/
+/** desktop version **/
 @media (min-width: 1024px) and (max-width: 1780px) {
   header { padding: 1rem 0; height: auto; }
 }
