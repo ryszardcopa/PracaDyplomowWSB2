@@ -91,6 +91,23 @@ $(document).ready(function () {
     },
   });
 
+
+  // -- DATEPICKER --//
+  $('#picker').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    opens: 'right',
+    drops: 'down',
+    minDate: moment(),
+    maxDate: moment().add(365, 'days'),
+    showWeekNumbers: true,
+    startDate: moment(),
+    locale: {
+      format: 'YYYY-MM-DD'
+    }
+
+  })
+
   // ---------------------Move of banner title -----------------------------------------------
   $(window).scroll(function () {
     let position = $(this).scrollTop();
@@ -129,64 +146,64 @@ $b = $("#tableResults");
 
 $.getJSON(url,
   function (data) {
-      var tr;
-      for (var i = 0; i < data.length; i++) {
-          tr = $('<tr/>');
-          tr.append("<td>" + data[i].id + "</td>");
-          tr.append("<td>" + data[i].to + "</td>");
-          tr.append("<td>" + data[i].date + "</td>");
-          tr.append("<td>" + data[i].passenger + "</td>");
-          tr.append("<td>" + data[i].status + "</td>");
-          $('table').append(tr);
-      }
+    var tr;
+    for (var i = 0; i < data.length; i++) {
+      tr = $('<tr/>');
+      tr.append("<td>" + data[i].id + "</td>");
+      tr.append("<td>" + data[i].to + "</td>");
+      tr.append("<td>" + data[i].date + "</td>");
+      tr.append("<td>" + data[i].passenger + "</td>");
+      tr.append("<td>" + data[i].status + "</td>");
+      $('table').append(tr);
+    }
   });
 
 
 // --------------------------------- IMPORT FLIGHT SELECTION -------------------------------
 
 $(function () {
-  var bindDatePicker = function() {
-   $(".date").datetimepicker({
-       format:'YYYY-MM-DD',
-     icons: {
-       time: "fa fa-clock-o",
-       date: "fa fa-calendar",
-       up: "fa fa-arrow-up",
-       down: "fa fa-arrow-down"
-     }
-   }).find('input:first').on("blur",function () {
-     // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
-     // update the format if it's yyyy-mm-dd
-     var date = parseDate($(this).val());
+  var bindDatePicker = function () {
+    $(".date").datetimepicker({
+      format: 'YYYY-MM-DD',
+      icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-arrow-up",
+        down: "fa fa-arrow-down"
+      }
+    }).find('input:first').on("blur", function () {
+      // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+      // update the format if it's yyyy-mm-dd
+      var date = parseDate($(this).val());
 
-     if (! isValidDate(date)) {
-       //create date based on momentjs (we have that)
-       date = moment().format('YYYY-MM-DD');
-     }
+      if (!isValidDate(date)) {
+        //create date based on momentjs (we have that)
+        date = moment().format('YYYY-MM-DD');
+      }
 
-     $(this).val(date);
-   });
- }
-  
-  var isValidDate = function(value, format) {
-   format = format || false;
-   // lets parse the date to the best of our knowledge
-   if (format) {
-     value = parseDate(value);
-   }
-
-   var timestamp = Date.parse(value);
-
-   return isNaN(timestamp) == false;
+      $(this).val(date);
+    });
   }
-  
-  var parseDate = function(value) {
-   var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
-   if (m)
-     value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
 
-   return value;
+  var isValidDate = function (value, format) {
+    format = format || false;
+    // lets parse the date to the best of our knowledge
+    if (format) {
+      value = parseDate(value);
+    }
+
+    var timestamp = Date.parse(value);
+
+    return isNaN(timestamp) == false;
   }
-  
+
+  var parseDate = function (value) {
+    var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+    if (m)
+      value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+
+    return value;
+  }
+
   bindDatePicker();
 });
