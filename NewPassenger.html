@@ -12,8 +12,8 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
     integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
     crossorigin="anonymous"></script>
-
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/style.css" />
   <title>Stork Airlines</title>
@@ -160,24 +160,34 @@
                 <div class="underline mb-4"></div>
                 <div class=""></div>
                 <form action="" method="get">
-                  <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
-                  <input type="date" name="DepartureDate-form" id="DepartureDate-form"
-                    class="DepartureDate-form form-control"><br>
-                  <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
-                  <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
-                    <option class="flight_from_opt" value="1">Warszawa</option>
-                    <option class="flight_from_opt" value="2">Berlin</option>
-                    <option class="flight_from_opt" value="3">Nowy Jork</option>
-                  </select><br>
-                  <label class="input-group-prepend" for="Destination">Flight to:</label>
-                  <select class="Destination-form form-control" name="Destination" id="Destinationform">
-                    <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
-                    <option value="2" id="Dest2" class="dest_opt">Berlin</option>
-                    <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
+                  <!-- <div class="container mt-5 mb-5" style="width: 400px;">
+                    <h3>Date Picker</h3>
+                    <input type="text" id="picker" class="form-control">
+                  </div> -->
 
-                  </select><br>
+                  <!-- <input type="date" name="DepartureDate-form" id="DepartureDate-form"
+                    class="DepartureDate-form form-control"> -->
+                  <div class="container">
+                    <label for="DepartureDate" class="input-group-prepend">Departure Date</label>
+                    <input type="text" id="picker" class="form-control">
 
 
+                    <br>
+                    <label class="input-group-prepend" for="FlightFrom">Flight from:</label>
+                    <select class="flightFrom-form form-control" name="FlightFrom" id="flightFrom_form">
+                      <option class="flight_from_opt" value="1" selected>Warszawa</option>
+                      <option class="flight_from_opt" value="2">Berlin</option>
+                      <option class="flight_from_opt" value="3">Nowy Jork</option>
+                    </select><br>
+                    <label class="input-group-prepend" for="Destination">Flight to:</label>
+                    <select class="Destination-form form-control" name="Destination" id="Destinationform">
+                      <option value="1" id="Dest1" class="dest_opt">Warszawa</option>
+                      <option value="2" id="Dest2" class="dest_opt" selected>Berlin</option>
+                      <option value="3" id="Dest3" class="dest_opt">Nowy Jork</option>
+
+                    </select><br>
+
+                  </div>
 
 
                 </form>
@@ -12820,6 +12830,10 @@
     <script src="./scripts/NewPassengerScript.js"></script>
 
     <script src="./scripts/script.js"></script>
+
+    <!-- DATEPICKER SCRIPTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <!-- ---------------------END SCRIPTS------------------------------------>
 
 </body>

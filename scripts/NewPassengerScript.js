@@ -74,6 +74,24 @@ $(document).ready(function () {
   $calculationTotal = $('#calculationTotal');
   $calcFlightSelected = $WAR_BER;
 
+
+
+  // -- DATEPICKER --//
+  $('#picker').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    opens: 'right',
+    drops: 'down',
+    minDate: moment(),
+    maxDate: moment().add(365, 'days'),
+    showWeekNumbers: true,
+    startDate: moment(),
+    locale: {
+      format: 'YYYY-MM-DD'
+    }
+
+  })
+
   // --- FLIGHT FROM TO SCRIPTS --//
 
   //-- INITIAL SETUP-- //
