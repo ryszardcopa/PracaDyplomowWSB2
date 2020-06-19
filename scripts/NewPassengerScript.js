@@ -633,6 +633,97 @@ $(document).ready(function () {
 
 
 
+  // -- SEATS SELECTION --//
+  $FirstClassSeats = $('.cls-128')
+
+  $FirstClassSeats.on("click", function () {
+    console.log("clicked");
+    var $this = $(this);
+    if ($this.is(".cls-128"
+    )) {
+      $this.removeClass('cls-128')
+      $this.addClass('cls-900')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('cls-128')
+    }
+
+  })
+
+  $businessClassSeats = $('.cls-127')
+
+  $businessClassSeats.on("click", function () {
+    console.log("clicked");
+    var $this = $(this);
+    if ($this.is(".cls-127"
+    )) {
+      $this.removeClass('cls-127')
+      $this.addClass('cls-900')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('cls-127')
+    }
+
+  })
+
+
+  $businessClassSeats_Plane2 = $('.cls-131')
+
+  $businessClassSeats_Plane2.on("click", function () {
+    console.log("clicked");
+    var $this = $(this);
+    if ($this.is(".cls-131"
+    )) {
+      $this.removeClass('cls-131')
+      $this.addClass('cls-900')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('cls-131')
+    }
+
+  })
+
+
+  $FirstClassSeats_Plane2 = $('.st262')
+
+  $FirstClassSeats_Plane2.on("click", function () {
+    console.log("clicked");
+    var $this = $(this);
+    if ($this.is(".st262"
+    )) {
+      $this.removeClass('st262')
+      $this.addClass('cls-900')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('st262')
+    }
+
+  })
+
+  $businessClassSeats_Plane2 = $('.st261')
+
+  $businessClassSeats_Plane2.on("click", function () {
+    console.log("clicked");
+    var $this = $(this);
+    if ($this.is(".st261"
+    )) {
+      $this.removeClass('st261')
+      $this.addClass('cls-900')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('st261')
+    }
+
+  })
+
+
+
+
 
 
 
