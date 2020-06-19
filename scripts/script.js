@@ -207,3 +207,10 @@ $(function () {
 
   bindDatePicker();
 });
+
+
+
+// ** Script sticky box ** //
+
+
+// ** END Script sticky box ** //
