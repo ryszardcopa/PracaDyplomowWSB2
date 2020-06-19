@@ -25,6 +25,10 @@ body {
   text-shadow: 2px 2px 15px #fff;
 }
 
+.form-group {
+  margin: 0 2rem 1rem;
+}
+
 /* header */
 header {
   height: 100vh;
@@ -297,6 +301,9 @@ header {
     padding: 1rem 0;
     height: auto;
   }
+  .form-group {
+    margin: 0 2rem 1rem;
+  }
 }
 
 /** tablet version **/
@@ -318,7 +325,7 @@ header {
   .display-4 {
     font-size: 2.5rem;
   }
-  /* responsive sidebar*/
+  /* responsive sidebar */
   .calculation-section {
     display: flex;
     flex-wrap: wrap;
