@@ -404,10 +404,6 @@ header {
   }
 }
 
-.pt-5, .py-5 {
-  padding-top: 0 !important;
-}
-
 .airplane {
   display: none;
 }
