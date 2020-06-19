@@ -136,19 +136,19 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 @media (min-width: 768px) and (max-width: 1024px ) {
   header { padding: 1rem 0; height: auto; }
   .calendar-box { margin: 0 25px; width: auto; }
+  .form-group { margin: 0 4rem 1rem; }
+
   h1 { font-size: 1.5rem; }
+
   .display-3 { font-size: 3.5rem; }
   .display-4 { font-size: 2.5rem; }
+
   /* responsive sidebar */
   .calculation-section {
     display: flex; flex-wrap: wrap; flex-direction: column-reverse;
   }
   .calculation-section {
-    .col-2, .col-6 { 
-      -ms-flex: 0 0 100% !important;
-      flex: 0 0 100% !important;
-      max-width: 100% !important;
-    }
+    .col-2, .col-6 { -ms-flex: 0 0 100% !important; flex: 0 0 100% !important; max-width: 100% !important; }
     .col-8 { -ms-flex: 0 0 80%; flex: 0 0 80%; max-width: 80%; }
     .col-3 { display: none; }
   }
@@ -160,6 +160,7 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
     height: auto;
     margin-bottom: 2rem;
   }
+
 }
 
 
@@ -170,6 +171,8 @@ header { padding: 1rem 0; height: auto; }
 .display-3 { font-size: 2.5rem; }
 .display-4 { font-size: 1.5rem; }
 .calendar-box { margin: 0 25px; width: auto; }
+.form-group { margin: 0 0 1rem; }
+
 .lead { font-size: 1rem; }
 /* responsive sidebar*/
 .calculation-section {
