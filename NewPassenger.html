@@ -127,18 +127,9 @@
                         <div class="underline mb-4"></div>
                         <div class=""></div>
                         <form action="" method="get">
-                          <!-- <div class="container mt-5 mb-5" style="width: 400px;">
-                              <h3>Date Picker</h3>
-                              <input type="text" id="picker" class="form-control">
-                            </div> -->
-
-                          <!-- <input type="date" name="DepartureDate-form" id="DepartureDate-form"
-                              class="DepartureDate-form form-control"> -->
                           <div class="container">
                             <label for="DepartureDate" class="input-group-prepend">Data wylotu</label>
-                            <input type="text" id="picker" class="form-control select-bar">
-
-
+                            <input type="text" id="picker" class="form-control select-bar" name="DepartureDate">
                             <br>
                             <label class="input-group-prepend" for="FlightFrom">Wylot z:</label>
                             <select class="flightFrom-form form-control select-bar" name="FlightFrom"
@@ -12754,6 +12745,12 @@
               </div>
               <div class="card-body">
                 <h4 class="card-title">Szczegóły zamówienia</h4>
+                <p class="card-text" id="calcDeparture_Date">Data Wylotu:
+                  <span>2020-07-01</span>
+                </p>
+                <p class="card-text" id="calcDeparture_Time">Godzina wylotu:
+                  <span>13:00</span>
+                </p>
                 <p class="card-text"><span>Ilość pasażerów: </span><span id="calcNoPassengers"></span></p>
                 <p class="card-text"><span>Cena za przelot: </span><span id="calcFlightCost"></span></p>
                 <div class="card-text"><span>Taryfa: </span><span id="calctarrif"></span>

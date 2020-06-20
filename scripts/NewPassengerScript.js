@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   // -- CHANGE UPDATES OF VALUES IN CALCULATION --//
   // -- VARIABLES FLIGHT --//
-  $DepartureDateform = $('#DepartureDate-form');
+  $picker = $('#picker')
   $flightFromform = $('#flightFrom_form');
   $flight_from_opt = $('.flight_from_opt');
   $Destinationform = $('#Destinationform');
@@ -59,6 +59,10 @@ $(document).ready(function () {
   $WAR_NY = 1200;
   $BER_NY = 1500;
 
+  $WarszawaDepartureTime = "13:00";
+  $BerlinDepartureTime = "16:00";
+  $NowyJorkDepartureTime = "20:00"
+
   $TarrifBusiness = 200;
   $TarrifFirstClass = 400;
 
@@ -90,7 +94,58 @@ $(document).ready(function () {
       format: 'YYYY-MM-DD'
     }
 
-  })
+  });
+
+  // -- CALC SECTION DEPARTURE DATE AND TIME UPDATE --//
+
+  $calcDeparture_Date = $('#calcDeparture_Date');
+  $calcDeparture_Time = $('#calcDeparture_Time');
+
+  $picker.on('change', function () {
+    // alert("dziala");
+    $calcDeparture_Date.children().remove();
+    $calcDeparture_Time.children().remove();
+    $calcDeparture_Date.append('<span>' + $picker.val() + '</span>')
+
+    if ($flightFromform.val() == 1) {
+      $calcDeparture_Time.append('<span>' + $WarszawaDepartureTime + '</span>');
+    }
+    else if ($flightFromform.val() == 2) {
+      $calcDeparture_Time.append('<span>' + $BerlinDepartureTime + '</span>');
+    }
+    else {
+      $calcDeparture_Time.append('<span>' + $NowyJorkDepartureTime + '</span>');
+    }
+
+  });
+
+  function DateTimeUpdate() {
+    $calcDeparture_Date.children().remove();
+    $calcDeparture_Time.children().remove();
+    $calcDeparture_Date.append('<span>' + $picker.val() + '</span>')
+
+    if ($flightFromform.val() == 1) {
+      $calcDeparture_Time.append('<span>' + '13:00' + '</span>');
+    }
+    else if ($flightFromform.val() == 2) {
+      $calcDeparture_Time.append('<span>' + '16:00' + '</span>');
+    }
+    else {
+      $calcDeparture_Time.append('<span>' + '20:00' + '</span>');
+    }
+
+  }
+
+  DateTimeUpdate();
+
+
+
+
+
+
+  // -- END CALC SECTION DEPARTURE DATE AND TIME --//
+
+
 
   // --- FLIGHT FROM TO SCRIPTS --//
 
@@ -99,7 +154,8 @@ $(document).ready(function () {
   $dest_opt
     .eq(parseInt($flightFromform.val() - 1))
     .attr('disabled', 'disabled');
-  $calcFlightSelected = $WAR_BER
+  $calcFlightSelected = $WAR_BER;
+
 
   // -- WAR_BER --//
   if ($flightFromform.val() == 1 && $Destinationform.val() == 2) {
@@ -130,18 +186,13 @@ $(document).ready(function () {
     alert('wrong destionations');
   }
 
-
-
-
-
-
-
   //-- UPDATES -- //
 
   $flightFromform.on('change', function () {
     recalculate();
     updatePrice();
-    PlaneSelection()
+    PlaneSelection();
+    DateTimeUpdate();
   });
 
   $Destinationform.on('change', function () {
