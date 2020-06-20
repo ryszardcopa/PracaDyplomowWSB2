@@ -81,7 +81,7 @@ header {
   background: #b4bfc1 url(../images/promotion.jpg) no-repeat center fixed;
   background-size: 100% auto;
   height: auto;
-  color: #ffffff;
+  color: #fff;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -206,11 +206,12 @@ header {
 }
 
 /* airplane SVG */
-.airplane img {
+.airplane {
   vertical-align: middle;
   border-style: none;
   width: 100%;
-  margin: 1rem auto 2rem;
+  height: 100%;
+  position: relative;
 }
 
 /* image slide airplane */
@@ -501,13 +502,23 @@ header {
     width: 100%;
     margin: 0;
   }
+  /* airplane SVG */
   .airplane {
-    vertical-align: middle;
-    border-style: none;
+    display: block;
+    position: relative;
     width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
+    height: 1500px;
   }
+  .airplane #Airbus_319, .airplane #Layer_1, .airplane #_757-200_752__16-153_v1 {
+    rotate: 90deg !important;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+  }
+  svg {
+    top: 24rem !important;
+  }
+  /* end airplane SVG */
 }
 
 /** mobile version **/
@@ -588,12 +599,25 @@ header {
     padding-left: 15px;
   }
   /* airplane SVG */
-  .airplane img {
-    rotate: 90deg;
-    vertical-align: middle;
-    border-style: none;
+  .airplane {
+    display: block;
+    position: relative;
     width: 100%;
-    height: 500px;
-    margin: 1rem auto 2rem;
+    height: 1000px;
   }
+  .airplane #Airbus_319, .airplane #Layer_1, .airplane #_757-200_752__16-153_v1 {
+    rotate: 90deg !important;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+  }
+  svg {
+    width: 100vh;
+    position: absolute;
+    left: -12rem;
+    top: 15rem;
+    display: block;
+    margin: 0 auto;
+  }
+  /* end airplane SVG */
 }

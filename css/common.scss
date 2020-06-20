@@ -53,7 +53,7 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
   background: #b4bfc1 url(../images/promotion.jpg)no-repeat center fixed;
   background-size: 100% auto;
   height: auto;
-  color: #ffffff;
+  color: $ff-color;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +68,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .promo-card .front .author { font-size: 0.8rem; opacity: 0.6; }
 
 /* promotions cards */
-
 .promo-card .front,
 .promo-card .back { overflow: hidden; position: absolute; top: 0; left: 0; bottom: 0; right: 0; backface-visibility: hidden; transition: transform 400ms; }
 .promo-card .back .content { background: $main-color !important; text-align: center; }
@@ -89,7 +88,7 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .banner-par { animation-duration: 2s; animation-delay: .5s; animation-fill-mode: backwards; }
 
 /* airplane SVG */
-.airplane img { vertical-align: middle; border-style: none; width: 100%; margin: 1rem auto 2rem; }
+.airplane { vertical-align: middle; border-style: none; width: 100%; height: 100%; position: relative; }
 
 /* image slide airplane */
 .image-slide-airplane { width: 100%; height: 25rem; background: #416ca0 url(../images/image-slide-airplane.jpg)no-repeat center fixed; }
@@ -197,7 +196,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
   line-height: 1.2;
   color: inherit;
 }
-
   .display-3 { font-size: 3.5rem; }
   .display-4 { font-size: 2rem !important; }
 
@@ -214,13 +212,21 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
     .col-3 { display: none; }
   }
  .row { width: 100%; margin:0; }
-  .airplane { 
-    vertical-align: middle;
-    border-style: none;
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-  }
+
+
+/* airplane SVG */
+.airplane { 
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1500px; }
+.airplane {
+  #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; display:block; margin: 0 auto; }
+}
+svg {
+  top: 24rem !important;
+}
+/* end airplane SVG */
 
 }
 
@@ -238,12 +244,10 @@ header { padding: 1rem 0; height: auto; }
   line-height: 1.2;
   color: inherit;
 }
-
 .display-3 { font-size: 2.5rem; }
 .display-4 { font-size: 1.5rem; }
 .calendar-box { margin: 0 25px; width: auto; }
 .form-group { margin: 0 0 1rem; }
-
 .lead { font-size: 1rem; }
 
 /* promotions */
@@ -270,5 +274,17 @@ header { padding: 1rem 0; height: auto; }
   position: relative; -ms-flex: 0 0 100% !important; flex: 0 0 100% !important; max-width: 100% !important; width: 100%; min-height: 1px; padding-right: 15px; padding-left: 15px; }
 
 /* airplane SVG */
-.airplane img { rotate: 90deg; vertical-align: middle; border-style: none; width: 100%; height: 500px; margin: 1rem auto 2rem; }
+.airplane { display: block; position: relative; width: 100%; height: 1000px; }
+.airplane {
+  #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; display:block; margin: 0 auto; }
+}
+svg {
+  width: 100vh;
+  position: absolute;
+  left: -12rem;
+  top: 15rem;
+  display: block;
+  margin: 0 auto;
+}
+/* end airplane SVG */
 }
