@@ -106,7 +106,53 @@ $(document).ready(function () {
       format: 'YYYY-MM-DD'
     }
 
+  });
+
+  // -- SENT QUESTION REGARDING FLIGHTS --//
+  $QuestionAboutFlights = $('#QuestionAboutFlights');
+  $CardWithHoursOfFly = $('#CardWithHoursOfFly');
+  $flight_selection_departure_to = $('#flight_selection_departure_to');
+  $picker = $('#picker');
+  $Card_From = $('#Card_From');
+  $Card_Date = $('#Card_Date');
+  $Card_Hour = $('#Card_Hour');
+
+
+  $QuestionAboutFlights.on('click', function () {
+    // alert("działa");
+    $CardWithHoursOfFly.toggleClass('d-none');
+    $('.card-text span').remove();
+    $Card_From.append('<span>' + $flight_selection_departure_to.val() + '</span>');
+    $Card_Date.append('<span>' + $picker.val() + '</span>');
+
+    if ($flight_selection_departure_to.val() == "Warszawa") {
+      $Card_Hour.append('<span>' + "13:00" + '</span>');
+    }
+    else if ($flight_selection_departure_to.val() == "Berlin") {
+      $Card_Hour.append('<span>' + "16:00" + '</span>');
+    }
+    else {
+      $Card_Hour.append('<span>' + "20:00" + '</span>');
+    }
+
+  });
+
+  $flight_selection_departure_to.on('change', function () {
+    $CardWithHoursOfFly.addClass('d-none');
   })
+
+  $picker.on('change', function () {
+    $CardWithHoursOfFly.addClass('d-none');
+  })
+
+
+
+
+
+
+
+
+
 
   // ---------------------Move of banner title -----------------------------------------------
   $(window).scroll(function () {
