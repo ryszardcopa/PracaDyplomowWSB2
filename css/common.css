@@ -29,6 +29,10 @@ body {
   margin: 0 0 1rem;
 }
 
+.border-3 {
+  border: 3px solid #fff !important;
+}
+
 /* header */
 header {
   height: 100vh;
@@ -66,6 +70,113 @@ header {
   100% {
     opacity: 1;
   }
+}
+
+/* promotions */
+.promotions {
+  background: radial-gradient(ellipse at center, #2c5364, #203a43, #0f2027);
+  background-repeat: no-repeat;
+  height: auto;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  margin: 1rem 50px;
+}
+
+.promo-card .content {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.promo-card .front .image img {
+  display: block;
+}
+
+.promo-card .front .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 50%);
+  padding: 40px 20px 20px;
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+.promo-card .front .author {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* promotions cards */
+.promo-card .front,
+.promo-card .back {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backface-visibility: hidden;
+  transition: transform 400ms;
+}
+
+.promo-card .back .content {
+  background-color: var(--back-bg-color);
+  text-align: center;
+}
+
+.promo-card .back .title {
+  font-size: 2rem;
+  margin-top: 20%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.promo-card .back .sub-title {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.promo-card .back .info ul {
+  list-style: none;
+  text-align: left;
+  margin: 30px 20px;
+}
+
+.promo-card .back .info ul li {
+  margin: 10px 0;
+}
+
+.promo-card .back .info ul li i {
+  margin-right: 10px;
+}
+
+.promo-card .front {
+  transform: perspective(900px) rotateY(0deg);
+}
+
+.promo-card .back {
+  transform: perspective(900px) rotateY(180deg);
+}
+
+.promo-card:hover .front {
+  transform: perspective(900px) rotateY(-180deg);
+}
+
+.promo-card:hover .back {
+  transform: perspective(900px) rotateY(0deg);
 }
 
 /* banner */
@@ -312,6 +423,10 @@ header {
   .form-group {
     margin: 0 2rem 1rem;
   }
+  /* promotions */
+  .promotions {
+    flex-wrap: nowrap;
+  }
 }
 
 /** tablet version **/
@@ -327,14 +442,24 @@ header {
   .form-group {
     margin: 0 4rem 1rem;
   }
-  h1 {
+  /* font style */
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
     font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+    color: inherit;
   }
   .display-3 {
     font-size: 3.5rem;
   }
   .display-4 {
     font-size: 2.5rem;
+  }
+  /* promotions */
+  .promo-card {
+    margin: 1rem 1rem !important;
   }
   /* responsive sidebar */
   .calculation-section {
@@ -398,6 +523,19 @@ header {
   }
   .lead {
     font-size: 1rem;
+  }
+  /* promotions */
+  .promotions {
+    background: none;
+  }
+  .p-5 {
+    padding: 0 !important;
+  }
+  .promo-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: 1rem 0 1rem;
   }
   /* responsive sidebar*/
   .calculation-section {
