@@ -25,7 +25,7 @@ $weight-thin: 500;
 .text-dark { color: $main-color !important; }
 .text-shadow-dark { text-shadow: 2px 2px 15px $main-color; }
 .text-shadow-light { text-shadow: 2px 2px 15px $ff-color; }
-.form-group { margin: 0 4rem 0.4rem; }
+.form-group { margin: 0 0 1rem; }
 
 /* header */
 header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/samolot.svg) no-repeat center center /cover; }
@@ -44,6 +44,9 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .banner { height: auto; padding: 30vh 0 0 0; }
 .banner-heading { animation-name: anim; animation-duration: 2s; }
 .banner-par { animation-duration: 2s; animation-delay: .5s; animation-fill-mode: backwards; }
+
+/* airplane SVG */
+.airplane img { vertical-align: middle; border-style: none; width: 100%; margin: 1rem auto 2rem; }
 
 /* navbar */
 .text-info { color: $second-color; } 
@@ -186,9 +189,7 @@ header { padding: 1rem 0; height: auto; }
 .row { width: 100%; margin:0; }
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
   position: relative; -ms-flex: 0 0 100% !important; flex: 0 0 100% !important; max-width: 100% !important; width: 100%; min-height: 1px; padding-right: 15px; padding-left: 15px; }
-} 
 
-.airplane { display: none; }
-
-/** Sicky box **/
-/** END Sticky box **/
+/* airplane SVG */
+.airplane img { rotate: 90deg; vertical-align: middle; border-style: none; width: 100%; height: 500px; margin: 1rem auto 2rem; }
+}
