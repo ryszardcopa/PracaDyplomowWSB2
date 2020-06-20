@@ -126,7 +126,7 @@
               <!-- departure from -->
               <label class="mt-1 font-weight-bold">Wylot do: </label>
               <div class="form-group">
-                <select name="Departure to" class="select-bar" id="flight-selection-departure-to">
+                <select name="Departure to" class="select-bar" id="flight_selection_departure_to">
                   <option class="dropdown-item">Warszawa</option>
                   <option class="dropdown-item">Berlin</option>
                   <option class="dropdown-item">Nowy Jork</option>
@@ -152,14 +152,29 @@
 
             <!-- send button -->
             <div class="col-md-12">
-              <label class="mt-1 font-weight-bold">Wyślij zapytanie:</label>
+              <!-- <label class="mt-1 font-weight-bold">Wyślij zapytanie:</label>
               <input type="submit" data-toggle="modal" data-target="#sign-in" class="button"
-                id="flight-selection-submit">
-            </div>
-          </div><!-- end row -->
-        </form><!-- end flight selection form-->
+                id="flight-selection-submit"> -->
 
-      </div><!-- end calendar box -->
+
+              <button class="btn btn-primary btn-lg" type="button" id="QuestionAboutFlights">
+                <i class="fas fa-question-circle"></i> Wyślij Zapytanie</button>
+            </div>
+            <div class="card border-primary mb-3 d-none" id="CardWithHoursOfFly">
+              <div class="card-body">
+                <p class="card-text" id="Card_From">Wylot do: <span>Warszawa</span></p>
+                <p class="card-text" id="Card_Date">Najbliższa Data: <span>2020-07-01</span> </p>
+                <p class="card-text" id="Card_Hour">Godzina wylotu: <span>13:00</span> </p>
+                <h5 class="card-text">Zaloguj żeby poznać szczegóły oferty </h5>
+              </div>
+            </div>
+
+
+          </div>
+      </div><!-- end row -->
+      </form><!-- end flight selection form-->
+
+    </div><!-- end calendar box -->
 
 
   </header>
@@ -187,107 +202,107 @@
         <div class="underline mb-4"></div>
 
         <div class="promotions mb-4">
-        <!-- promo card 1 -->
-        <div class="promo-card">
-          <div class="front">
-            <div class="content">
-              <div class="image">
-                <img src="./images/promo-img-warsaw.jpg" alt="Warsaw">
+          <!-- promo card 1 -->
+          <div class="promo-card">
+            <div class="front">
+              <div class="content">
+                <div class="image">
+                  <img src="./images/promo-img-warsaw.jpg" alt="Warsaw">
+                </div>
+                <div class="title">
+                  Warszawa
+                  <div class="author">z Berlina</div>
+                </div>
               </div>
-              <div class="title">
-                Warszawa
-                <div class="author">z Berlina</div>
+            </div>
+            <div class="back">
+              <div class="content">
+                <div class="title">
+                  Warszawa
+                </div>
+                <div class="sub-title">
+                  z Berlina
+                </div>
+                <div class="info">
+                  <ul>
+                    <li><i class="fa fa-user"></i> Nowy York</li>
+                    <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
+                    <li><i class="fa fa-heart"></i> 234k</li>
+                    <li><i class="fa fa-comment"></i> 167</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="back">
-            <div class="content">
-              <div class="title">
-                Warszawa
-              </div>
-              <div class="sub-title">
-                z Berlina
-              </div>
-              <div class="info">
-                <ul>
-                  <li><i class="fa fa-user"></i> Nowy York</li>
-                  <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
-                  <li><i class="fa fa-heart"></i> 234k</li>
-                  <li><i class="fa fa-comment"></i> 167</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <!-- promo card 2 -->
-        <div class="promo-card">
-          <div class="front">
-            <div class="content">
-              <div class="image">
-                <img src="./images/promo-img-berlin.jpg" alt="Berlin">
-              </div>
-              <div class="title">
-                Berlin
-                <div class="author">z Warszawy</div>
-              </div>
-            </div>
-          </div>
-          <div class="back">
-            <div class="content">
-              <div class="title">
-                Berlin
-              </div>
-              <div class="sub-title">
-                z Warszawy
-              </div>
-              <div class="info">
-                <ul>
-                  <li><i class="fa fa-user"></i> Alan Musiner</li>
-                  <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
-                  <li><i class="fa fa-heart"></i> 551k</li>
-                  <li><i class="fa fa-comment"></i> 344</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- promo card 3 -->
-        <div class="promo-card">
-          <div class="front">
-            <div class="content">
-              <div class="image">
-                <img src="./images/promo-img-newyork.jpg" alt="">
+
+          <!-- promo card 2 -->
+          <div class="promo-card">
+            <div class="front">
+              <div class="content">
+                <div class="image">
+                  <img src="./images/promo-img-berlin.jpg" alt="Berlin">
+                </div>
+                <div class="title">
+                  Berlin
+                  <div class="author">z Warszawy</div>
+                </div>
               </div>
-              <div class="title">
-                Nowy Jork
-                <div class="author">z Warszawy</div>
+            </div>
+            <div class="back">
+              <div class="content">
+                <div class="title">
+                  Berlin
+                </div>
+                <div class="sub-title">
+                  z Warszawy
+                </div>
+                <div class="info">
+                  <ul>
+                    <li><i class="fa fa-user"></i> Alan Musiner</li>
+                    <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
+                    <li><i class="fa fa-heart"></i> 551k</li>
+                    <li><i class="fa fa-comment"></i> 344</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="back">
-            <div class="content">
-              <div class="title">
-                Nowy Jork
+
+          <!-- promo card 3 -->
+          <div class="promo-card">
+            <div class="front">
+              <div class="content">
+                <div class="image">
+                  <img src="./images/promo-img-newyork.jpg" alt="">
+                </div>
+                <div class="title">
+                  Nowy Jork
+                  <div class="author">z Warszawy</div>
+                </div>
               </div>
-              <div class="sub-title">
-                z Warszawy
-              </div>
-              <div class="info">
-                <ul>
-                  <li><i class="fa fa-user"></i> Alan Musiner</li>
-                  <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
-                  <li><i class="fa fa-heart"></i> 31k</li>
-                  <li><i class="fa fa-comment"></i> 23</li>
-                </ul>
+            </div>
+            <div class="back">
+              <div class="content">
+                <div class="title">
+                  Nowy Jork
+                </div>
+                <div class="sub-title">
+                  z Warszawy
+                </div>
+                <div class="info">
+                  <ul>
+                    <li><i class="fa fa-user"></i> Alan Musiner</li>
+                    <li><i class="fa fa-map-marker-alt"></i> Some Place</li>
+                    <li><i class="fa fa-heart"></i> 31k</li>
+                    <li><i class="fa fa-comment"></i> 23</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- END CARDS -->
-      </div><!-- END PROMOTIONS -->
+          <!-- END CARDS -->
+        </div><!-- END PROMOTIONS -->
 
       </div>
     </div>
