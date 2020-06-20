@@ -702,19 +702,26 @@ $(document).ready(function () {
 
   })
 
-  $businessClassSeats = $('.cls-127')
+  $businessClassSeats = $('.cls-127');
+  $calc_Seats = $('#calc_Seats');
+
 
   $businessClassSeats.on("click", function () {
     console.log("clicked");
     var $this = $(this);
+    $calc_Seats.removeAttr('span')
     if ($this.is(".cls-127"
     )) {
-      $this.removeClass('cls-127')
-      $this.addClass('cls-900')
+      $this.removeClass('cls-127');
+      $this.addClass('cls-900');
+      // alert($this.attr('id'));
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
+
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('cls-127')
+
     }
 
   })
@@ -729,10 +736,12 @@ $(document).ready(function () {
     )) {
       $this.removeClass('cls-131')
       $this.addClass('cls-900')
+      alert($this.attr('id'))
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('cls-131')
+      alert($this.attr('id'))
     }
 
   })
