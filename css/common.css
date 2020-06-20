@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -74,8 +78,8 @@ header {
 
 /* promotions */
 .promotions {
-  background: radial-gradient(ellipse at center, #2c5364, #203a43, #0f2027);
-  background-repeat: no-repeat;
+  background: url(../images/promotion.jpg) no-repeat fixed;
+  background-size: 100% auto;
   height: auto;
   color: #ffffff;
   overflow: hidden;
@@ -96,6 +100,7 @@ header {
   overflow: hidden;
   border-radius: 20px;
   height: 100%;
+  background: #000080 !important;
 }
 
 .promo-card .front .image img {
@@ -133,7 +138,7 @@ header {
 }
 
 .promo-card .back .content {
-  background-color: var(--back-bg-color);
+  background: #000080 !important;
   text-align: center;
 }
 
@@ -153,6 +158,10 @@ header {
   list-style: none;
   text-align: left;
   margin: 30px 20px;
+}
+
+.promo-card .svg-inline--fa {
+  color: #D4AA00;
 }
 
 .promo-card .back .info ul li {
@@ -310,7 +319,8 @@ header {
   background: #000080;
   color: #fff;
   width: 100%;
-  height: 2.5rem;
+  height: auto;
+  padding: 0.5rem 0;
   border-radius: 5px;
   border: 2px solid #000080;
   font-weight: 700;
