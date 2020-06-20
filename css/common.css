@@ -78,7 +78,7 @@ header {
 
 /* promotions */
 .promotions {
-  background: url(../images/promotion.jpg) no-repeat fixed;
+  background: #b4bfc1 url(../images/promotion.jpg) no-repeat center fixed;
   background-size: 100% auto;
   height: auto;
   color: #fff;
@@ -212,6 +212,13 @@ header {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+/* image slide airplane */
+.image-slide-airplane {
+  width: 100%;
+  height: 25rem;
+  background: #416ca0 url(../images/image-slide-airplane.jpg) no-repeat center fixed;
 }
 
 /* navbar */
@@ -466,7 +473,7 @@ header {
     font-size: 3.5rem;
   }
   .display-4 {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
   }
   /* promotions */
   .promo-card {
