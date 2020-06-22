@@ -1,4 +1,4 @@
-Strona rezerwacji lotów - "Stork Airlines".
+<h1>Strona rezerwacji lotów - "Stork Airlines".</h1>
 
 Autorzy: Mirosław Bidziński, Ryszard Copa.
 Grafika: Mirosław Bidziński.
@@ -11,7 +11,7 @@ https://github.com/ryszardcopa/PracaDyplomowWSB2.git
 
 ------------------------------------------
 
-Krótki opis:
+<h3>Krótki opis:</h3>
 
   Strona oparta jest na Bootstrapie. Zastosowano preprocesory less/sass.
 Zastosowano maksymalnie dwie strony, stronę główną index.html i stronę rezerwacji NewPassengger.html.
@@ -23,7 +23,7 @@ Strona jest w pełni responsywna.
 
 ------------------------------------------
 
-Opis działania:
+<h3>Opis działania:<h3>
 
   1. Wyszukiwarka lotów - Po wyborze daty i miejsca docelowego pojawi się wynik wyszukiwania,
 czyli propozycja lotu o ustalonej godzinie.
@@ -40,7 +40,7 @@ ID 1:
 Login: ryszardcopa
 Hasło: password
 
-ID 2: 
+ID 2:
 
 Login: miroslawbidzinski
 Hasło: password
