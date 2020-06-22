@@ -6,8 +6,7 @@ Grafika: Mirosław Bidziński.
 Kierunek studiów: Programista Frontend z Angular
 Rok adkademicki: 2019/2020
 
-Git jest udostępniony jako publiczny:
-https://github.com/ryszardcopa/PracaDyplomowWSB2.git
+Git jest udostępniony jako publiczny: [Tutaj](https://github.com/ryszardcopa/PracaDyplomowWSB2.git)
 
 ------------------------------------------
 
@@ -23,32 +22,32 @@ Strona jest w pełni responsywna.
 
 ------------------------------------------
 
-<h3>Opis działania:<h3>
+<h3>Opis działania:</h3>
 
-  1. Wyszukiwarka lotów - Po wyborze daty i miejsca docelowego pojawi się wynik wyszukiwania,
+1. Wyszukiwarka lotów - Po wyborze daty i miejsca docelowego pojawi się wynik wyszukiwania,
 czyli propozycja lotu o ustalonej godzinie.
 
-  2. Logowanie do strony rezerwacji - Odbywa się poprzez okno logowania w menu, 
+2. Logowanie do strony rezerwacji - Odbywa się poprzez okno logowania w menu, 
 bądź jako wynik wyszukiwania z przyciskiem kierującym do powyższego okna.
 
 Dane użytkowników i hasła przechowywane są w pliku users.json.
 
 ID użytkowników i hasła:
 
-ID 1:
+**ID 1:**
 
-Login: ryszardcopa
-Hasło: password
+**Login:** ryszardcopa
+**Hasło:** password
 
-ID 2:
+**ID 2:**
 
-Login: miroslawbidzinski
-Hasło: password
+**Login:** miroslawbidzinski
+**Hasło:** password
 
-ID 3:
+**ID 3:**
 
-Login: marcindlubis
-Hasło: password
+**Login:** marcindlubis
+**Hasło:** password
 
   3. Strona rezerwacji:
 
