@@ -685,63 +685,116 @@ $(document).ready(function () {
 
 
   // -- SEATS SELECTION --//
-  $FirstClassSeats = $('.cls-128')
+  $Plane1_FirstClass = $('.cls-128')
 
-  $FirstClassSeats.on("click", function () {
+  $Plane1_FirstClass.on("click", function () {
     console.log("clicked");
     var $this = $(this);
     if ($this.is(".cls-128"
     )) {
       $this.removeClass('cls-128')
       $this.addClass('cls-900')
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('cls-128')
+      $('span#calc_F-01').remove();
+      $('span#calc_E-01').remove();
+      $('span#calc_B-01').remove();
+      $('span#calc_A-01').remove();
+      $('span#calc_F-02').remove();
+      $('span#calc_E-02').remove();
     }
 
   })
 
-  $businessClassSeats = $('.cls-127');
+  $Plane1_FirstClass = $('.cls-127');
   $calc_Seats = $('#calc_Seats');
 
 
-  $businessClassSeats.on("click", function () {
-    console.log("clicked");
+  $Plane1_FirstClass.on("click", function () {
+
     var $this = $(this);
     $calc_Seats.removeAttr('span')
     if ($this.is(".cls-127"
     )) {
       $this.removeClass('cls-127');
       $this.addClass('cls-900');
-      // alert($this.attr('id'));
       $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
 
     }
     else {
       $this.removeClass('cls-900')
-      $this.addClass('cls-127')
-
+      $this.addClass('cls-127');
+      $('span#calc_A-02').remove();
+      $('span#calc_A-04').remove();
+      $('span#calc_B-04').remove();
+      $('span#calc_E-01').remove();
+      $('span#calc_E-02').remove();
+      $('span#calc_F-07').remove();
+      $('span#calc_B-07').remove();
+      $('span#calc_C-07').remove();
+      $('span#calc_C-08').remove();
+      $('span#calc_B-08').remove();
+      $('span#calc_D-11').remove();
     }
-
   })
 
 
-  $businessClassSeats_Plane2 = $('.cls-131')
+  $Plane2_BusinessClass = $('.cls-131')
 
-  $businessClassSeats_Plane2.on("click", function () {
-    console.log("clicked");
+  $Plane2_BusinessClass.on("click", function () {
     var $this = $(this);
     if ($this.is(".cls-131"
     )) {
       $this.removeClass('cls-131')
       $this.addClass('cls-900')
-      alert($this.attr('id'))
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('cls-131')
-      alert($this.attr('id'))
+      $('span#calc_A-07').remove();
+      $('span#calc_A-09').remove();
+      $('span#calc_B-09').remove();
+      $('span#calc_C-09').remove();
+      $('span#calc_D-08').remove();
+      $('span#calc_C-08').remove();
+    }
+
+  })
+
+
+  $Plane2_EconomicClass = $('.cls-1010')
+
+  $Plane2_EconomicClass.on("click", function () {
+
+    var $this = $(this);
+    if ($this.is(".cls-1010"
+    )) {
+      $this.removeClass('cls-1010')
+      $this.addClass('cls-900')
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
+    }
+    else {
+      $this.removeClass('cls-900')
+      $this.addClass('cls-1010')
+      $('span#calc_F-20').remove();
+      $('span#calc_E-20').remove();
+      $('span#calc_D-20').remove();
+      $('span#calc_C-12').remove();
+      $('span#calc_B-12').remove();
+      $('span#calc_A-12').remove();
+      $('span#calc_A-20').remove();
+      $('span#calc_C-20').remove();
+      $('span#calc_A-21').remove();
+      $('span#calc_F-21').remove();
+      $('span#calc_E-21').remove();
+      $('span#calc_D-21').remove();
+      $('span#calc_C-21').remove();
+      $('span#calc_B-21').remove();
+      $('span#calc_A-21').remove();
     }
 
   })
@@ -756,10 +809,18 @@ $(document).ready(function () {
     )) {
       $this.removeClass('st262')
       $this.addClass('cls-900')
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('st262')
+      $('span#calc_A-01').remove();
+      $('span#calc_B-01').remove();
+      $('span#calc_A-02').remove();
+      $('span#calc_B-02').remove();
+      $('span#calc_F-05').remove();
+      $('span#calc_E-05').remove();
+
     }
 
   })
@@ -773,10 +834,17 @@ $(document).ready(function () {
     )) {
       $this.removeClass('st261')
       $this.addClass('cls-900')
+      $calc_Seats.append('<span id="' + 'calc_' + $this.attr('id') + '">' + $this.attr('id') + ',' + '</span>')
     }
     else {
       $this.removeClass('cls-900')
       $this.addClass('st261')
+      $('span#calc_F-07').remove();
+      $('span#calc_E-07').remove();
+      $('span#calc_D-07').remove();
+      $('span#calc_F-08').remove();
+      $('span#calc_E-08').remove();
+      $('span#calc_D-08').remove();
     }
 
   })
