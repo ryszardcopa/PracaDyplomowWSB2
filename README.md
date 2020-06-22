@@ -1,10 +1,10 @@
 <h1>Strona rezerwacji lotów - "Stork Airlines".</h1>
 
-**Autorzy:** *Mirosław Bidziński, Ryszard Copa.*
-**Grafika:** *Mirosław Bidziński.*
-
-**Kierunek studiów:** *Programista Frontend z Angular*
-**Rok adkademicki:** *2019/2020*
+**Autorzy:** *Mirosław Bidziński, Ryszard Copa,*<br>
+**Grafika:** *Mirosław Bidziński,*<br>
+<br>
+**Kierunek studiów:** *Programista Frontend z Angular,*<br>
+**Rok adkademicki:** *2019/2020.*<br>
 
 Git jest udostępniony jako publiczny: [Tutaj](https://github.com/ryszardcopa/PracaDyplomowWSB2.git)
 
@@ -13,7 +13,7 @@ Git jest udostępniony jako publiczny: [Tutaj](https://github.com/ryszardcopa/Pr
 <h3>Krótki opis:</h3>
 
   Strona oparta jest na Bootstrapie. Zastosowano preprocesory less/sass.
-Zastosowano maksymalnie dwie strony, stronę główną index.html i stronę rezerwacji NewPassengger.html.
+Zastosowano maksymalnie dwie strony, stronę główną ***index.html*** i stronę rezerwacji ***NewPassengger.html***.
 
   Nawigacja odbywa się poprzez *"smooth scroolling"*, czyli przewijanie między sekcjami strony i menu hamburger w przypadku zmiany 
 widoku na wertykalny.
@@ -61,18 +61,18 @@ Maksymalna ilość pasażerów na którą można zarezerwować lot to sześć os
 
   a) Bagaż dodatkowy o maksymalnej wadze: 
   
-      - 25kg
-      - 32kg
+   - 25kg
+   - 32kg
   
   b) Klasa lotu: 
   
-      - ekonomiczna 
-      - biznesowa
-      - pierwsza
+   - ekonomiczna 
+   - biznesowa
+   - pierwsza
   
   c) Wybór miejsca w samolocie.
 
-Każdy dodatkowy parametr np. Bagaż dodatkowy, zmiania cenę w oknie podsumowania.
+Każdy dodatkowy parametr np. *Bagaż dodatkowy*, zmiania cenę w oknie podsumowania.
 
 W momencie usunięcia pasażera lub parametru - cena zmieni się automatycznie.
 
