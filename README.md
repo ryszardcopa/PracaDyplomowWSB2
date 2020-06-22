@@ -59,12 +59,20 @@ Maksymalna ilość pasażerów na którą można zarezerwować lot to sześć os
 
 **Dodatkowe parametry:**
 
-  a) Bagaż dodatkowy o wadze: 25kg lub 32kg.
+  a) Bagaż dodatkowy o maksymalnej wadze: 
   
-  b) Klasa lotu: ekonomiczna, biznesowa, pierwsza
+      - 25kg
+      - 32kg
   
-  c) Wybór miejsca w samolocie
+  b) Klasa lotu: 
+  
+      - ekonomiczna 
+      - biznesowa
+      - pierwsza
+  
+  c) Wybór miejsca w samolocie.
 
 Każdy dodatkowy parametr np. Bagaż dodatkowy, zmiania cenę w oknie podsumowania.
-W momencie usunięcia pasażera lub parametru - cena zmniejszy się automatycznie.
+
+W momencie usunięcia pasażera lub parametru - cena zmieni się automatycznie.
 
