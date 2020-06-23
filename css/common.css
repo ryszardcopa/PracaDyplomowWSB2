@@ -6,9 +6,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* global color */
-/* font-weight */
-/* global styles */
 .btm-md-clr {
   padding: 25px 0;
 }
@@ -37,14 +34,12 @@ body {
   border: 3px solid #fff !important;
 }
 
-/* header */
 header {
   height: 100vh;
   margin-top: -9px;
   background: #fff url(../images/samolot.svg) no-repeat center center/cover;
 }
 
-/* collection */
 .card-shadow {
   box-shadow: 1px 1px 10px black;
 }
@@ -76,7 +71,6 @@ header {
   }
 }
 
-/* promotions */
 .promotions {
   background: #b4bfc1 url(../images/promotion.jpg) no-repeat center fixed;
   background-size: 100% auto;
@@ -124,7 +118,6 @@ header {
   opacity: 0.6;
 }
 
-/* promotions cards */
 .promo-card .front,
 .promo-card .back {
   overflow: hidden;
@@ -192,7 +185,6 @@ header {
   transform: perspective(900px) rotateY(0deg);
 }
 
-/* banner */
 .banner {
   height: auto;
   padding: 30vh 0 0 0;
@@ -209,7 +201,6 @@ header {
   animation-fill-mode: backwards;
 }
 
-/* airplane SVG */
 .airplane {
   vertical-align: middle;
   border-style: none;
@@ -218,14 +209,12 @@ header {
   position: relative;
 }
 
-/* image slide airplane */
 .image-slide-airplane {
   width: 100%;
   height: 25rem;
   background: #416ca0 url(../images/image-slide-airplane.jpg) no-repeat center fixed;
 }
 
-/* navbar */
 .text-info {
   color: #D4AA00;
 }
@@ -243,7 +232,6 @@ header {
   background: #000080;
 }
 
-/* nav menu */
 .nav-logo {
   max-width: 6rem;
   height: auto;
@@ -282,7 +270,6 @@ header {
   color: #000080;
 }
 
-/* line */
 .line1, .line2, .line3 {
   width: 23px;
   height: 3px;
@@ -307,7 +294,6 @@ header {
   background: linear-gradient(rgba(255, 255, 255, 0.8), white);
 }
 
-/* flight selection form */
 .calendar-box {
   width: 40vw;
   border-radius: 1rem;
@@ -338,13 +324,11 @@ header {
   font-weight: 700;
 }
 
-/* table */
 .table-dark {
   color: #fff;
   background-color: #000080;
 }
 
-/* mission */
 .mission {
   background: #000080;
 }
@@ -379,7 +363,6 @@ header {
   animation-duration: 3s;
 }
 
-/* calculations section */
 .card {
   z-index: 1;
   margin: 15px 0;
@@ -422,20 +405,16 @@ header {
   }
 }
 
-/* customers */
 .customers {
   background: #000080;
   color: #fff;
 }
 
-/* icons */
 .icons {
   max-width: 4rem;
   height: 4rem;
 }
 
-/* MEDIA QUERIES */
-/** desktop version **/
 @media (min-width: 1024px) and (max-width: 1780px) {
   header {
     padding: 1rem 0;
@@ -444,13 +423,11 @@ header {
   .form-group {
     margin: 0 2rem 1rem;
   }
-  /* promotions */
   .promotions {
     flex-wrap: nowrap;
   }
 }
 
-/** tablet version **/
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     padding: 1rem 0;
@@ -463,7 +440,6 @@ header {
   .form-group {
     margin: 0 4rem 1rem;
   }
-  /* font style */
   .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     font-size: 1.5rem;
@@ -478,11 +454,9 @@ header {
   .display-4 {
     font-size: 2rem !important;
   }
-  /* promotions */
   .promo-card {
     margin: 1rem 1rem !important;
   }
-  /* responsive sidebar */
   .calculation-section {
     display: flex;
     flex-wrap: wrap;
@@ -505,7 +479,6 @@ header {
     width: 100%;
     margin: 0;
   }
-  /* airplane SVG */
   .airplane {
     display: block;
     position: relative;
@@ -521,16 +494,13 @@ header {
   svg {
     top: 24rem !important;
   }
-  /* end airplane SVG */
 }
 
-/** mobile version **/
 @media (min-width: 320px) and (max-width: 768px) {
   header {
     padding: 1rem 0;
     height: auto;
   }
-  /* font style */
   .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     font-size: 1.2rem;
@@ -555,7 +525,6 @@ header {
   .lead {
     font-size: 1rem;
   }
-  /* promotions */
   .promotions {
     background: none;
   }
@@ -568,7 +537,6 @@ header {
     height: 450px;
     margin: 1rem 0 1rem;
   }
-  /* responsive sidebar*/
   .calculation-section {
     display: flex;
     flex-wrap: wrap;
@@ -604,7 +572,6 @@ header {
     padding-right: 15px;
     padding-left: 15px;
   }
-  /* airplane SVG */
   .airplane {
     display: block;
     position: relative;
@@ -625,5 +592,4 @@ header {
     display: block;
     margin: 0 auto;
   }
-  /* end airplane SVG */
 }

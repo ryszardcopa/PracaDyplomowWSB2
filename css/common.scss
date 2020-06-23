@@ -1,27 +1,13 @@
-html {
-  scroll-behavior: smooth !important;
-}
-
-
+html { scroll-behavior: smooth !important; }
 body { font-family: 'Montserrat', sans-serif; }
 
 @mixin grad { background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 1)); }
 @mixin dark-grad { background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 50%); }
+@mixin lighten-alpha { background: rgba(255, 255, 255, 0.8); }
+@mixin darken-alpha { background: rgba(0, 0, 0, 0.8); }
+@mixin flex { display: flex; }
+@mixin block { display: block; }
 
-@mixin lighten-alpha { 
-  background: rgba(255, 255, 255, 0.8);
-}
-@mixin darken-alpha { 
-  background: rgba(0, 0, 0, 0.8);
-}
-@mixin flex {
-  display: flex;
-}
-@mixin block {
-  display: block;
-}
-
-/* global color */
 $main-color: #000080; 
 $second-color: #D4AA00; 
 $ff-color: #fff;
@@ -30,15 +16,12 @@ $light-grey: #b4bfc1;
 $dark-grey: #222;
 $dark: #000;
 $blue: #416ca0;
-
-/* font-weight */
 $weight-bold: 700;
 $weight-regular: normal;
 $weight-thin: 500;
 $pct: 10%;
 $rm: 1rem;
 
-/* global styles */
 .btm-md-clr { padding: 25px 0; }
 .text-light { color: $ff-color !important; }
 .text-dark { color: $main-color !important; }
@@ -46,11 +29,7 @@ $rm: 1rem;
 .text-shadow-light { text-shadow: 2px 2px 15px $ff-color; }
 .form-group { margin: 0 0 $rm; }
 .border-3 { border: 3px solid $ff-color !important; }
-
-/* header */
 header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/samolot.svg) no-repeat center center /cover; }
-
-/* collection */
 .card-shadow { box-shadow: 1px 1px 10px darken($dark-grey, $pct*4); }
 .heading { position: absolute; top: $pct*7; right: 0; font-size: 14px; letter-spacing: 1px; background: darken($dark-grey, $pct*2); width: $pct*7; cursor: pointer; opacity: .7; transition: all .5s; }
 .heading:hover { opacity: 1; }
@@ -59,8 +38,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
   0% { transform: translateX(-100px); opacity: 0; }
   100% { opacity: 1; }
 }
-
-/* promotions */
 
 .promotions {
   background: $light-grey url(../images/promotion.jpg)no-repeat center fixed;
@@ -79,8 +56,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .promo-card .front .image img { @include block; }
 .promo-card .front .title { position: absolute; bottom: 0; left: 0; right: 0; text-align: right; @include dark-grad; padding: 40px 20px 20px; font-size: $rm*2; border-radius: 20px; }
 .promo-card .front .author { font-size: 0.8rem; opacity: 0.6; }
-
-/* promotions cards */
 .promo-card .front,
 .promo-card .back { overflow: hidden; position: absolute; top: 0; left: 0; bottom: 0; right: 0; backface-visibility: hidden; transition: transform 400ms; }
 .promo-card .back .content { background: $main-color !important; text-align: center; }
@@ -96,24 +71,18 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .promo-card:hover .front { transform: perspective(900px) rotateY(-180deg); }
 .promo-card:hover .back { transform: perspective(900px) rotateY(0deg); }
 
-/* banner */
 .banner { height: auto; padding: 30vh 0 0 0; }
 .banner-heading { animation-name: anim; animation-duration: 2s; }
 .banner-par { animation-duration: 2s; animation-delay: .5s; animation-fill-mode: backwards; }
 
-/* airplane SVG */
 .airplane { vertical-align: middle; border-style: none; width: $pct*10; height: $pct*10; position: relative; }
-
-/* image slide airplane */
 .image-slide-airplane { width: $pct*10; height: $rm*25; background: $blue url(../images/image-slide-airplane.jpg)no-repeat center fixed; }
 
-/* navbar */
 .text-info { color: $second-color; } 
 .text-primary { color: $second-color; }
 .svg-inline--fa { font-size: inherit; color: $main-color; }
 .nav-button { background: $main-color; }
 
-/* nav menu */
 .nav-logo { max-width: $rm*6; height: auto; }
 .nav-menu { padding: 15px 30px; transition: all .7s; @include grad; }
 .menu-item { font-size: 13px; letter-spacing: 1px; color: $main-color; transition: color .5s; }
@@ -122,22 +91,17 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .nav-active:hover { color: $second-color; }
 .navbar-expand-lg .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; color: $main-color; }
 
-/* line */
 .line1, .line2, .line3 { width: 23px; height: 3px; margin: 5px; transition: all .4s; }
 .change .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
 .change .line2 { opacity: 0; }
 .change .line3 { transform: rotate(45deg) translate(-5px, -6px); }
 .custom-navbar { padding: 5px 30px; @include grad; }
 
-/* flight selection form */
 .calendar-box { width: 40vw; border-radius: $rm; padding: $rm*2; margin: $rm*2 auto; color: $main-color; @include lighten-alpha; box-shadow: 0 0 1.5rem $grey; }
 .select-bar { transform: none; width: $pct*10; height: 2.5rem; border: 2px solid $main-color; border-radius: 5px; }
 .button { text-transform: none; background: $main-color; color: $ff-color; width: $pct*10; height: auto; padding: 0.5rem $rm; border-radius: 5px; border: 2px solid $main-color; font-weight: $weight-bold; }
 
-/* table */
 .table-dark { color: $ff-color; background-color: $main-color; }
-
-/* mission */
 .mission { background: $main-color; }
 .white-bg { background: $ff-color; color: $main-color !important; }
 .bg-dark { background: $main-color !important; color: $ff-color !important; }
@@ -146,7 +110,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 .fromLeft { animation-name: fromLeft; animation-duration: 3s; }
 .fromRight { animation-name: fromRight; animation-duration: 3s; }
   
-/* calculations section */
 .card { 
   z-index: 1; 
   margin: 15px 0; 
@@ -166,7 +129,6 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
   height: $pct*10;
 }
 
-
 @keyframes fromLeft {
   0% { transform: translateX(-120px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
@@ -177,28 +139,20 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
   100% { transform: translateX(0); opacity: 1; }
 }
 
-/* customers */
 .customers { background: $main-color; color: $ff-color; }
-
-/* icons */
 .icons { max-width: $rm*4; height: $rm*4; }
 
-/* MEDIA QUERIES */
-
-/** desktop version **/
 @media (min-width: 1024px) and (max-width: 1780px) {
   header { padding: $rm 0; height: auto; }
   .form-group { margin: 0 $rm*2 $rm; }
-  /* promotions */
   .promotions { flex-wrap: nowrap; }
 }
 
-/** tablet version **/
 @media (min-width: 768px) and (max-width: 1024px ) {
   header { padding: $rm 0; height: auto; }
   .calendar-box { margin: 0 25px; width: auto; }
   .form-group { margin: 0 $rm*4 $rm; }
-  /* font style */
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-size: 1.5rem;
@@ -209,11 +163,7 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
 }
   .display-3 { font-size: 3.5rem; }
   .display-4 { font-size: $rm*2 !important; }
-
-  /* promotions */
   .promo-card { margin: $rm $rm !important; }
-
-  /* responsive sidebar */
   .calculation-section {
     @include flex; flex-wrap: wrap; flex-direction: column-reverse;
   }
@@ -222,31 +172,14 @@ header { height: 100vh; margin-top: -9px; background: $ff-color url(../images/sa
     .col-8 { -ms-flex: 0 0 $pct*8; flex: 0 0 $pct*8; max-width: $pct*8; }
     .col-3 { display: none; }
   }
- .row { width: $pct*10; margin:0; }
-
-
-/* airplane SVG */
-.airplane { 
-  @include block;
-  position: relative;
-  width: $pct*10;
-  height: 1500px; }
-.airplane {
-  #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; @include block; margin: 0 auto; }
-}
-svg {
-  top: $rm*24 !important;
-}
-/* end airplane SVG */
-
+.row { width: $pct*10; margin:0; }
+.airplane { @include block; position: relative; width: $pct*10; height: 1500px; }
+.airplane { #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; @include block; margin: 0 auto; }}
+svg { top: $rm*24 !important; }
 }
 
-
-/** mobile version **/
 @media (min-width: 320px) and (max-width: 768px) {
 header { padding: $rm 0; height: auto; }
-
-/* font style */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-size: 1.2rem;
@@ -260,21 +193,10 @@ header { padding: $rm 0; height: auto; }
 .calendar-box { margin: 0 25px; width: auto; }
 .form-group { margin: 0 0 $rm; }
 .lead { font-size: $rm; }
-
-/* promotions */
 .promotions { background: none; }
 .p-5 { padding:0 !important; }
-.promo-card {
-  position: relative;
-  width: 300px;
-  height: 450px;
-  margin: $rm 0 $rm;
-}
-
-/* responsive sidebar*/
-.calculation-section {
-  @include flex; flex-wrap: wrap; flex-direction: column-reverse;
-}
+.promo-card { position: relative; width: 300px; height: 450px; margin: $rm 0 $rm; }
+.calculation-section { @include flex; flex-wrap: wrap; flex-direction: column-reverse; }
 .calculation-section {
   .col-2, .col-6 { -ms-flex: 0 0 $pct*10 !important; flex: 0 0 $pct*10 !important; max-width: $pct*10 !important; }
   .col-8 { -ms-flex: 0 0 $pct*8; flex: 0 0 $pct*8; max-width: $pct*8; }
@@ -284,19 +206,7 @@ header { padding: $rm 0; height: auto; }
 .row { width: $pct*10; margin:0; }
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
   position: relative; -ms-flex: 0 0 $pct*10 !important; flex: 0 0 $pct*10 !important; max-width: $pct*10 !important; width: $pct*10; min-height: 1px; padding-right: 15px; padding-left: 15px; }
-
-/* airplane SVG */
 .airplane { @include block; position: relative; width: $pct*10; height: 1000px; }
-.airplane {
-  #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; @include block; margin: 0 auto; }
-}
-svg {
-  width: 100vh;
-  position: absolute;
-  left: -12rem;
-  top: $rm*15;
-  @include block;
-  margin: 0 auto;
-}
-/* end airplane SVG */
+.airplane { #Airbus_319, #Layer_1, #_757-200_752__16-153_v1 { rotate: 90deg !important; position: absolute; @include block; margin: 0 auto; }}
+svg { width: 100vh; position: absolute; left: -12rem; top: $rm*15; @include block; margin: 0 auto; }
 }

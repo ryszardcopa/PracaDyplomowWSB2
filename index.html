@@ -24,10 +24,7 @@
 
 </head>
 <body>
-
-  <!-- header -->
   <header id="#top">
-    <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top nav-menu">
       <a href="index.html" class="navbar-brand text-light text-uppercase">
         <img src="images/stork-airline-logo.svg" class="nav-logo">
@@ -68,10 +65,7 @@
 
       </div>
     </nav>
-    <!-- end of navbar -->
-    <!--------------------------------------- modal ------------------------------------------>
 
-    <!-- modal -->
     <div class="modal fade" id="sign-in">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -95,17 +89,13 @@
             <p class="text-danger" id="modalWrongPasswordWarning">Błędne hasło</p>
           </div>
           <div class="modal-footer">
-            <!-- <a href="./NewPassenger.html" type="button" class="btn btn-success" id="modalloginbutton">Login</a> -->
             <button type="button" class="btn btn-success" id="modalLoginButton">Zaloguj</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Zrezygnuj</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- end of modal -->
 
-    <!---------------------------------------END OF modal ----------------------------------------- -->
-    <!-- banner -->
     <div class="text-light text-center banner">
       <h1 class="display-5 banner-heading">
         <span class="display-3 font-weight-bold text-shadow-dark">Lataj ze Stork Airlines!</span>
@@ -117,9 +107,7 @@
 
       <div class="calendar-box">
 
-        <!-- flight selection form-->
         <form id="flight-selection-form">
-          <!-- row -->
           <div class="row">
 
             <div class="col-md-12">
@@ -127,7 +115,6 @@
             </div>
 
             <div class="col-md-6">
-              <!-- departure from -->
               <label class="mt-1 font-weight-bold">Wylot do: </label>
               <div class="form-group">
                 <select name="Departure to" class="select-bar" id="flight_selection_departure_to">
@@ -139,47 +126,35 @@
             </div>
 
             <div class="col-md-6">
-              <!-- departure date -->
               <label class="mt-1 font-weight-bold">Data wylotu:</label>
               <div class="form-group">
                   <input type="text" id="picker" class="form-control select-bar">
               </div>
             </div>
 
-          </div><!-- end row -->
+          </div>
 
-          <!-- row -->
           <div class="row">
 
-            <!-- send button -->
             <div class="col-md-12">
-              <!-- <label class="mt-1 font-weight-bold">Wyślij zapytanie:</label>
-              <input type="submit" data-toggle="modal" data-target="#sign-in" class="button"
-                id="flight-selection-submit"> -->
 
               <a href="#seven">
                 <button class="button" type="button" id="QuestionAboutFlights">
                 <i class="fas fa-question-circle"></i>Pokaż dostępny lot</button>
               </a>
             </div>
-          </div><!-- END ROW -->
-        </form><!-- end flight selection form-->
+          </div>
+        </form>
 
-      </div><!-- end calendar box -->
-
-
+      </div>
   </header>
-  <!-- end of header -->
 
-
-  <!-- section results -->
   <section class="p-5 white-bg mt-4" id="seven">
     <div class="row text-center">
       <div class="col-md-12 col-12">
         <h1 class="display-4 mb-4">Dostępne loty</h1>
         <div class="underline mb-4"></div>
 
-        <!-- tutaj pojawią się wyniki -->
         <div class="card border-primary mb-3 d-none" id="CardWithHoursOfFly">
           <div class="card-body">
             <p class="card-text" id="Card_From"><strong>Wylot do:</strong> <span>Warszawa</span></p>
@@ -193,9 +168,7 @@
       </div>
     </div>
   </section>
-  <!-- end section results -->
 
-  <!-- section promotions -->
   <section class="white-bg" id="three">
     <div class="row text-center">
       <div class="col-md-12 col-12">
@@ -203,7 +176,6 @@
         <div class="underline mb-4"></div>
 
         <div class="promotions pb-4">
-        <!-- promo card 1 -->
         <div class="promo-card">
           <div class="front">
             <div class="content">
@@ -230,7 +202,6 @@
                   <li><i class="fa fa-map-marker-alt"></i> do Warszawy</li>
                   <li><i class="fa fa-heart"></i> 234k</li>
                   <li><i class="fa fa-comment"></i> 167</li>
-
                   <p class="mb-3 text-warning"><del>220 zł</del></p>
                   <h2 class="mt-9">90 zł</h2>
                 </ul>
@@ -239,8 +210,6 @@
           </div>
         </div>
         
-        
-        <!-- promo card 2 -->
         <div class="promo-card">
           <div class="front">
             <div class="content">
@@ -276,7 +245,6 @@
           </div>
         </div>
 
-        <!-- promo card 3 -->
         <div class="promo-card">
           <div class="front">
             <div class="content">
@@ -311,18 +279,15 @@
             </div>
           </div>
         </div>
-        <!-- END CARDS -->
-      </div><!-- END PROMOTIONS -->
-
+      </div>
       </div>
     </div>
   </section>
-  <!-- end section promotions -->
+
 
   <section class="p-5 mission" id="one">
     <div class="container-fluid">
 
-      <!-- title -->
       <div class="row text-white text-center">
         <div class="col m-4">
           <h1 class="display-4 mb-4">Nasza misja</h1>
@@ -336,7 +301,7 @@
           </p>
         </div>
       </div>
-      <!-- end of title -->
+
       <div class="row my-5" id="#fourgit">
         <div class="col-md-4 text-center">
           <img src="images/suitcase-rolling-solid.svg" class="icons mb-4">
@@ -394,18 +359,13 @@
       </div>
     </div>
   </section>
-  <!-- end of mission -->
 
-  <!-- image slide airplane -->
   <section class="image-slide-airplane">
     <div></div>
   </section>
-  <!-- image slide airplane -->
 
-  <!-- customers -->
   <section class="p-5 customers" id="four">
     <div class="container-fluid">
-      <!-- title -->
       <div class="row text-white text-center">
         <div class="col m-4">
           <h1 class="display-4 mb-4">Zadowoleni klienci</h1>
@@ -415,7 +375,7 @@
           </p>
         </div>
       </div>
-      <!-- end of title -->
+
       <div class="row">
         <div class="col-md-6 mx-auto">
           <div class="carousel slide" data-ride="carousel" id="customer-carousel">
@@ -428,7 +388,6 @@
             </ol>
 
             <div class="carousel-inner">
-              <!-- customer -->
               <div class="carousel-item active text-center">
                 <img src="images/customer1.jpeg" class="img-fluid rounded-circle m-5" width="150" />
                 <blockquote class="blockquote text-white">
@@ -458,7 +417,7 @@
                   </li>
                 </ul>
               </div>
-              <!-- customer -->
+
               <div class="carousel-item text-center">
                 <img src="images/customer2.jpeg" class="img-fluid rounded-circle m-5" width="150" />
                 <blockquote class="blockquote text-white">
@@ -487,7 +446,7 @@
                   </li>
                 </ul>
               </div>
-              <!-- customer -->
+
               <div class="carousel-item text-center">
                 <img src="images/customer3.jpeg" class="img-fluid rounded-circle m-5" width="150" />
                 <blockquote class="blockquote text-white">
@@ -516,7 +475,7 @@
                   </li>
                 </ul>
               </div>
-              <!-- customer -->
+
               <div class="carousel-item text-center">
                 <img src="images/customer4.jpg" class="img-fluid rounded-circle m-5" width="150" />
                 <blockquote class="blockquote text-white">
@@ -546,7 +505,7 @@
                   </li>
                 </ul>
               </div>
-              <!-- customer -->
+
               <div class="carousel-item text-center">
                 <img src="images/customer5.jpg" class="img-fluid rounded-circle m-5" width="150" />
                 <blockquote class="blockquote text-white">
@@ -584,9 +543,7 @@
       </div>
     </div>
   </section>
-  <!-- end of customers -->
 
-  <!-- footer -->
   <section id="five">
   <footer class="bg-dark px-5">
     <div class="container-fluid">
@@ -666,9 +623,7 @@
       </div>
     </div>
   </footer>
-  </section> <!-- END SECTION FOOTER -->
-
-  <!-- end of footer -->
+  </section>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
@@ -679,9 +634,8 @@
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
   <script src="./scripts/script.js"></script>
-  <!-- DATEPICKER SCRIPTS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-</body>
 
+</body>
 </html>
