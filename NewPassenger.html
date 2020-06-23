@@ -39,22 +39,16 @@
             <a href="#" class="nav-link m-2 menu-item nav-active">Strona główna</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link m-2 menu-item">Misja</a>
+            <a href="#one" class="nav-link m-2 menu-item">Szczegóły Lotu</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link m-2 menu-item">Informacje</a>
+            <a href="#two" class="nav-link m-2 menu-item">Ilość pasażerów</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link m-2 menu-item">Galeria</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link m-2 menu-item">Opinie klientów</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link m-2 menu-item">Kontakt</a>
+            <a href="#five" class="nav-link m-2 menu-item">Kontakt</a>
           </li>
           <li class="nav-item" data-toggle="modal" data-target="#sign-in">
-            <a href="#" class="nav-link m-2 menu-item"> | <i class="fas fa-user"></i> Zaloguj się</a>
+            <a href="#six" class="nav-link m-2 menu-item"> | <i class="fas fa-user"></i> Zalogowany</a>
           </li>
         </ul>
       </div>
@@ -117,7 +111,7 @@
 
               <!-- FLIGHT DETAILS -->
 
-              <section class="flightDetails_section ">
+              <section class="flightDetails_section" id="one">
                 <div class="container-fluid clearfix">
                   <div class="row text-center pt-5">
                     <div class="col-3"></div>
@@ -162,7 +156,7 @@
 
 
               <!-- NUMBER OF PASSENGERS -->
-              <section class="passengerInfo ">
+              <section class="passengerInfo" id="two">
                 <div class="container-fluid text-center">
                   <div class="row text-center">
                     <div class="col-3"></div>
@@ -213,7 +207,7 @@
                     <!-- PASSANGER 1 - 1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_1_1_form">
                       <fieldset class="form-group">
-                        <legend class="h4 display-5">Informacje dotyczące pierwszego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczące pierwszego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -268,7 +262,7 @@
                     <!-- PASSANGER 2-1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_2_1_form">
                       <fieldset class="form-group">
-                        <legend class="h4 display-5">Informacje dotyczące drugiego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczące drugiego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -323,7 +317,7 @@
                     <!-- PASSANGER 3-1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_3_1_form">
                       <fieldset class=" form-group">
-                        <legend class="h4 display-5">Informacje dotyczące trzeciego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczące trzeciego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -378,7 +372,7 @@
                     <!-- PASSANGER 4-1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_4_1_form">
                       <fieldset class="form-group">
-                        <legend class="h4 display-5">Informacje dotyczęce czwartego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczęce czwartego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -432,7 +426,7 @@
                     <!-- PASSANGER 5-1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33" id="passenger_5_1_form">
                       <fieldset class="form-group">
-                        <legend class="h4 display-5">Informacje dotyczące piątego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczące piątego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -486,7 +480,7 @@
                     <!-- PASSANGER 6-1 -->
                     <div class="mx-auto col-sm-12 col-md-12 col-lg-4 col-xl-4 mw-33 " id="passenger_6_1_form">
                       <fieldset class=" form-group">
-                        <legend class="h4 display-5">Informacje dotyczące szóstego pasażera</legend>
+                        <legend class="h4 display-5">Informacje dotyczące szóstego<br> pasażera</legend>
                         <div class="underline mb-4"></div>
                         <form action="example" method="post">
                           <label class="input-group-prepend" for="firstName">Imię:</label>
@@ -12812,6 +12806,7 @@
   <!-- ******* END MAIN SITE ********* -->
 
   <!-- footer -->
+  <section id="five">
   <footer class="bg-dark px-5">
     <div class="container-fluid">
       <div class="row text-light py-4">
@@ -12827,16 +12822,16 @@
           </p>
         </div>
         <div class="col-lg-2 col-sm-6">
-          <h5 class="pb-3">Visit Us</h5>
+          <h5 class="pb-3">Menu:</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="#" class="footer-link">Strona Główna</a>
+              <a href="#top" class="footer-link">Strona Główna</a>
             </li>
             <li>
-              <a href="#" class="footer-link" data-target="#sign-in">Logowanie</a>
+              <a href="#top" class="footer-link">Logowanie</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Kontakt</a>
+              <a href="#five" class="footer-link">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -12849,18 +12844,17 @@
           </ul>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <h5 class="pb-3">Stay Connected</h5>
+          <h5 class="pb-3">Pozostań z nami w kontakcie</h5>
           <p class="small">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            accusamus dolores iste praesentium assumenda est quia accusantium
-            corrupti ipsam inventore.
+            Chcesz jako pierwszy dowiedzieć się o nowych lotach<br />
+            lub promocjach Stork Airlines?
           </p>
           <form class="mb-3">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Email Address" />
+              <input type="text" class="form-control" placeholder="Adres email" />
               <div class="input-group-append">
                 <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">
-                  Sign Up
+                  Zapisz się!
                 </button>
               </div>
             </div>
@@ -12884,8 +12878,6 @@
           </ul>
         </div>
       </div>
-
-
       <div class="row">
         <div class="col text-center text-light border-top pt-3">
           <p>&copy; 2020 Copyright, Autorzy: Ryszard Copa, Mirosław Bidziński. Wszystkie prawa zastrzeżone.</p>
@@ -12893,6 +12885,8 @@
       </div>
     </div>
   </footer>
+  </section> <!-- END SECTION FOOTER -->
+
   <!-- end of footer -->
 
 

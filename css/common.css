@@ -142,6 +142,10 @@ header {
   text-align: center;
 }
 
+.promo-card > .card-text {
+  padding: 2rem 1.5rem;
+}
+
 .promo-card .back .title {
   font-size: 2rem;
   margin-top: 20%;
@@ -582,6 +586,9 @@ header {
   }
   .calculation-section .col-3 {
     display: none;
+  }
+  .calculation-section .col-2 {
+    margin-top: 6rem;
   }
   .row {
     width: 100%;
