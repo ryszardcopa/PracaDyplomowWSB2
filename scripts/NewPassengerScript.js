@@ -42,12 +42,7 @@ $(document).ready(function () {
   $p5_1_AdditionalBaggageForm = $('#p5_1_AdditionalBaggageForm');
   $p6_1_AdditionalBaggageForm = $('#p6_1_AdditionalBaggageForm');
 
-  $p1_1_SeatsForm = $('#p1_1_SeatsForm');
-  $p1_2_SeatsForm = $('#p2_1_SeatsForm');
-  $p1_3_SeatsForm = $('#p3_1_SeatsForm');
-  $p1_4_SeatsForm = $('#p4_1_SeatsForm');
-  $p1_5_SeatsForm = $('#p5_1_SeatsForm');
-  $p1_6_SeatsForm = $('#p6_1_SeatsForm');
+
 
   // --Plane selection --//
   $plane1 = $('#plane1');
@@ -102,7 +97,6 @@ $(document).ready(function () {
   $calcDeparture_Time = $('#calcDeparture_Time');
 
   $picker.on('change', function () {
-    // alert("dziala");
     $calcDeparture_Date.children().remove();
     $calcDeparture_Time.children().remove();
     $calcDeparture_Date.append('<span>' + $picker.val() + '</span>')
@@ -155,6 +149,22 @@ $(document).ready(function () {
     .eq(parseInt($flightFromform.val() - 1))
     .attr('disabled', 'disabled');
   $calcFlightSelected = $WAR_BER;
+  $NumberOfPassengers.val(1);
+  $p1_1_tarrifForm.val(0);
+  $p2_1_tarrifForm.val(0);
+  $p3_1_tarrifForm.val(0);
+  $p4_1_tarrifForm.val(0);
+  $p5_1_tarrifForm.val(0);
+  $p6_1_tarrifForm.val(0);
+
+  $p1_1_AdditionalBaggageForm.val(0);
+  $p2_1_AdditionalBaggageForm.val(0);
+  $p3_1_AdditionalBaggageForm.val(0);
+  $p4_1_AdditionalBaggageForm.val(0);
+  $p5_1_AdditionalBaggageForm.val(0);
+  $p6_1_AdditionalBaggageForm.val(0);
+
+
 
 
   // -- WAR_BER --//
@@ -231,67 +241,137 @@ $(document).ready(function () {
 
   function TarrifUpdate() {
     if ($NumberOfPassengers.val() == 1) {
-      console.log('ilość Pasażerów 1');
       if ($('#p2_1_calcTarrifParagraph').length) {
         $('#p2_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p3_1_calcTarrifParagraph').length) {
         $('#p3_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p4_1_calcTarrifParagraph').length) {
         $('#p4_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p5_1_calcTarrifParagraph').length) {
         $('#p5_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p6_1_calcTarrifParagraph').length) {
         $('#p6_1_calcTarrifParagraph').remove();
+        updatePrice();
+      }
+      if ($('.p2_1_addBagg_paragraph').length) {
+        $('.p2_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p3_1_addBagg_paragraph').length) {
+        $('.p3_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p4_1_addBagg_paragraph').length) {
+        $('.p4_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p5_1_addBagg_paragraph').length) {
+        $('.p5_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p6_1_addBagg_paragraph').length) {
+        $('.p6_1_addBagg_paragraph').remove();
+        updatePrice();
       }
     }
     if ($NumberOfPassengers.val() == 2) {
-      console.log('ilość Pasażerów 2');
       if ($('#p3_1_calcTarrifParagraph').length) {
         $('#p3_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p4_1_calcTarrifParagraph').length) {
         $('#p4_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p5_1_calcTarrifParagraph').length) {
         $('#p5_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p6_1_calcTarrifParagraph').length) {
         $('#p6_1_calcTarrifParagraph').remove();
+        updatePrice();
+      }
+      if ($('.p3_1_addBagg_paragraph').length) {
+        $('.p3_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p4_1_addBagg_paragraph').length) {
+        $('.p4_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p5_1_addBagg_paragraph').length) {
+        $('.p5_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p6_1_addBagg_paragraph').length) {
+        $('.p6_1_addBagg_paragraph').remove();
+        updatePrice();
       }
     }
     if ($NumberOfPassengers.val() == 3) {
-      console.log('ilość Pasażerów 3');
       if ($('#p4_1_calcTarrifParagraph').length) {
         $('#p4_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p5_1_calcTarrifParagraph').length) {
         $('#p5_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p6_1_calcTarrifParagraph').length) {
         $('#p6_1_calcTarrifParagraph').remove();
+        updatePrice();
+      }
+      if ($('.p4_1_addBagg_paragraph').length) {
+        $('.p4_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p5_1_addBagg_paragraph').length) {
+        $('.p5_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p6_1_addBagg_paragraph').length) {
+        $('.p6_1_addBagg_paragraph').remove();
+        updatePrice();
       }
     }
     if ($NumberOfPassengers.val() == 4) {
-      console.log('ilość Pasażerów 4');
       if ($('#p5_1_calcTarrifParagraph').length) {
         $('#p5_1_calcTarrifParagraph').remove();
+        updatePrice();
       }
       if ($('#p6_1_calcTarrifParagraph').length) {
         $('#p6_1_calcTarrifParagraph').remove();
+        updatePrice();
+      }
+      if ($('.p5_1_addBagg_paragraph').length) {
+        $('.p5_1_addBagg_paragraph').remove();
+        updatePrice();
+      }
+      if ($('.p6_1_addBagg_paragraph').length) {
+        $('.p6_1_addBagg_paragraph').remove();
+        updatePrice();
       }
     }
     if ($NumberOfPassengers.val() == 5) {
-      console.log('ilość Pasażerów 5');
       if ($('#p6_1_calcTarrifParagraph').length) {
         $('#p6_1_calcTarrifParagraph').remove();
+        updatePrice();
+      }
+      if ($('.p6_1_addBagg_paragraph').length) {
+        $('.p6_1_addBagg_paragraph').remove();
+        updatePrice();
       }
     }
     if ($NumberOfPassengers.val() == 6) {
-      console.log('ilość Pasażerów 6');
+      updatePrice();
     }
   }
 
@@ -395,11 +475,13 @@ $(document).ready(function () {
       $p1_1_calcTarrif.append(
         '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="Economic">Economic class</span></p>'
       );
+      updatePrice();
     }
   });
 
   // --PASSENGER 2_1 --//
   $p2_1_tarrifForm.on('change', function () {
+
     $('#p2_1_calcTarrifParagraph').remove();
     if ($p2_1_tarrifForm.val() == 1) {
       $('#p2_1_calcTarrif').append(
@@ -526,7 +608,6 @@ $(document).ready(function () {
   // --PASSENGER 1_1 --//
 
   $('#p1_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p1_1_addBagg_paragraph').remove();
     if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
@@ -547,13 +628,13 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p1_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
 
   // --PASSENGER 2_1 --//
   $('#p2_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p2_1_addBagg_paragraph').remove();
     if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
@@ -574,12 +655,12 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p2_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
   // --PASSENGER 3_1 --//
   $('#p3_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p3_1_addBagg_paragraph').remove();
     if ($('#p3_1_AdditionalBaggageForm').val() == 1) {
@@ -600,12 +681,12 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p3_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
   // --PASSENGER 4_1 --//
   $('#p4_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p4_1_addBagg_paragraph').remove();
     if ($('#p4_1_AdditionalBaggageForm').val() == 1) {
@@ -626,12 +707,12 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p4_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
   // --PASSENGER 5_1 --//
   $('#p5_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p5_1_addBagg_paragraph').remove();
     if ($('#p5_1_AdditionalBaggageForm').val() == 1) {
@@ -652,12 +733,12 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p5_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
   // --PASSENGER 6_1 --//
   $('#p6_1_AdditionalBaggageForm').on('change', function () {
-    // alert('tarrifchangeWorking');
 
     $('.p6_1_addBagg_paragraph').remove();
     if ($('#p6_1_AdditionalBaggageForm').val() == 1) {
@@ -678,9 +759,10 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $('.p6_1_addBagg_paragraph').remove();
+      updatePrice();
     }
   });
-  updatePrice();
+
 
 
 
@@ -688,7 +770,6 @@ $(document).ready(function () {
   $Plane1_FirstClass = $('.cls-128')
 
   $Plane1_FirstClass.on("click", function () {
-    console.log("clicked");
     var $this = $(this);
     if ($this.is(".cls-128"
     )) {
@@ -803,7 +884,6 @@ $(document).ready(function () {
   $FirstClassSeats_Plane2 = $('.st262')
 
   $FirstClassSeats_Plane2.on("click", function () {
-    console.log("clicked");
     var $this = $(this);
     if ($this.is(".st262"
     )) {
@@ -828,7 +908,6 @@ $(document).ready(function () {
   $businessClassSeats_Plane2 = $('.st261')
 
   $businessClassSeats_Plane2.on("click", function () {
-    console.log("clicked");
     var $this = $(this);
     if ($this.is(".st261"
     )) {
