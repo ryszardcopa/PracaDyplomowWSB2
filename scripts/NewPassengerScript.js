@@ -447,7 +447,7 @@ $(document).ready(function () {
 
   // --UPDATE OF TARRIF INITIAL SETUP--//
   $p1_1_calcTarrif.append(
-    '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="Economic">Economic class</span></p>'
+    '<p id="p1_1_calcTarrifParagraph">Pasażer1: <span class="Economic">Economic class</span></p>'
   );
 
   // --UPDATE OF TARRIF CHANGES--//
@@ -457,7 +457,7 @@ $(document).ready(function () {
     $('#p1_1_calcTarrifParagraph').remove();
     if ($p1_1_tarrifForm.val() == 1) {
       $p1_1_calcTarrif.append(
-        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="BusinessClass">Business class+' +
+        '<p id="p1_1_calcTarrifParagraph">Pasażer1: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -465,7 +465,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p1_1_tarrifForm.val() == 2) {
       $p1_1_calcTarrif.append(
-        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="FirstClass">FirstClass class+' +
+        '<p id="p1_1_calcTarrifParagraph">Pasażer1: <span class="FirstClass">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -473,7 +473,7 @@ $(document).ready(function () {
       updatePrice();
     } else {
       $p1_1_calcTarrif.append(
-        '<p id="p1_1_calcTarrifParagraph">Passenger1: <span class="Economic">Economic class</span></p>'
+        '<p id="p1_1_calcTarrifParagraph">Pasażer1: <span class="Economic">Economic class</span></p>'
       );
       updatePrice();
     }
@@ -485,7 +485,7 @@ $(document).ready(function () {
     $('#p2_1_calcTarrifParagraph').remove();
     if ($p2_1_tarrifForm.val() == 1) {
       $('#p2_1_calcTarrif').append(
-        '<p id="p2_1_calcTarrifParagraph">Passenger2: <span class="BusinessClass">Business class+' +
+        '<p id="p2_1_calcTarrifParagraph">Pasażer2: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -493,7 +493,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p2_1_tarrifForm.val() == 2) {
       $('#p2_1_calcTarrif').append(
-        '<p id="p2_1_calcTarrifParagraph">Passenger2: <span class="FirstClass">FirstClass class+' +
+        '<p id="p2_1_calcTarrifParagraph">Pasażer2: <span class="FirstClass">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -510,7 +510,7 @@ $(document).ready(function () {
     $('#p3_1_calcTarrifParagraph').remove();
     if ($p3_1_tarrifForm.val() == 1) {
       $('#p3_1_calcTarrif').append(
-        '<p id="p3_1_calcTarrifParagraph">Passenger3: <span class="BusinessClass">Business class+' +
+        '<p id="p3_1_calcTarrifParagraph">Pasażer3: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -518,7 +518,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p3_1_tarrifForm.val() == 2) {
       $('#p3_1_calcTarrif').append(
-        '<p id="p3_1_calcTarrifParagraph">Passenger3: <span class="FirstClass">FirstClass class+' +
+        '<p id="p3_1_calcTarrifParagraph">Pasażer3: <span class="FirstClass">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -534,7 +534,7 @@ $(document).ready(function () {
     $('#p4_1_calcTarrifParagraph').remove();
     if ($p4_1_tarrifForm.val() == 1) {
       $('#p4_1_calcTarrif').append(
-        '<p id="p4_1_calcTarrifParagraph">Passenger4: <span class="BusinessClass">Business class+' +
+        '<p id="p4_1_calcTarrifParagraph">Pasażer4: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -542,7 +542,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p4_1_tarrifForm.val() == 2) {
       $('#p4_1_calcTarrif').append(
-        '<p id="p4_1_calcTarrifParagraph">Passenger4: <span class="FirstClass">FirstClass class+' +
+        '<p id="p4_1_calcTarrifParagraph">Pasażer4: <span class="FirstClass">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -559,7 +559,7 @@ $(document).ready(function () {
     $('#p5_1_calcTarrifParagraph').remove();
     if ($p5_1_tarrifForm.val() == 1) {
       $('#p5_1_calcTarrif').append(
-        '<p id="p5_1_calcTarrifParagraph">Passenger5: <span class="BusinessClass">Business class+' +
+        '<p id="p5_1_calcTarrifParagraph">Pasażer5: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -567,7 +567,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p5_1_tarrifForm.val() == 2) {
       $('#p5_1_calcTarrif').append(
-        '<p id="p5_1_calcTarrifParagraph">Passenger5: <span id="FirstClass_paragraph">FirstClass class+' +
+        '<p id="p5_1_calcTarrifParagraph">Pasażer5: <span id="FirstClass_paragraph">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -584,7 +584,7 @@ $(document).ready(function () {
     $('#p6_1_calcTarrifParagraph').remove();
     if ($p6_1_tarrifForm.val() == 1) {
       $('#p6_1_calcTarrif').append(
-        '<p id="p6_1_calcTarrifParagraph">Passenger6: <span class="BusinessClass">Business class+' +
+        '<p id="p6_1_calcTarrifParagraph">Pasażer6: <span class="BusinessClass">Business class+' +
         $TarrifBusiness +
         ' PLN' +
         '</span></p>'
@@ -592,7 +592,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($p6_1_tarrifForm.val() == 2) {
       $('#p6_1_calcTarrif').append(
-        '<p id="p6_1_calcTarrifParagraph">Passenger6: <span class="FirstClass">FirstClass class+' +
+        '<p id="p6_1_calcTarrifParagraph">Pasażer6: <span class="FirstClass">FirstClass class+' +
         $TarrifFirstClass +
         ' PLN' +
         '</span></p>'
@@ -612,7 +612,7 @@ $(document).ready(function () {
     $('.p1_1_addBagg_paragraph').remove();
     if ($('#p1_1_AdditionalBaggageForm').val() == 1) {
       $('#p1_1_calc_AddBagg').append(
-        '<p class="p1_1_addBagg_paragraph">Passenger1->20kg+<span class="20kg"></span>' +
+        '<p class="p1_1_addBagg_paragraph">Pasażer1->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -620,7 +620,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p1_1_AdditionalBaggageForm').val() == 2) {
       $('#p1_1_calc_AddBagg').append(
-        '<p class="p1_1_addBagg_paragraph">Passenger1->32kg+<span class="32kg"></span>: ' +
+        '<p class="p1_1_addBagg_paragraph">Pasażer1->32kg+<span class="32kg"></span>: ' +
         $AddBag32 +
         ' PLN' +
         '</p>'
@@ -639,7 +639,7 @@ $(document).ready(function () {
     $('.p2_1_addBagg_paragraph').remove();
     if ($('#p2_1_AdditionalBaggageForm').val() == 1) {
       $('#p2_1_calc_AddBagg').append(
-        '<p class="p2_1_addBagg_paragraph">Passenger2->20kg+<span class="20kg"></span>' +
+        '<p class="p2_1_addBagg_paragraph">Pasażer2->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -647,7 +647,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p2_1_AdditionalBaggageForm').val() == 2) {
       $('#p2_1_calc_AddBagg').append(
-        '<p class="p2_1_addBagg_paragraph">Passenger2->32kg+<span class="32kg"></span>' +
+        '<p class="p2_1_addBagg_paragraph">Pasażer2->32kg+<span class="32kg"></span>' +
         $AddBag32 +
         ' PLN' +
         '</p>'
@@ -665,7 +665,7 @@ $(document).ready(function () {
     $('.p3_1_addBagg_paragraph').remove();
     if ($('#p3_1_AdditionalBaggageForm').val() == 1) {
       $('#p3_1_calc_AddBagg').append(
-        '<p class="p3_1_addBagg_paragraph">Passenger3->20kg+<span class="20kg"></span>' +
+        '<p class="p3_1_addBagg_paragraph">Pasażer3->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -673,7 +673,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p3_1_AdditionalBaggageForm').val() == 2) {
       $('#p3_1_calc_AddBagg').append(
-        '<p class="p3_1_addBagg_paragraph">Passenger3->32kg+<span class="32kg"></span>' +
+        '<p class="p3_1_addBagg_paragraph">Pasażer3->32kg+<span class="32kg"></span>' +
         $AddBag32 +
         ' PLN' +
         '</p>'
@@ -691,7 +691,7 @@ $(document).ready(function () {
     $('.p4_1_addBagg_paragraph').remove();
     if ($('#p4_1_AdditionalBaggageForm').val() == 1) {
       $('#p4_1_calc_AddBagg').append(
-        '<p class="p4_1_addBagg_paragraph">Passenger4->20kg+<span class="20kg"></span>' +
+        '<p class="p4_1_addBagg_paragraph">Pasażer4->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -699,7 +699,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p4_1_AdditionalBaggageForm').val() == 2) {
       $('#p4_1_calc_AddBagg').append(
-        '<p class="p4_1_addBagg_paragraph">Passenger4->32kg+<span class="32kg"></span>' +
+        '<p class="p4_1_addBagg_paragraph">Pasażer4->32kg+<span class="32kg"></span>' +
         $AddBag32 +
         ' PLN' +
         '</p>'
@@ -717,7 +717,7 @@ $(document).ready(function () {
     $('.p5_1_addBagg_paragraph').remove();
     if ($('#p5_1_AdditionalBaggageForm').val() == 1) {
       $('#p5_1_calc_AddBagg').append(
-        '<p class="p5_1_addBagg_paragraph">Passenger5->20kg+<span class="20kg"></span>' +
+        '<p class="p5_1_addBagg_paragraph">Pasażer5->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -725,7 +725,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p5_1_AdditionalBaggageForm').val() == 2) {
       $('#p5_1_calc_AddBagg').append(
-        '<p class="p5_1_addBagg_paragraph">Passenger5->32kg+<span class="32kg"></span>' +
+        '<p class="p5_1_addBagg_paragraph">Pasażer5->32kg+<span class="32kg"></span>' +
         $AddBag32 +
         ' PLN' +
         '</p>'
@@ -743,7 +743,7 @@ $(document).ready(function () {
     $('.p6_1_addBagg_paragraph').remove();
     if ($('#p6_1_AdditionalBaggageForm').val() == 1) {
       $('#p6_1_calc_AddBagg').append(
-        '<p class="p6_1_addBagg_paragraph">Passenger6->20kg+<span class="20kg"></span>' +
+        '<p class="p6_1_addBagg_paragraph">Pasażer6->20kg+<span class="20kg"></span>' +
         $AddBag20 +
         ' PLN' +
         '</p>'
@@ -751,7 +751,7 @@ $(document).ready(function () {
       updatePrice();
     } else if ($('#p6_1_AdditionalBaggageForm').val() == 2) {
       $('#p6_1_calc_AddBagg').append(
-        '<p class="p6_1_addBagg_paragraph">Passenger6->32kg+<span class="32kg"></span>' +
+        '<p class="p6_1_addBagg_paragraph">Pasażer6->32kg+<span class="32kg"></span>' +
         $AddBag32 +
         ' PLN' +
         '</p>'
